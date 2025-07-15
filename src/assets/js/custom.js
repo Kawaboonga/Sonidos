@@ -1,34 +1,37 @@
 (function($) {
     'use strict';
 
-    // Mean Menu
+    // =========================
+    // Activa el menú responsive con MeanMenu cuando el ancho de pantalla es menor a 991px
     jQuery('.mean-menu').meanmenu({ 
         meanScreenWidth: "991"
     });
 
-    // Navbar Area
+    // =========================
+    // Hace que la barra de navegación se vuelva fija (sticky) al hacer scroll hacia abajo
     $(window).on('scroll', function() {
-        if ($(this).scrollTop() >150){  
-            $('.navbar-area').addClass("sticky-nav");
-        }
-        else{
-            $('.navbar-area').removeClass("sticky-nav");
+        if ($(this).scrollTop() > 150){  
+            $('.navbar-area').addClass("sticky-nav"); // Agrega clase sticky
+        } else {
+            $('.navbar-area').removeClass("sticky-nav"); // La quita si vuelve arriba
         }
     });
 
-    // Search Botton
+    // =========================
+    // Funcionalidad de botón de búsqueda: abrir y cerrar overlay de búsqueda
     $('.close-btn').on('click',function() {
-        $('.search-overlay').fadeOut();
-        $('.search-btn').show();
-        $('.close-btn').removeClass('active');
+        $('.search-overlay').fadeOut();        // Oculta el overlay
+        $('.search-btn').show();               // Muestra botón de buscar
+        $('.close-btn').removeClass('active'); // Quita clase activa al botón de cerrar
     });
     $('.search-btn').on('click',function() {
-        $(this).hide();
-        $('.search-overlay').fadeIn();
-        $('.close-btn').addClass('active');
+        $(this).hide();                        // Oculta botón de buscar
+        $('.search-overlay').fadeIn();         // Muestra el overlay
+        $('.close-btn').addClass('active');    // Activa el botón de cerrar
     });
-        
-    // Home Slider
+
+    // =========================
+    // Carrusel principal (home): slider de bienvenida o presentación
     $('.slider-area').owlCarousel({
         loop: true,
         margin: 0,
@@ -41,7 +44,8 @@
         autoplayHoverPause: true,
     });
 
-    // Brand Slider 
+    // =========================
+    // PRUEBA Carrusel de marcas o aliados (logos de empresas)
     $('.brand-slider').owlCarousel({
         loop: true,
         margin: 30,
@@ -49,23 +53,16 @@
         dots: false,
         autoplay: true,
         autoplayHoverPause: true,
-        responsive:{
-            0:{
-                items: 2
-            },
-            568:{
-                items: 3
-            },
-            768:{
-                items: 5
-            },
-            1000:{
-                items: 5
-            }
+        responsive: {
+            0: { items: 2 },
+            568: { items: 3 },
+            768: { items: 5 },
+            1000: { items: 5 }
         }
-    })
-        
-    // Popup Video 
+    });
+
+    // =========================
+    // Reproductor de video en popup (YouTube, Vimeo, etc.)
     $('.play-btn').magnificPopup({
         disableOn: 700,
         type: 'iframe',
@@ -75,7 +72,8 @@
         fixedContentPos: false
     });
 
-    // Service Item Area Slider
+    // =========================
+    // PRUEBA Carrusel de servicios destacados (ej: clases de guitarra, piano, etc.)
     $('.service-item-area').owlCarousel({
         center: true,
         items: 3,
@@ -89,36 +87,30 @@
             "<i class='fas fa-chevron-left'></i>",
             "<i class='fas fa-chevron-right'></i>"
         ],
-        responsive:{
-            0:{
-                items: 1
-            },
-            600:{
-                items: 1
-            },
-            768:{
-                items: 2
-            },
-            1000:{
-                items: 3
-            }
+        responsive: {
+            0: { items: 1 },
+            600: { items: 1 },
+            768: { items: 2 },
+            1000: { items: 3 }
         }
-    })
+    });
 
-    // Popup Gallery 
+    // =========================
+    // PRUEBA Galería de imágenes con popup (tipo lightbox)
     $('.gallery-view').magnificPopup({
-        delegate: 'a',
+        delegate: 'a',                // Activa en los enlaces dentro del contenedor
         type: 'image',
         tLoading: 'Loading image #%curr%...',
         mainClass: 'mfp-img-mobile',
         gallery: {
-            enabled: true,
+            enabled: true,           // Galería activa (puede navegar entre imágenes)
             navigateByImgClick: true,
-            preload: [0,1] 
+            preload: [0, 1]          // Precarga imágenes adyacentes
         }
     });
 
-    // Testimonial Slider
+    // =========================
+    // Carrusel de testimonios o comentarios de clientes/alumnos
     $('.testimonial-slider').owlCarousel({
         items: 1,
         loop: true,
@@ -132,70 +124,74 @@
             "<i class='flaticon-right-arrow'></i>"
         ],
     });
-        
-    // Tabs Single Page
+
+    // =========================
+    // PRUEBA Tabs de contenido en una sola página (por ejemplo: descripción, profesores, preguntas)
     (function ($) {
-        $('.tab ul.tabs').addClass('active').find('> li:eq(0)').addClass('current');
+        $('.tab ul.tabs').addClass('active').find('> li:eq(0)').addClass('current'); // Activa el primer tab
         $('.tab ul.tabs li a').on('click', function (g) {
             var tab = $(this).closest('.tab'), 
-            index = $(this).closest('li').index();
-            tab.find('ul.tabs > li').removeClass('current');
-            $(this).closest('li').addClass('current');
-            tab.find('.tab_content').find('div.tabs_item').not('div.tabs_item:eq(' + index + ')').slideUp();
-            tab.find('.tab_content').find('div.tabs_item:eq(' + index + ')').slideDown();
-            g.preventDefault();
+                index = $(this).closest('li').index();
+
+            tab.find('ul.tabs > li').removeClass('current');         // Quita clase actual
+            $(this).closest('li').addClass('current');               // Agrega clase actual al clickeado
+
+            tab.find('.tab_content')
+                .find('div.tabs_item')
+                .not('div.tabs_item:eq(' + index + ')').slideUp();   // Oculta los demás
+            tab.find('.tab_content')
+                .find('div.tabs_item:eq(' + index + ')').slideDown();// Muestra el tab actual
+
+            g.preventDefault(); // Previene comportamiento por defecto del enlace
         });
     })(jQuery);
 
-    // Input Plus & Minus Number JS
+    // =========================
+    // PRUEBA Controles para sumar y restar cantidades en inputs (ej: unidades al comprar)
     $('.input-counter').each(function() {
         var spinner = jQuery(this),
-        input = spinner.find('input[type="text"]'),
-        btnUp = spinner.find('.plus-btn'),
-        btnDown = spinner.find('.minus-btn'),
-        min = input.attr('min'),
-        max = input.attr('max');
+            input = spinner.find('input[type="text"]'),
+            btnUp = spinner.find('.plus-btn'),
+            btnDown = spinner.find('.minus-btn'),
+            min = input.attr('min'),
+            max = input.attr('max');
         
+        // Botón de sumar
         btnUp.on('click', function() {
             var oldValue = parseFloat(input.val());
-            if (oldValue >= max) {
-                var newVal = oldValue;
-            } else {
-                var newVal = oldValue + 1;
-            }
-            spinner.find("input").val(newVal);
-            spinner.find("input").trigger("change");
+            var newVal = (oldValue >= max) ? oldValue : oldValue + 1;
+            spinner.find("input").val(newVal).trigger("change");
         });
 
+        // Botón de restar
         btnDown.on('click', function() {
             var oldValue = parseFloat(input.val());
-            if (oldValue <= min) {
-                var newVal = oldValue;
-            } else {
-                var newVal = oldValue - 1;
-            }
-            spinner.find("input").val(newVal);
-            spinner.find("input").trigger("change");
+            var newVal = (oldValue <= min) ? oldValue : oldValue - 1;
+            spinner.find("input").val(newVal).trigger("change");
         });
     });
 
-    // Back To Top Js
+    // =========================
+    // Botón "volver arriba" que aparece al hacer scroll
     $('body').append('<div id="toTop" class="top-btn"><i class="fas fa-chevron-up"></i></div>');
-    $(window).on('scroll',function () {
+
+    // Muestra u oculta el botón según posición del scroll
+    $(window).on('scroll', function () {
         if ($(this).scrollTop() != 0) {
             $('#toTop').fadeIn();
         } else {
             $('#toTop').fadeOut();
         }
-    }); 
-    $('#toTop').on('click',function(){
+    });
+
+    // Al hacer clic, hace scroll suave hasta el top de la página
+    $('#toTop').on('click', function() {
         $("html, body").animate({ scrollTop: 0 }, 600);
         return false;
     });
 
-    // WOW JS
+    // =========================
+    // Inicializa animaciones cuando los elementos entran en pantalla (requiere librería WOW.js)
     new WOW().init();
 
 })(jQuery);
-
- 

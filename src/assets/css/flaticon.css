@@ -1,44 +1,77 @@
 /*
-Flaticon icon font: Flaticon
+Fuente de íconos personalizada: Flaticon
+Esta fuente permite usar íconos mediante clases CSS con prefijo .flaticon-
 */
+
+/* Declaración principal de la fuente Flaticon */
 @font-face {
-	font-family: "Flaticon";
-	src: url("../../assets/fonts/Flaticon.eot");
-	src: url("../../assets/fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
-	url("../../assets/fonts/Flaticon.woff2") format("woff2"),
-	url("../../assets/fonts/Flaticon.woff") format("woff"),
-	url("../../assets/fonts/Flaticon.ttf") format("truetype"),
-	url("../../assets/fonts/Flaticon.svg#Flaticon") format("svg");
+	font-family: "Flaticon"; /* Nombre con el que se invoca la fuente en CSS */
+	src: url("../../assets/fonts/Flaticon.eot"); /* Formato antiguo para compatibilidad */
+	src: 
+		url("../../assets/fonts/Flaticon.eot?#iefix") format("embedded-opentype"), /* Compatibilidad IE */
+		url("../../assets/fonts/Flaticon.woff2") format("woff2"), /* Formato moderno comprimido */
+		url("../../assets/fonts/Flaticon.woff") format("woff"), /* Buen soporte en navegadores */
+		url("../../assets/fonts/Flaticon.ttf") format("truetype"), /* Compatible con muchos sistemas */
+		url("../../assets/fonts/Flaticon.svg#Flaticon") format("svg"); /* Último recurso, para navegadores antiguos */
 	font-weight: normal;
 	font-style: normal;
 }
+
+/* Compatibilidad específica para navegadores WebKit (Chrome/Safari antiguos) */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 	@font-face {
 		font-family: "Flaticon";
 		src: url("../../assets/fonts/Flaticon.svg#Flaticon") format("svg");
 	}
 }
-[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
-	font-family: Flaticon;
-	font-style: normal;
+
+/* Aplica la fuente Flaticon a cualquier clase que comience o contenga "flaticon-" */
+/* Esto permite usar pseudo-elementos :before o :after para mostrar íconos */
+[class^="flaticon-"]:before, 
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, 
+[class*=" flaticon-"]:after {
+	font-family: Flaticon; /* Se usa la fuente definida arriba */
+	font-style: normal;    /* Evita estilos cursivos por defecto */
 }
 
-.flaticon-sea:before { content: "\f100"; }
-.flaticon-multimedia:before { content: "\f101"; }
-.flaticon-teacher:before { content: "\f102"; }
-.flaticon-fins:before { content: "\f103"; }
-.flaticon-swimming:before { content: "\f104"; }
-.flaticon-left-arrow:before { content: "\f105"; }
-.flaticon-right-arrow:before { content: "\f106"; }
-.flaticon-diver:before { content: "\f107"; }
-.flaticon-plus:before { content: "\f108"; }
-.flaticon-loupe:before { content: "\f109"; }
-.flaticon-shopping-cart:before { content: "\f10a"; }
-.flaticon-menu:before { content: "\f10b"; }
-.flaticon-telephone:before { content: "\f10c"; }
-.flaticon-oxigen:before { content: "\f10d"; }
-.flaticon-swimming-1:before { content: "\f10e"; }
-.flaticon-water-polo:before { content: "\f10f"; }
-.flaticon-chevron:before { content: "\f110"; }
-.flaticon-left-arrow-1:before { content: "\f111"; }
+/* Íconos individuales definidos por su código unicode */
+/* Cada clase representa un ícono visual que se puede usar con pseudo-elementos */
+.flaticon-sea:before { content: "\f100"; }              /* Ícono relacionado al mar */
+.flaticon-multimedia:before { content: "\f101"; }       /* Ícono multimedia */
+.flaticon-teacher:before { content: "\f102"; }          /* Ícono profesor o instructora */
+.flaticon-fins:before { content: "\f103"; }             /* Aletas de natación o buceo */
+.flaticon-swimming:before { content: "\f104"; }         /* Persona nadando */
+.flaticon-left-arrow:before { content: "\f105"; }       /* Flecha izquierda */
+.flaticon-right-arrow:before { content: "\f106"; }      /* Flecha derecha */
+.flaticon-diver:before { content: "\f107"; }            /* Buzo o persona con equipo de buceo */
+.flaticon-plus:before { content: "\f108"; }             /* Símbolo de suma o agregar */
+.flaticon-loupe:before { content: "\f109"; }            /* Lupa (buscar) */
+.flaticon-shopping-cart:before { content: "\f10a"; }    /* Carrito de compras */
+.flaticon-menu:before { content: "\f10b"; }             /* Menú (hamburguesa o listado) */
+.flaticon-telephone:before { content: "\f10c"; }        /* Ícono de teléfono */
+.flaticon-oxigen:before { content: "\f10d"; }           /* Oxígeno o cilindro de aire */
+.flaticon-swimming-1:before { content: "\f10e"; }       /* Variante de nadador */
+.flaticon-water-polo:before { content: "\f10f"; }       /* Ícono de waterpolo */
+.flaticon-chevron:before { content: "\f110"; }          /* Chevron (flecha decorativa) */
+.flaticon-left-arrow-1:before { content: "\f111"; }     /* Otra variante de flecha izquierda */
+
+
+.flaticon-guitarra:before { content: "\f100"; }          /* Ícono de guitarra */
+.flaticon-bateria:before { content: "\f101"; }           /* Ícono de batería */
+.flaticon-profesor:before { content: "\f102"; }          /* Profesor o profesora de música */
+.flaticon-bajo:before { content: "\f103"; }              /* Bajo eléctrico */
+.flaticon-piano:before { content: "\f104"; }             /* Piano o teclado */
+.flaticon-flecha-izquierda:before { content: "\f105"; }  /* Flecha izquierda */
+.flaticon-flecha-derecha:before { content: "\f106"; }    /* Flecha derecha */
+.flaticon-rockero:before { content: "\f107"; }           /* Rockero o músico en escenario */
+.flaticon-agregar:before { content: "\f108"; }           /* Agregar nuevo instrumento o clase */
+.flaticon-buscar:before { content: "\f109"; }            /* Buscar instrumento o profesor */
+.flaticon-carrito:before { content: "\f10a"; }           /* Carrito de compras */
+.flaticon-menu:before { content: "\f10b"; }              /* Menú hamburguesa (se mantiene) */
+.flaticon-telefono:before { content: "\f10c"; }          /* Teléfono de contacto */
+.flaticon-amplificador:before { content: "\f10d"; }      /* Amplificador de guitarra o bajo */
+.flaticon-microfono:before { content: "\f10e"; }         /* Micrófono para clases o canto */
+.flaticon-banda:before { content: "\f10f"; }             /* Banda musical completa */
+.flaticon-chevron:before { content: "\f110"; }           /* Chevron decorativo (se mantiene) */
+.flaticon-flecha-retroceder:before { content: "\f111"; } /* Otra variante de flecha izquierda */
