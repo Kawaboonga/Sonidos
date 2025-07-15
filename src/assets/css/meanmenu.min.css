@@ -1,9 +1,9 @@
-
+/* Oculta el botón del menú responsive por defecto (solo se muestra cuando la pantalla es pequeña) */
 a.meanmenu-reveal {
 	display: none;
 }
-/* when under viewport size, .mean-container is added to body */
 
+/* Contenedor principal del menú responsive cuando se activa en pantallas pequeñas */
 .mean-container .mean-bar {
 	float: left;
 	width: 100%;
@@ -11,9 +11,11 @@ a.meanmenu-reveal {
 	background: transparent;
 	padding: 20px 0 0;
 	z-index: 999;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+	border-bottom: 1px sólido con muy baja opacidad;
 	height: 55px;
 }
+
+/* Estilos del botón hamburguesa que revela el menú (en responsive) */
 .mean-container a.meanmenu-reveal {
 	width: 35px;
 	height: 30px;
@@ -23,28 +25,33 @@ a.meanmenu-reveal {
 	cursor: pointer;
 	color: #ffffff;
 	text-decoration: none;
-	font-size: 20px;
-	text-indent: -9999em;
+	font-size: 1px; /* oculto para lectores, pero presente para accesibilidad */
+	text-indent: -9999em; /* oculta el texto */
 	line-height: 22px;
-	font-size: 1px;
 	display: block;
 	font-weight: 700;
 }
+
+/* Líneas del botón hamburguesa (tres rayas blancas) */
 .mean-container a.meanmenu-reveal span {
 	display: block;
 	background: #ffffff;
 	height: 4px;
-    top: 8px;
-    border-radius: 3px;
+	top: 8px;
+	border-radius: 3px;
 	position: relative;
 	margin-top: -8px;
 }
+
+/* Menú desplegable del responsive, aparece bajo la barra cuando está activo */
 .mean-container .mean-nav {
 	float: left;
 	width: 100%;
 	background: #ffffff;
 	margin-top: 55px;
 }
+
+/* Lista principal del menú (sin estilos por defecto de lista) */
 .mean-container .mean-nav ul {
 	padding: 0;
 	margin: 0;
@@ -52,11 +59,15 @@ a.meanmenu-reveal {
 	border: none;
 	list-style-type: none;
 }
+
+/* Cada ítem de la lista ocupa el 100% del ancho y se posiciona relativo */
 .mean-container .mean-nav ul li {
 	position: relative;
 	float: left;
 	width: 100%;
 }
+
+/* Enlaces del menú en móvil (nivel 1) */
 .mean-container .mean-nav ul li a {
 	display: block;
 	float: left;
@@ -65,17 +76,21 @@ a.meanmenu-reveal {
 	margin: 0;
 	text-align: left;
 	color: #677294;
-	border-top: 1px solid #DBEEFD;
+	border-top: 1px sólido celeste claro;
 	text-decoration: none;
 }
+
+/* Enlace activo en menú móvil (nivel 1) */
 .mean-container .mean-nav ul li a.active {
 	color: #000000;
 }
+
+/* Enlaces de submenús (niveles anidados) */
 .mean-container .mean-nav ul li li a {
 	width: 80%;
 	padding: 1em 10%;
 	color: #677294;
-	border-top: 1px solid #DBEEFD;
+	border-top: 1px sólido celeste claro;
 	opacity: 1;
 	filter: alpha(opacity=75);
 	text-shadow: none !important;
@@ -83,10 +98,14 @@ a.meanmenu-reveal {
 	text-transform: none;
 	font-size: 16px;
 }
+
+/* Último ítem del menú, sin borde inferior */
 .mean-container .mean-nav ul li.mean-last a {
 	border-bottom: none;
 	margin-bottom: 0;
 }
+
+/* Niveles más profundos de submenú con sangría creciente */
 .mean-container .mean-nav ul li li li a {
 	width: 70%;
 	padding: 1em 15%;
@@ -99,16 +118,19 @@ a.meanmenu-reveal {
 	width: 50%;
 	padding: 1em 25%;
 }
+
+/* Efecto hover en los enlaces del menú móvil */
 .mean-container .mean-nav ul li a:hover {
-	background: #252525;
-	background: rgba(255,255,255,0.1);
+	background: rgba(255, 255, 255, 0.1);
 }
+
+/* Botón para expandir submenús en móvil */
 .mean-container .mean-nav ul li a.mean-expand {
 	margin-top: -5px;
 	width: 100%;
 	height: 24px;
 	padding: 12px !important;
-	text-align: right ;
+	text-align: right;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -117,6 +139,8 @@ a.meanmenu-reveal {
 	background: transparent;
 	border: none !important;
 }
+
+/* Resetea flotantes dentro del menú */
 .mean-container .mean-push {
 	float: left;
 	width: 100%;
@@ -124,149 +148,186 @@ a.meanmenu-reveal {
 	margin: 0;
 	clear: both;
 }
+
+/* Envoltorio adicional para organizar elementos del menú */
 .mean-nav .wrapper {
 	width: 100%;
 	padding: 0;
 	margin: 0;
 }
-/* Fix for box sizing on Foundation Framework etc. */
+
+/* Corrige problemas de box-sizing en ciertos frameworks como Foundation */
 .mean-container .mean-bar, .mean-container .mean-bar * {
-	-webkit-box-sizing: content-box;
-	-moz-box-sizing: content-box;
 	box-sizing: content-box;
 }
+
+/* Clase para eliminar componentes del menú al volver a escritorio */
 .mean-remove {
 	display: none !important;
 }
+
+/* Oculta el menú móvil en vista escritorio */
 .mobile-nav {
-    display: none;
+	display: none;
 }
+
+/* Color del enlace activo en menú móvil */
 .mobile-nav.mean-container .mean-nav ul li a.active {
-    color: #ff6464;
+	color: #ff6464;
 }
+
+/* Menú principal (vista escritorio) */
 .main-nav {
-    background: #000;
-    position: inherit;
-    top: 0;
-    left: 0;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    width: 100%;
-    z-index: 999;
-    height: auto;
+	background: #000;
+	position: inherit;
+	top: 0;
+	left: 0;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	width: 100%;
+	z-index: 999;
+	height: auto;
 }
+
+/* Oculta la flecha del dropdown para no mostrarla */
 .mean-nav .dropdown-toggle::after {
 	display: none;
 }
 
+/* Lista del menú principal, sin estilos por defecto */
 .main-nav nav ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
 }
+
+/* Ítems del menú principal (espaciado interno) */
 .main-nav nav .navbar-nav .nav-item {
-    position: relative;
-    padding: 15px 0;
+	position: relative;
+	padding: 15px 0;
 }
+
+/* Enlaces del menú principal */
 .main-nav nav .navbar-nav .nav-item a {
-    font-weight: 500;
-    font-size: 16px;
-    text-transform: capitalize;
-    color: #ffffff;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-left: 15px;
-    margin-right: 15px;
+	font-weight: 500;
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	padding: 0;
+	margin: 0 15px;
 }
-.main-nav nav .navbar-nav .nav-item a:hover, 
-.main-nav nav .navbar-nav .nav-item a:focus, 
+
+/* Colores al pasar el mouse o en estado activo */
+.main-nav nav .navbar-nav .nav-item a:hover,
+.main-nav nav .navbar-nav .nav-item a:focus,
 .main-nav nav .navbar-nav .nav-item a.active {
-    color: #ff6464;
+	color: #ff6464;
 }
+
+/* Color para ítem al estar sobre él */
 .main-nav nav .navbar-nav .nav-item:hover a {
-    color: #ff6464;
+	color: #ff6464;
 }
+
+/* Estilos para los submenús desplegables */
 .main-nav nav .navbar-nav .nav-item .dropdown-menu {
-    -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
-            box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
-    background: #0d1028;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 250px;
-    z-index: 99;
-    display: block;
-    padding-top: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-bottom: 20px;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+	background: #0d1028;
+	position: absolute;
+	top: 80px;
+	left: 0;
+	width: 250px;
+	z-index: 99;
+	display: block;
+	padding: 20px 5px;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease-in-out;
 }
+
+/* Estilos individuales para ítems del submenú */
 .main-nav nav .navbar-nav .nav-item .dropdown-menu li {
-    position: relative;
-    padding: 0;
+	position: relative;
+	padding: 0;
 }
+
+/* Enlaces dentro del submenú */
 .main-nav nav .navbar-nav .nav-item .dropdown-menu li a {
-    font-size: 15px;
-    font-weight: 500;
-    text-transform: capitalize;
-    padding: 9px 15px;
-    margin: 0;
-    display: block;
-    color: #ffffff;
+	font-size: 15px;
+	font-weight: 500;
+	text-transform: capitalize;
+	padding: 9px 15px;
+	margin: 0;
+	display: block;
+	color: #ffffff;
 }
-.main-nav nav .navbar-nav .nav-item .dropdown-menu li a:hover, 
-.main-nav nav .navbar-nav .nav-item .dropdown-menu li a:focus, 
+
+/* Enlace activo o con hover dentro del submenú */
+.main-nav nav .navbar-nav .nav-item .dropdown-menu li a:hover,
+.main-nav nav .navbar-nav .nav-item .dropdown-menu li a:focus,
 .main-nav nav .navbar-nav .nav-item .dropdown-menu li a.active {
-    color: #ff6464;
+	color: #ff6464;
 }
+
+/* Submenús anidados (nivel 2 y más) ocultos inicialmente */
 .main-nav nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu {
-    position: absolute;
-    left: -100%;
-    top: 0;
-    opacity: 0 !important;
-    visibility: hidden !important;
+	position: absolute;
+	left: -100%;
+	top: 0;
+	opacity: 0 !important;
+	visibility: hidden !important;
 }
+
+/* Muestra submenús anidados al pasar el mouse */
 .main-nav nav .navbar-nav .nav-item .dropdown-menu li:hover .dropdown-menu {
-    opacity: 1 !important;
-    visibility: visible !important;
-    top: -20px !important;
+	opacity: 1 !important;
+	visibility: visible !important;
+	top: -20px !important;
 }
+
+/* Submenú de nivel 3 dentro de otro anidado */
 .main-nav nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu {
-    position: absolute;
-    left: -100%;
-    top: 0;
-    opacity: 0 !important;
-    visibility: hidden !important;
+	position: absolute;
+	left: -100%;
+	top: 0;
+	opacity: 0 !important;
+	visibility: hidden !important;
 }
+
+/* Muestra tercer nivel al hacer hover en segundo */
 .main-nav nav .navbar-nav .nav-item .dropdown-menu li:hover .dropdown-menu li:hover .dropdown-menu {
-    opacity: 1 !important;
-    visibility: visible !important;
-    top: -20px !important;
+	opacity: 1 !important;
+	visibility: visible !important;
+	top: -20px !important;
 }
+
+/* Estilos para enlaces del tercer nivel */
 .main-nav nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a {
-    color: #ffffff;
-    text-transform: capitalize;
+	color: #ffffff;
+	text-transform: capitalize;
 }
-.main-nav nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:hover, 
-.main-nav nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:focus, 
+
+/* Hover para enlaces del tercer nivel */
+.main-nav nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:hover,
+.main-nav nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:focus,
 .main-nav nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a.active {
-    color: #ff6464;
+	color: #ff6464;
 }
+
+/* Hover general para ítems del submenú */
 .main-nav nav .navbar-nav .nav-item .dropdown-menu li:hover a {
-    color: #ff6464;
+	color: #ff6464;
 }
+
+/* Mostrar submenú al pasar el mouse sobre el ítem padre */
 .main-nav nav .navbar-nav .nav-item:hover ul {
-    opacity: 1;
-    visibility: visible;
-    top: 100%;
+	opacity: 1;
+	visibility: visible;
+	top: 100%;
 }
+
+/* Ajuste para que el último ítem no se desborde a la derecha */
 .main-nav nav .navbar-nav .nav-item:last-child .dropdown-menu {
-    left: auto;
-    right: 0;
+	left: auto;
+	right: 0;
 }
