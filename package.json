@@ -1,6 +1,6 @@
 {
-  "name": "nuva-ng",
-  "version": "1.7.0",
+  "name": "sonidos-ng",
+  "version": "1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
