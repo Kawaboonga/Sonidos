@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Proyecto Sonido
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
@@ -25,3 +26,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+# Sonidos
+Proyecto de angular: V2 - comunidad, clases, venta e intercambio de instrumentos y efectos de segunda mano
+>>>>>>> 89759c86288b3e56d72f8f96570472ee3e3d33ba
+Este proyecto Angular se encuentra sincronizado con GitHub vía SSH.
