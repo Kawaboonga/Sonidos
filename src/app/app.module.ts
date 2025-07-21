@@ -20,10 +20,19 @@ import { NewsComponent } from './components/pages/news/news.component';
 import { NewsDetailsComponent } from './components/pages/news-details/news-details.component';
 import { ProductsDetailsComponent } from './components/pages/products-details/products-details.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ForgotPasswordComponent } from './components/pages/forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './components/pages/reset-password/reset-password.component';
+import { ProfileComponent } from './components/pages/profile/profile.component';
+import { AdminComponent } from './components/pages/admin/admin.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    ForgotPasswordComponent,
+    ProfileComponent,
     HomeOneComponent,
     PreloaderComponent,
     FooterComponent,
@@ -40,12 +49,17 @@ import { ContactComponent } from './components/pages/contact/contact.component';
     NewsComponent,
     NewsDetailsComponent,
     ProductsDetailsComponent,
-    ContactComponent
+    ContactComponent,
+    ResetPasswordComponent,
+    AdminComponent
+
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

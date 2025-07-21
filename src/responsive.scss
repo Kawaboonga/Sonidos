@@ -1,791 +1,669 @@
 @media only screen and (max-width : 767px) {
 
-    /* ===============================
-       Ajustes generales para móviles
-       =============================== */
-
-    /* Disminuye el tamaño base del texto en todo el cuerpo del documento */
+    /* Default CSS */
     body {
         font-size: 14px;
     }
-
-    /* Ajustes de espaciado responsivo (padding/margin) para móviles */
-
-    /* Padding top y bottom reducido */
     .ptb-100 {
         padding-top: 50px;
         padding-bottom: 50px;
     }
-
-    /* Padding top reducido de 100px a 50px */
     .pt-100 {
         padding-top: 50px;
     }
-
-    /* Padding top reducido de 94px a 44px */
     .pt-94 {
         padding-top: 44px;
     }
-
-    /* Padding top reducido de 70px a 50px */
     .pt-70 {
         padding-top: 50px;
     }
-
-    /* Padding bottom reducido de 70px a 20px */
     .pb-70 {
         padding-bottom: 20px;
     }
-
-    /* Padding top reducido de 60px a 30px */
     .pt-60 {
         padding-top: 30px;
     }
-
-    /* Padding top eliminado (queda en 0px) */
     .pt-50 {
         padding-top: 0px;
     }
-
-    /* Padding top ajustado de 40px a 30px */
     .pt-40 {
         padding-top: 30px;
     }
-
-    /* Margen izquierdo eliminado completamente */
     .ml-50 {
         margin-left: 0px;
     }
-
-    /* Margen inferior reducido a 30px */
     .mb-50 {
         margin-bottom: 30px;
     }
-
-    /* Margen izquierdo reducido a 15px */
     .ml-20 {
         margin-left: 15px;
     }
-
-    /* ============================
-       Botones por defecto (ajustes)
-       ============================ */
-
-    /* Reducción del tamaño de fuente y paddings para botones, manteniendo consistencia visual en móviles */
-
     .default-btn1 {
         font-size: 16px;
         padding: 10px 20px;
     }
-
     .default-btn2 {
         font-size: 16px;
         padding: 10px 23px;
     }
-
     .default-btn3 {
         font-size: 16px;
         padding: 10px 20px;
     }
-
     .default-btn4 {
         font-size: 16px;
         padding: 10px 20px;
     }
-
-    /* ================================
-       Títulos de sección responsivos
-       ================================ */
-
     .scetion-title {
         span {
-            font-size: 16px; // Subtítulo más pequeño
+            font-size: 16px;
         }
         h2 {
-            font-size: 24px; // Título principal más compacto
+            font-size: 24px;
         }
     }
+    /* Default CSS */
 
-   
-}
-
-
-    /* Fin de ajustes por defecto */
-
-    /* ================================
-   Home Page - Ajustes para móviles
-   ================================ */
-
-.top-header {
-    text-align: center; // Centra el contenido superior (teléfono, email, etc.)
-    
-    .header-left {
-        ul {
-            li {
-                font-size: 12px; // Fuente más pequeña
-                margin-right: 5px;
-                
-                i {
-                    font-size: 14px; // Iconos ligeramente reducidos
-                }
-
-                &::before {
-                    display: none; // Elimina separadores decorativos si existen
-                }
-            }
-        }
-    }
-}
-
-.top-header .social-icon {
-    display: none; // Oculta íconos sociales en mobile
-}
-
-.mean-container {
-    .mean-bar {
-        background-color: #fff; // Fondo blanco para menú hamburguesa
-        padding: 0;
-    }
-}
-
-.other-side {
-    display: none; // Oculta secciones laterales no necesarias
-}
-
-.mobile-nav {
-    .logo {
-        img {
-            max-width: 110px; // Logo más pequeño
-        }
-    }
-}
-
-/* ===== Slider Principal ===== */
-.home-slider {
-    .slider-item {
-        height: 100%; // Altura automática para adaptarse
-        padding-top: 130px;
-        padding-bottom: 90px;
-
-        .slider-text {
-            h1 {
-                font-size: 30px; // Título más pequeño
-            }
-            .slider-btn {
-                margin-top: 0px;
-                margin-bottom: 10px;
-            }
-            p {
-                margin-top: 14px;
-            }
-        }
-    }
-
-    .owl-theme {
-        .owl-dots {
-            position: absolute;
-            bottom: 5%;
-            transform: translateY(0px);
-            right: 0;
-            left: 0;
-
-            .owl-dot {
-                display: inline-block; // Asegura visibilidad
-            }
-        }
-    }
-}
-
-/* ===== Sección About ===== */
-.about-right .play-area {
-    padding: 70px 0; // Reduce espacio vertical
-}
-.icon-shape-1,
-.icon-shape-2 {
-    display: none; // Oculta elementos decorativos en mobile
-}
-
-/* ===== Servicios ===== */
-.service-area {
-    margin-bottom: 50px;
-
-    .owl-theme .owl-nav {
-        position: absolute;
-        bottom: 15px;
-        left: 0;
-        right: 0;
-        margin: 0 20px;
-        transform: translateY(0px);
-
-        .owl-prev {
-            left: 20%;
-        }
-        .owl-next {
-            right: 20%;
-        }
-    }
-}
-
-.service-item {
-    margin-left: auto;
-    margin-right: auto;
-
-    .service-head h3 {
-        font-size: 18px; // Reducción de tamaño en encabezado
-    }
-}
-
-/* ===== Aplicar (Call to Action) ===== */
-.apply-text {
-    padding-top: 50px;
-    padding-bottom: 56px;
-
-    span {
-        font-size: 16px;
-    }
-    h2 {
-        font-size: 24px;
-    }
-}
-
-/* ===== Cursos ===== */
-.course-text {
-    span {
-        font-size: 16px;
-    }
-    h2 {
-        font-size: 24px;
-    }
-    .course-btn {
-        margin-top: 20px;
-    }
-}
-.course-img,
-.course-img-2 {
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-
-    img {
-        width: 100%;
-        height: 100%; // Imagenes adaptadas al contenedor
-    }
-}
-.course-dots,
-.course-dots-2,
-.icon-shape-3,
-.icon-shape-4 {
-    display: none; // Oculta decoración innecesaria
-}
-
-/* ===== Productos (e-commerce) ===== */
-.product-item {
-    a {
-        display: block;
-        img {
-            width: 100%;
-        }
-    }
-
-    .product-cotent {
-        .product-text {
-            a h3 {
-                font-size: 20px;
-            }
-            span {
-                font-size: 18px;
-            }
-        }
-        .add-product {
-            width: 45px;
-            height: 45px;
-            line-height: 45px;
-        }
-    }
-}
-
-/* ===== Galería de imágenes ===== */
-.gallery-item {
-    a {
-        display: block;
-
-        img {
-            width: 100%;
-        }
-    }
-    .gallery-text {
+    /* Home  Page One */
+    .top-header {
         text-align: center;
+        .header-left {
+            ul {
+                li {
+                    font-size: 12px;
+                    margin-right: 5px;
+                    i {
+                        font-size: 14px;
+                    }
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }   
     }
-}
+    .top-header .social-icon {
+        display: none;
+    }
 
-/* ===== Instructores o Trainers ===== */
-.trainer-card {
-    a {
-        display: block;
-        img {
-            width: 100%;
+    .mean-container{
+        .mean-bar {
+            background-color: #fff;
+            padding: 0;
         }
     }
-
-    .trainer-content.active {
-        margin-bottom: 50px;
+    .other-side {
+        display: none;
     }
-}
-
-/* ===== Noticias ===== */
-.news-card {
-    .news-content {
-        a h3 {
+    .mobile-nav {
+        .logo {
+            img {
+                max-width: 110px;
+            }
+        }
+    }
+    
+    .home-slider {
+        .slider-item {
+            height: 100%;
+            padding-top: 130px;
+            padding-bottom: 90px;
+            .slider-text {
+                h1 {
+                    font-size: 30px;
+                }
+                .slider-btn {
+                    margin-top: 0px;
+                    margin-bottom: 10px;
+                }
+                p {
+                    margin-top: 14px;
+                }
+            }
+        }
+        .owl-theme {
+            .owl-dots {
+                position: absolute;
+                top: unset;
+                bottom: 5%;
+                right: 0;
+                left: 0;
+                transform: translateY(0px);
+                .owl-dot {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+   
+    .about-right {
+        .play-area {
+            padding: 70px 0;
+        }
+    }
+    .icon-shape-1 {
+        display: none;
+    }
+    .icon-shape-2 {
+        display: none;
+    }
+   
+    .service-area {
+        margin-bottom: 50px;
+        .owl-theme  {
+            .owl-nav {
+                position: absolute;
+                margin-top: 0;
+                margin: 0 20px;
+                top: unset;
+                bottom: 15px;
+				transform: translateY(0px);
+                left: 0;
+                right: 0;
+                .owl-prev {
+                    position: absolute;
+                    left: 20%;
+                }
+                .owl-next {
+                    position: absolute;
+                    right: 20%;
+                }
+            }
+        }
+    }
+    .service-item {
+        margin-left: auto;
+        margin-right: auto;
+        .service-head h3 {
             font-size: 18px;
         }
     }
-}
-
-/* ===== Footer (Pie de página) ===== */
-.footer-conten-title {
-    a img {
-        max-width: 110px;
+   
+    .apply-text {
+        padding-top: 50px;
+        padding-bottom: 56px;
+        span {
+            font-size: 16px;
+        }
+        h2 {
+            font-size: 24px;
+        }
     }
-}
+    
+    .course-text {
+        span {
+            font-size: 16px;
+        }
+        h2 {
+            font-size: 24px;
+        }
+        .course-btn {
+            margin-top: 20px;
+        }
+    }
+    .course-img {
+        margin-left: 0;
+        margin-bottom: 0;
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .course-img-2 {
+        margin-right: 0px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .course-dots {
+        display: none;
+    }
+    .course-dots-2 {
+        display: none;
+    }
+    .icon-shape-3 {
+        display: none;
+    }
+    .icon-shape-4 {
+        display: none;
+    }
+    
+    .product-item {
+        a {
+            display: block;
+            img {
+                width: 100%;
+            }
+        }
+        .product-cotent {
+            .product-text {
+                a {
+                    h3 {
+                        font-size: 20px;
+                    }
+                }
+                span {
+                    font-size: 18px;
+                }
+            }
+            .add-product {
+                width: 45px;
+                height: 45px;
+                line-height: 45px;
+            }
+        }
+    }
+    
+    .gallery-item {
+        a {
+            display: block;
+            img {
+                width: 100%;
+            }
+        }
+        .gallery-text {
+            text-align: center;
+        }
+    }
+   
+    .trainer-card {
+        a {
+            display: block;
+            img {
+                width: 100%;
+            }
+        }
+        .trainer-content {
+            &.active {
+               margin-bottom: 50px;
+            }
+        }
+    }
+    
+    .news-card {
+        .news-content {
+            a {
+                h3 {
+                    font-size: 18px;
+                }
+            }
+        }
 
-.footer-content .newsleter-area h3 {
-    font-size: 20px;
-}
-
-.footer-list {
-    h3 {
-        font-size: 20px;
-
-        &::before {
-            height: 20px;
+    }
+    .footer-conten-title {
+        a {
+            img {
+                max-width: 110px;
+            }
         }
     }
 
-    ul li {
-        font-size: 15px;
-    }
-}
-
-.footer-bottom {
-    padding: 20px 0;
-
-    .bottom-list {
-        margin-bottom: 10px;
-        text-align: center;
-
-        ul li {
-            margin-right: 15px;
+    .footer-content {
+        .newsleter-area {
+            h3 {
+                font-size: 20px;
+            }
         }
     }
+    .footer-list {
+        h3 {
+            font-size: 20px;
+            &::before {
+                height: 20px;
+            }
+        }
+        ul {
+            li { font-size: 15px;
+            }
+        }
 
-    .bottom-text {
+    }
+    .footer-bottom {
+        padding: 20px 0;
+        .bottom-list {
+            margin-bottom: 10px;
+            text-align: center;
+            ul {
+                li {
+                    margin-right: 15px;
+                   
+                }
+            }
+        }
+    
+        .bottom-text {
+            text-align: center;
+            float: none;
+            p {
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+    /* Home  Page One End */
+
+    /* Home  Page Two */
+    .banner-area {
+        position: relative;
+        height: 100%;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    .banner-content {
+        padding-top: 0;
         text-align: center;
-        float: none;
-
+        margin-left: auto;
+        margin-right: auto;
+        h1 {
+            font-size: 30px;
+        }
         p {
-            padding: 0;
-            margin: 0;
+            margin-top: 10px;
         }
-    }
-}
-/* ===== Fin Home Page Mobile ===== */
-
-
-   /* ===============================
-   Home Page 2 - Responsive (≤767px)
-   =============================== */
-
-.banner-area {
-    position: relative;
-    height: 100%; // Altura automática
-    padding-top: 100px; // Espaciado superior aumentado para dejar aire
-    padding-bottom: 50px;
-}
-
-.banner-content {
-    padding-top: 0;
-    text-align: center; // Centrado en mobile
-    margin-left: auto;
-    margin-right: auto;
-
-    h1 {
-        font-size: 30px; // Título más pequeño
-    }
-
-    p {
-        margin-top: 10px;
-    }
-
-    .banner-btn {
-        margin-top: 15px;
-
-        .banner-btn1,
-        .banner-btn2 {
-            font-size: 16px; // Tamaño de botón ajustado
-            padding: 10px 18px; // Padding reducido para botón compacto
-
-            // banner-btn2 tiene un poco más de padding horizontal
-            &.banner-btn2 {
+        .banner-btn {
+            margin-top: 15px;
+            .banner-btn1 {
+                font-size: 16px;
+                padding: 10px 18px;
+            }
+            .banner-btn2 {
+                font-size: 16px;
                 padding: 10px 23px;
             }
         }
     }
-}
-
-.banner-img {
-    text-align: right;
-    margin-top: 30px;
-
-    img {
-        height: auto; // Permite que la imagen escale fluidamente
-    }
-}
-
-/* ===== Sección About ===== */
-.about-content {
-    margin-left: 0; // Elimina desplazamiento horizontal
-    span {
-        font-size: 16px;
-    }
-    h2 {
-        font-size: 24px;
-    }
-}
-
-/* Oculta formas decorativas */
-.icon-shape-5,
-.icon-shape-6 {
-    display: none;
-}
-
-.visit-btn {
-    margin-top: 0; // Elimina separación innecesaria
-}
-
-/* ===== Tarjetas de curso ===== */
-.course-card {
-    img {
-        height: 100%; // Asegura que imagen se adapte a contenedor
-    }
-
-    .couser-delt {
-        top: 15.1%; // Ajuste de posición vertical del detalle
-        padding: 30px 15px;
-        max-width: 280px; // Restringe ancho para mejorar lectura
-
-        h3 {
-            font-size: 18px;
-        }
-
-        p {
-            max-width: 100%; // Asegura que el texto use todo el ancho posible
-        }
-
-        .default-btn3,
-        .default-btn4 {
-            font-size: 14px;
-            padding: 7px 16px; // Botones compactos
+    .banner-img {
+        text-align: right;
+        margin-top: 30px;
+        img {
+            height: auto;
         }
     }
-}
-
-.course-item {
-    img {
-        height: 100%;
+   
+    .about-content {
+        margin-left: 0;
+        span {
+            font-size: 16px;
+        }
+        h2 {
+            font-size: 24px;
+        }
     }
-}
-
-/* ===== Testimonios ===== */
-.testimonial-area {
-    margin-bottom: 20px;
-
-    .owl-theme {
-        .owl-nav {
-            z-index: 999;
-            position: absolute;
-            bottom: 30px;
-            left: 0;
-            right: 0;
-            margin: 10px;
-
-            .owl-prev {
-                left: 30%; // Posicionamiento ajustado de controles
+    .icon-shape-5 {
+        display: none;
+    }
+    .icon-shape-6 {
+        display: none;
+    }
+    .visit-btn {
+        margin-top: 0;
+    }
+    .course-card {
+        img {
+            height: 100%;
+        }
+        .couser-delt {
+            top: 15.1%;
+            padding: 30px 15px;
+            max-width: 280px;
+            h3 {
+                font-size: 18px;
             }
-
-            .owl-next {
-                right: 30%;
+            p {
+                max-width: 100%;
+            }
+            .default-btn3 {
+                font-size: 14px;
+                padding: 7px 16px;
+            }
+            .default-btn4 {
+                font-size: 14px;
+                padding: 7px 16px;
             }
         }
     }
-}
-
-.testimonial-img {
-    position: relative;
-    margin-bottom: 30px;
-
-    img {
-        max-width: 320px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .shape-img {
-        right: 0; // Ajusta posición de decoración (si no se oculta)
-    }
-}
-
-.testimonial-item {
-    margin-top: 0;
-    margin-bottom: 30px;
-
-    p {
-        font-size: 15px;
-        margin-bottom: 25px;
-    }
-}
-
-    /* ===== Fin Home Page 2 ===== */
-
-
-    /* ===============================
-   Inner Banner - Responsive (≤767px)
-   =============================== */
-
-.inner-banner {
-    .inner-title {
-        padding-top: 120px; // Espacio superior amplio para compensar menú móvil
-        padding-bottom: 60px; // Separación inferior
-        position: relative;
-
-        h3 {
-            font-size: 30px; // Título más pequeño para dispositivos móviles
+    .course-item {
+        img {
+            height: 100%;
         }
     }
-}
-
-.common-dtel-text {
-    h2 {
-        font-size: 24px; // Ajuste general de encabezados secundarios
-    }
-}
-
-.common-offer {
-    .common-offer-text {
-        .call-btn {
-            padding: 10px 35px; // Botón más compacto
-            font-size: 15px;
-        }
-    }
-}
-
-/* ===============================
-   Contact Page - Responsive (≤767px)
-   =============================== */
-
-.contact-title {
-    h2 {
-        font-size: 24px;
-        max-width: 100%;
-        text-align: center; // Centrado para mejor visualización
-    }
-}
-
-.contact-img {
-    img {
-        height: auto; // Permite que se escale adecuadamente
-    }
-}
-
-.form-area {
-    padding: 30px 20px; // Menor padding horizontal
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.form-section {
-    h2 {
-        font-size: 24px;
-    }
-
-    .form-group {
-        margin-bottom: 15px; // Menor separación entre campos
-    }
-}
-
-/* ===============================
-   Widget Categories - Responsive (≤767px)
-   =============================== */
-
-.widget-categories {
-    ul {
-        li {
-            a {
-                font-size: 16px; // Tamaño adecuado para lectura táctil
-            }
-        }
-    }
-}
-
-/* ===============================
-   Pagination Area - Responsive (≤767px)
-   =============================== */
-
-.pagination-area {
-    margin-top: 0; // Elimina espacio superior innecesario en pantallas pequeñas
-}
-
-/* ===============================
-   FAQ Page - Responsive (≤767px)
-   =============================== */
-
-.faq-area {
-    .accordion {
-        .accordion-item {
-            .accordion-title {
-                font-size: 14px; // Texto más compacto
-                padding: 15px 10px; // Menor padding para móviles
-
-                i {
-                    right: 7px; // Ícono alineado correctamente
-                    font-size: 20px;
+    
+    .testimonial-area {
+        margin-bottom: 20px;
+        .owl-theme {
+            .owl-nav {
+                z-index: 999;
+                position: absolute;
+                margin-top: 0;
+                left: 0;
+                right: 0;
+                margin: 10px;
+                bottom: 30px;
+                .owl-prev {
+                    left: 30%;
+                }
+                .owl-next {
+                    right: 30%;
                 }
             }
         }
     }
-}
-
-.faq-form {
-    padding: 30px 20px; // Espaciado reducido para formularios en móvil
-}
-  /* Faq Page End */
-/* ===== Fin sección ===== */
-
-  
-
-
-
-
-
-
-
-
-
-    /* ===============================
-   Shop Details - Responsive (≤767px)
-   =============================== */
-
-.shop-desc {
-    h3 {
-        font-size: 20px; // Título principal reducido
-    }
-
-    .shop-add {
-        .shop-btn {
-            font-size: 15px; // Botón de "Agregar"
-            padding: 10px 20px;
+    .testimonial-img {
+        position: relative;
+        margin-bottom: 30px;
+        img {
+            max-width: 320px;
+            margin-left: auto;
+            margin-right: auto;
+        } 
+        .shape-img {
+            right: 0;
         }
     }
+    .testimonial-item {
+        margin-top: 0;
+        margin-bottom: 30px;
+        p {
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+    }
+    /* Home  Page Two End */
 
-    .buy-checkbox-btn {
-        .item {
-            .inp-cbx {
-                width: 13px;
-                height: 13px; // Tamaño ajustado de checkbox
+    /* Inner Banner */
+    .inner-banner {
+        .inner-title {
+            padding-top: 120px;
+            padding-bottom: 60px;
+            position: relative;
+            h3 {
+                font-size: 30px;
             }
-
-            .cbx span {
+        }
+    }
+    .common-dtel-text {
+        h2 {
+            font-size: 24px;
+        }
+    }
+    .common-offer {
+        .common-offer-text {
+            .call-btn {
+                padding: 10px 35px;
                 font-size: 15px;
             }
         }
+    }
+    /* Inner Banner End */
 
-        .btn-buy {
-            padding: 12px 23px;
-            font-size: 16px; // Botón de compra
+    /* Contact Page */
+    .contact-title {
+        h2 {
+            font-size: 24px;
+            max-width: 100%;
+            text-align: center;
         }
     }
+    .contact-img {
+        img {
+            height: auto;
+        }
+    }
+    .form-area {
+        padding:30px 20px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .form-section {
+        h2 {
+            font-size: 24px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+    }
+    /* Contact Page End */
 
-    .custom-payment {
-        .payment-methods {
-            a {
-                img {
-                    width: 35px; // Logos de métodos de pago redimensionados
+    /* Widget Categories */
+    .widget-categories {
+        ul {
+            li {
+                a {
+                    font-size: 16px;
                 }
             }
         }
     }
-}
+    /* Widget Categories End */
+    
+    /* Pagination Area */
+    .pagination-area {
+       margin-top: 0;
+    }
+    /* Pagination Area */
 
-.shop-detls-tab {
-    .tabs {
-        li {
-            a {
-                padding: 14px 12px; // Espaciado reducido entre tabs
+    /* Faq Page */
+     .faq-area {
+        .accordion {
+            .accordion-item {
+                .accordion-title {
+                    font-size: 14px;
+                    padding: 15px 10px;
+                    i {
+                        right: 7px;
+                        font-size: 20px;
+                    }
+                }
             }
         }
     }
+    .faq-form {
+        padding: 30px 20px;
+    }
+    /* Faq Page End */
 
-    .tab_content {
-        border: 1px dashed #eeeeee;
-        padding: 25px 20px;
-
-        .tabs_item {
-            .shop-detls-tab-content {
-                .additional-information {
-                    li {
-                        span {
-                            width: 40%; // Alineación de datos en columnas
+    /* Shop Detls */
+    .shop-desc {
+        h3 {
+            font-size: 20px;
+        }
+        .shop-add {
+            .shop-btn {
+                font-size: 15px;
+                padding: 10px 20px;
+            }
+        }
+        .buy-checkbox-btn {
+            .item {
+                .inp-cbx {
+                    width: 13px;
+                    height: 13px;
+                }
+                .cbx span {
+                    font-size: 15px;
+                }
+            }
+            .btn-buy {
+                padding: 12px 23px;
+                font-size: 16px;
+            }
+        }
+        .custom-payment {
+            .payment-methods {
+                a {
+                    img {
+                        width: 35px;
+                    }
+                }
+            }
+        }
+    }
+    .shop-detls-tab {
+        .tabs {
+            li {
+                a {
+                    padding:14px 12px;
+                }
+            }
+        }
+        .tab_content {
+            border: 1px dashed #eeeeee;
+            padding: 25px 20px;
+            .tabs_item {
+                .shop-detls-tab-content {
+                    .additional-information {
+                        li {
+                            span {
+                                width: 40%;
+                            }
                         }
                     }
                 }
-
-                h3 {
-                    font-size: 20px;
-                }
-
-                .shop-review-form {
-                    .review-title {
-                        .rating {
-                            i {
-                                font-size: 12px; // Estrellas pequeñas
-                            }
-                        }
-
-                        .btn-right {
-                            position: inherit;
-                            font-size: 12px;
-                        }
+                .shop-detls-tab-content {
+                    h3 {
+                        font-size: 20px;
                     }
-
-                    .review-comments {
-                        .review-item {
-                            padding-right: 0;
-
-                            h3 {
-                                font-size: 18px;
-                            }
-
+                    .shop-review-form {
+                        .review-title {
                             .rating {
                                 i {
                                     font-size: 12px;
                                 }
                             }
-
-                            span {
-                                font-size: 14px;
-                            }
-
-                            .review-report-link {
+                            .btn-right {
                                 position: inherit;
-                                top: 0;
-                                font-size: 13px;
+                                font-size: 12px;
                             }
                         }
-                    }
-
-                    .review-form {
-                        form {
-                            .form-group {
-                                margin-bottom: 15px;
+                        .review-comments {
+                            .review-item {
+                                padding-right: 0;
+                                h3 {
+                                    font-size: 18px;
+                                }
+                                .rating {
+                                    i {
+                                        font-size: 12px;
+                                    }
+    
+                                }
+                                span {
+                                    font-size: 14px;
+                                }
+                                .review-report-link {
+                                    position: inherit;
+                                    top: 0;
+                                    font-size: 13px;
+                                }
+                               
+                            }
+                        }
+                        .review-form {
+                            form {
+                                .form-group {
+                                    margin-bottom: 15px;
+                                }
                             }
                         }
                     }
@@ -793,1067 +671,1283 @@
             }
         }
     }
-}
+    /* Shop Detls End */
 
-/* ===============================
-   Cart Page - Responsive (≤767px)
-   =============================== */
-
-.cart-area {
-    .cart-table {
-        text-align: center;
-
-        table {
-            thead {
-                tr {
-                    th {
-                        padding: 0 40px 10px;
-                        white-space: nowrap;
-                        font-size: 16px;
-
-                        &:first-child {
-                            text-align: left;
-                            padding-left: 0;
-                        }
-                    }
-
-                    td {
-                        white-space: nowrap;
-
-                        &:first-child {
-                            text-align: left;
-                            padding-left: 0;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .cart-buttons {
-        text-align: center;
-
-        .text-end {
-            text-align: center !important;
-            margin-top: 0;
-        }
-
-        .default-btn1 {
-            display: block;
+    /* Cart Page */
+    .cart-area {
+        .cart-table {
             text-align: center;
-            width: 100%; // Botón a ancho completo en móvil
+            table  {
+                thead {
+                    tr {
+                        th {
+                            padding: 0 40px 10px;
+                            white-space: nowrap;
+                            font-size: 16px;
+                            &:first-child {
+                                text-align: left;
+                                padding-left: 0;
+                            }
+                        }
+                        td {
+                            white-space: nowrap;
+                            &:first-child {
+                                text-align: left;
+                                padding-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .cart-buttons {
+            text-align: center;
+            .text-end {
+                text-align: center !important;
+                margin-top: 0;
+            }
+            .default-btn1 {
+                display: block;
+                text-align: center;
+                width: 100%;
+            }
+
+        }
+        .cart-totals {
+            padding: 20px;
+            margin-top: 35px;
+            h3 {
+                margin-bottom: 18px;
+                font-size: 20px;
+            }
+            ul {
+                li {
+                    font-size: 14px;
+                }
+            }
+            .default-btn1 {
+                display: block;
+                text-align: center;
+                width: 100%;
+            }
+        }
+        .cart-wraps {
+            .continue-shopping-box {
+                margin-bottom: 20px;
+            }
+        }
+        .cart-calc {
+            padding: 20px !important;
+            margin-top: 30px;
+            .shops-form {
+                h3 {
+                    font-size: 18px;
+                }
+                .form-group {
+                    select {
+                        width: 100%;
+                    }
+                }
+                .default-btn1 {
+                    width: 100%;
+                }
+            }
         }
     }
+    /* Cart Page End */
 
-    .cart-totals {
-        padding: 20px;
-        margin-top: 35px;
-
+    /* Checkout Page */
+    .checkout-area {
+        .user-option {
+            margin-bottom: 30px;
+            padding: 20px 10px;
+            span {
+                font-size: 16px;
+            }
+        }
+    }
+    .billing-details {
+        padding: 30px;
         h3 {
-            margin-bottom: 18px;
             font-size: 20px;
         }
-
-        ul {
-            li {
-                font-size: 14px;
+        .form-group {
+            margin-bottom: 15px;
+        }
+    }
+    .order-details {
+        .order-table {
+            padding:30px;
+            h3 {
+                font-size: 20px;
             }
         }
+        .payment-box {
+            padding: 30px;
+        }
+    }
+    /* Checkout Page */
 
-        .default-btn1 {
-            display: block;
-            text-align: center;
+    /* Instructor Page */
+    .instructor-img {
+        img {
             width: 100%;
         }
     }
-
-    .cart-wraps {
-        .continue-shopping-box {
-            margin-bottom: 20px;
-        }
-    }
-
-    .cart-calc {
-        padding: 20px !important;
-        margin-top: 30px;
-
-        .shops-form {
-            h3 {
-                font-size: 18px;
-            }
-
-            .form-group {
-                select {
-                    width: 100%; // Selector adaptado a 100%
-                }
-            }
-
-            .default-btn1 {
-                width: 100%; // Botón ajustado a ancho total
-            }
-        }
-    }
-}
-
-/* ===== Fin sección Shop y Cart ===== */
-
-
-   /* ===============================
-   Checkout Page - Responsive (≤767px)
-   =============================== */
-
-.checkout-area {
-    .user-option {
-        margin-bottom: 30px;
-        padding: 20px 10px;
-
-        span {
-            font-size: 16px; // Texto de opciones para usuarios (como login o registro)
-        }
-    }
-}
-
-.billing-details {
-    padding: 30px;
-
-    h3 {
-        font-size: 20px; // Título de la sección de facturación
-    }
-
-    .form-group {
-        margin-bottom: 15px; // Espaciado entre campos
-    }
-}
-
-.order-details {
-    .order-table {
-        padding: 30px;
-
+    .instructor-content {
         h3 {
-            font-size: 20px; // Título de resumen de orden
+            font-size: 24px;
         }
-    }
-
-    .payment-box {
-        padding: 30px; // Ajuste del contenedor de medios de pago
-    }
-}
-
-/* ===============================
-   Instructor Page - Responsive
-   =============================== */
-
-.instructor-img {
-    img {
-        width: 100%; // Imagen de instructor adaptada al ancho del dispositivo
-    }
-}
-
-.instructor-content {
-    h3 {
-        font-size: 24px; // Nombre del instructor
-    }
-
-    span {
-        font-size: 16px; // Cargo o especialidad
-    }
-}
-
-/* ===============================
-   Testimonio Individual - Responsive
-   =============================== */
-
-.single-testominal {
-    h3 {
-        font-size: 18px; // Nombre de la persona
-    }
-
-    span {
-        font-size: 14px; // Cargo o empresa
-    }
-
-    ul {
-        li {
-            font-size: 16px; // Texto o calificación
-        }
-    }
-}
-
-/* ===============================
-   Book Form - Responsive
-   =============================== */
-
-.book-form {
-    padding: 30px 20px; // Espaciado general
-}
-
-/* ===============================
-   Formulario de Registro/Login - Responsive
-   =============================== */
-
-.form-sign {
-    .form-group {
-        margin-bottom: 15px;
-
-        .form-control {
-            font-size: 14px;
-            height: 45px; // Campos de entrada más pequeños
-        }
-
-        .form-message {
-            font-size: 14px;
-        }
-
-        .form-check-label {
-            font-size: 14px;
-        }
-
-        .form-check-input {
-            width: 12px;
-            height: 12px; // Checkbox reducido
-        }
-    }
-
-    .login-btn {
-        font-size: 16px;
-        padding: 10px 30px;
-        width: 100%; // Botón ocupa todo el ancho
-    }
-}
-
-/* ===============================
-   Login Form - Responsive
-   =============================== */
-
-.login-form {
-    padding: 30px 20px;
-
-    .login-title {
-        h3 {
-            margin-bottom: 15px;
-            font-size: 20px; // Título reducido para móviles
-        }
-    }
-}
-
-    /* Login Form  End*/
-
-
-    /* ===============================
-   Register Form - Responsive
-   =============================== */
-.register-form {
-    padding: 30px; // Menor espacio en pantallas móviles
-
-    h3 {
-        font-size: 22px; // Tamaño del título ajustado
-        margin-bottom: 10px;
-    }
-}
-/* ===============================
-   Register Form End
-   =============================== */
-
-/* ===============================
-   Error Page - Responsive
-   =============================== */
-.error-area {
-    .error-content {
-        h1 {
-            font-size: 100px; // Error 404 u otro tipo reducido
-        }
-    }
-}
-/* ===============================
-   Error Page End
-   =============================== */
-
-/* ===============================
-   Single Content Page - Responsive
-   =============================== */
-.single-content {
-    h3 {
-        font-size: 20px; // Títulos más pequeños
-        margin-bottom: 10px;
-    }
-}
-/* ===============================
-   Single Content End
-   =============================== */
-
-/* ===============================
-   Courses Card Item - Responsive
-   =============================== */
-.courses-card-item {
-    .courses-card-img {
-        .courses-card-text {
-            margin-top: -52px;
-            font-size: 20px; // Precio o texto destacado del curso
-        }
-    }
-
-    .courses-card-content {
-        a {
-            h3 {
-                font-size: 20px; // Título del curso reducido
-            }
-        }
-    }
-}
-/* ===============================
-   Courses Card Item End
-   =============================== */
-
-/* ===============================
-   Pricing Card - Responsive
-   =============================== */
-.pricing-card {
-    .price-head {
-        padding: 40px 20px 30px 20px;
-
-        h2 {
-            font-size: 45px; // Precio principal más pequeño
-
-            sup {
-                font-size: 20px; // Moneda o símbolo reducido
-            }
-        }
-
         span {
-            font-size: 20px; // Subtítulo de plan
+            font-size: 16px;
         }
     }
+    /* Instructor Page End */
 
-    .price-list {
-        padding: 30px 20px;
-        text-align: center;
-
+    /* Single Testominal */
+    .single-testominal {
+        h3 {
+            font-size: 18px;
+        }
+        span {
+            font-size: 14px;
+        }
         ul {
             li {
-                font-size: 15px;
-                margin-bottom: 10px;
+                font-size: 16px;
             }
         }
     }
-}
-/* ===============================
-   Pricing Card End
-   =============================== */
+    /* Single Testominal End */
 
-/* ===============================
-   News Comments - Responsive
-   =============================== */
-.news-comments {
-    .news-comments-title {
-        h2 {
-            font-size: 24px; // Título de la sección de comentarios
+    .book-form {
+        padding: 30px 20px;
+    }
+    /* Form sing */
+    .form-sign {
+        .form-group {
+            margin-bottom: 15px;
+            .form-control {
+                font-size: 14px;
+                height: 45px;
+            }
+            .form-message {
+                font-size: 14px;
+            }
+            .form-check-label {
+                font-size: 14px;
+            }
+            .form-check-input {
+                width: 12px;
+                height: 12px;
+            }
         }
+        .login-btn {
+            font-size: 16px;
+            padding: 10px 30px;
+            width: 100%;
+        }
+    }
+    /* Form sing End */
+
+    /* Login Form */
+    .login-form {
+        padding: 30px 20px;
+        .login-title {
+            h3 {
+                margin-bottom: 15px;
+                font-size: 20px;
+            }
+        }
+    }
+    /* Login Form  End*/
+    
+    /* Register Form */
+    .register-form {
+        padding: 30px;
+        h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+    }
+    /* Register Form  End*/
+
+    /* Error Area */
+    .error-area {
+        .error-content {
+            h1 {
+                font-size: 100px;
+            }
+        }
+    }
+    /* Error Area End */
+   
+    /* Single Content */
+    .single-content {
+        h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    }
+    /* Single Content */
+    
+    /* Courses Card Item */
+    .courses-card-item {
+        .courses-card-img {
+            .courses-card-text {
+                margin-top: -52px;
+                font-size: 20px;
+            }
+        }
+        .courses-card-content {
+            a {
+                h3 {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    /* Courses Card Item End */
+
+    /* pricing card  */
+    .pricing-card {
+        .price-head {
+            padding: 40px 20px 30px 20px;
+            h2 {
+                font-size: 45px;
+                sup {
+                    font-size: 20px;
+                }
+            }
+            span {
+                font-size: 20px;
+            }
+        }
+        .price-list {
+            padding: 30px 20px;
+            text-align: center;
+            ul {
+                li {
+                    font-size: 15px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    /* pricing card End */
+    .news-comments {
+       
+        .news-comments-title {
+            h2 {
+                font-size: 24px;
+            }
+        }
+    }
+    .news-post h3 {
+        font-size: 16px;
     }
 }
 
-/* ===============================
-   News Post Titles - Responsive
-   =============================== */
-.news-post h3 {
-    font-size: 16px; // Títulos de noticias o artículos
-}
-
-    
-  
 @media only screen and (min-width : 576px) and (max-width : 767px) {
 
-    /* Home Page */
+    /* Home Page One Style */
+
     .top-header {
-        .header-left ul li {
-            font-size: 12px; // Reducido para mejor cabida
-            margin-right: 10px;
+        .header-left {
+            ul {
+                li {
+                    font-size: 12px;
+                    margin-right: 10px;
+                }
+            }
         }
-    }
-
-    .about-text .about-btn {
-        margin-top: 15px; // Espaciado para el botón
-    }
-
-    .service-area .owl-theme .owl-nav {
-        .owl-prev { left: 30%; }
-        .owl-next { right: 30%; }
-    }
-
-    .trainer-card {
-        a img {
-            width: 100%; // Imagen full width
-        }
-        .trainer-content.active {
-            margin-bottom: 0;
-            padding: 17px; // Compactar
-        }
-        .trainer-content.active .social-icon {
-            opacity: 0; // Oculta íconos sociales
-        }
-    }
-
-    .course-area .container-fluid {
-        max-width: 540px; // Ancho restringido
-    }
-
-    .news-card .news-content a h3 {
-        font-size: 20px; // Título ajustado
-    }
-
-    /* Home Page 2 */
-    .banner-content {
-        text-align: center;
-        margin: 0 auto;
-    }
-
-    .about-another .container-fluid,
-    .form-area {
-        max-width: 540px;
-        padding: 40px 30px;
-        margin: 0 auto;
-    }
-
-    .apply-another {
-        padding-top: 40px;
-        padding-bottom: 10px;
-    }
-
-    .testimonial-area .owl-theme .owl-nav {
-        .owl-prev { left: 38%; }
-        .owl-next { right: 38%; }
-    }
-
-    .course-card .couser-delt {
-        top: 18.7%;
-        padding: 40px 20px;
-        max-width: 450px;
-    }
-
-    /* FAQ Section */
-    .faq-area .accordion .accordion-item .accordion-title {
-        font-size: 16px;
-        padding: 15px;
-        i {
-            right: 20px;
-            font-size: 25px;
-        }
-    }
-
-    .faq-form {
-        padding: 30px;
-    }
-
-    /* Cart / Checkout */
-    .cart-area .cart-wraps .continue-shopping-box {
-        margin-bottom: 0;
-    }
-
-    .checkout-area .user-option {
-        padding: 20px 30px;
-        margin-bottom: 30px;
-    }
-}
-
-@media only screen and (min-width : 768px) and (max-width : 991px) {
-
-    /* Default spacing and typography adjustments */
-    body { font-size: 15px; }
-    .ptb-100, .pt-100, .pt-70 { padding-top: 50px; }
-    .pb-70 { padding-bottom: 20px; }
-    .pt-60 { padding-top: 30px; }
-    .pt-50 { padding-top: 0; }
-    .pt-40 { padding-top: 30px; }
-    .ml-50 { margin-left: 0; }
-    .ml-20 { margin-left: 15px; }
-    .mb-50 { margin-bottom: 30px; }
-
-    /* Botones adaptados */
-    .default-btn1, .default-btn3 { padding: 10px 25px; font-size: 16px; }
-    .default-btn2, .default-btn4 { padding: 10px 30px; font-size: 16px; }
-
-    /* Títulos adaptados */
-    .scetion-title {
-        span { font-size: 18px; }
-        h2 { font-size: 26px; }
-    }
-
-    /* Home Page */
-    .top-header {
-        text-align: center;
-        .header-left ul li {
-            font-size: 12px;
-            margin-right: 20px;
-            i { font-size: 14px; }
-            &::before { display: none; }
-        }
-    }
-    .top-header .social-icon,
-    .other-side,
-    .icon-shape-1,
-    .icon-shape-2,
-    .icon-shape-3,
-    .icon-shape-4,
-    .course-dots,
-    .course-dots-2 {
-        display: none;
-    }
-
-    .mobile-nav .logo img {
-        max-width: 110px;
-    }
-
-    .mean-container .mean-bar {
-        background-color: #fff;
-        padding: 0;
-    }
-
-    .home-slider .slider-item {
-        height: 100%;
-        padding: 130px 0 90px;
-        .slider-text {
-            h1 { font-size: 30px; }
-            .slider-btn { margin: 0 0 10px; }
-            p { margin-top: 14px; }
-        }
-    }
-    .home-slider .owl-theme .owl-dots {
-        right: 2%;
     }
 
     .about-text {
-        margin-bottom: 30px;
-        .scetion-title p {
-            float: left;
-            margin-bottom: 20px;
+        .about-btn {
+            margin-top: 15px;
         }
     }
 
     .service-area {
-        margin-bottom: 50px;
-        .owl-theme .owl-nav {
-            bottom: 15px;
-            left: 0;
-            right: 0;
-            .owl-prev { left: 35%; }
-            .owl-next { right: 35%; }
+        .owl-theme  {
+            .owl-nav {
+                .owl-prev {
+                    position: absolute;
+                    left: 30%;
+                }
+                .owl-next {
+                    position: absolute;
+                    right: 30%;
+                }
+            }
         }
     }
 
+    .trainer-card {
+        a {
+            display: block;
+            img {
+                width: 100%;
+            }
+        }
+        .trainer-content {
+            &.active {
+               margin-bottom: 0;
+               padding: 17px;
+            }
+            &.active .social-icon {
+                opacity: 0;
+            }
+        }
+    }
+   
+    .course-area {
+        .container-fluid {
+            max-width: 540px;
+        }
+    }
+    .news-card {
+        .news-content {
+            a {
+                h3 {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    
+    /* Home Page One End */
+
+    /* Home Page Two */
+    .banner-content { 
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about-another {
+        .container-fluid {
+            max-width: 540px;
+        }
+    }
+    .apply-another {
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+    .testimonial-area {
+        .owl-theme {
+            .owl-nav {
+                .owl-prev {
+                    left: 38%;
+                }
+                .owl-next {
+                    right: 38%;
+                }
+            }
+        }
+    }
+    .course-card {
+        .couser-delt {
+            top: 18.7%;
+            padding: 40px 20px;
+            max-width: 450px;
+        }
+    }
+   
+    /* Home Page Two End */
+    .form-area {
+        padding:40px 30px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    /* Faq Page */
+    .faq-area {
+        .accordion {
+            .accordion-item {
+                .accordion-title {
+                    font-size: 16px;
+                    padding: 15px 15px;
+                    i {
+                        right: 20px;
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+    .faq-form {
+        padding:30px;
+    }
+    /* Faq Page End */
+    .cart-area {
+        .cart-wraps {
+            .continue-shopping-box {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .checkout-area {
+        .user-option {
+            margin-bottom: 30px;
+            padding: 20px 30px;
+        }
+    }
+   
+}
+
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    /* Default CSS */
+    body {
+        font-size: 15px;
+    }
+    .ptb-100 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .pt-94 {
+        padding-top: 44px;
+    }
+    .pt-70 {
+        padding-top: 50px;
+    }
+    .pb-70 {
+        padding-bottom: 20px;
+    }
+    .pt-60 {
+        padding-top: 30px;
+    }
+    .pt-50 {
+        padding-top: 0px;
+    }
+    .pt-40 {
+        padding-top: 30px;
+    }
+    .pt-100 {
+        padding-top: 50px;
+    }
+    .mb-50 {
+        margin-bottom: 30px;
+    }
+    .ml-20 {
+        margin-left: 15px;
+    }
+    .ml-50 {
+        margin-left: 0px;
+    }
+    .default-btn1 {
+        font-size: 16px;
+        padding: 10px 25px;
+    }
+    .default-btn2 {
+        font-size: 16px;
+        padding: 10px 30px;
+    }
+    .default-btn3 {
+        font-size: 16px;
+        padding: 10px 25px;
+    }
+    .default-btn4 {
+        font-size: 16px;
+        padding: 10px 30px;
+    }
+    .scetion-title {
+        span {
+            font-size: 18px;
+        }
+        h2 {
+            font-size: 26px;
+        }
+    }
+    /* Default CSS End */
+
+    /* Home Page One */
+    .top-header {
+        text-align: center;
+        .header-left {
+            ul {
+                li {
+                    font-size: 12px;
+                    margin-right: 20px;
+                    i {
+                        font-size: 14px;
+                    }
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }   
+    }
+    .top-header .social-icon {
+        display: none;
+    }
+
+    .mobile-nav {
+        .logo {
+            img {
+                max-width: 110px;
+            }
+        }
+    }
+    .mean-container{
+        .mean-bar {
+            background-color: #fff;
+            padding: 0;
+        }
+    }
+    .other-side {
+        display: none;
+    }
+
+    .home-slider {
+        .slider-item {
+            height: 100%;
+            padding-top: 130px;
+            padding-bottom: 90px;
+            .slider-text {
+                h1 {
+                    font-size: 30px;
+                }
+                .slider-btn {
+                    margin-top: 0px;
+                    margin-bottom: 10px;
+                }
+                p {
+                    margin-top: 14px;
+                }
+            }
+        }
+        .owl-theme {
+            .owl-dots {
+                right: 2%;
+            }
+        }
+    }
+
+    .about-text {
+        margin-bottom: 30px;
+        .scetion-title {
+            p {
+                float: left;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .icon-shape-1 {
+        display: none;
+    }
+    .icon-shape-2 {
+        display: none;
+    }
+
+    .service-area {
+        margin-bottom: 50px;
+        .owl-theme  {
+            .owl-nav {
+                position: absolute;
+                margin-top: 0;
+                margin: 0 20px;
+                top: unset;
+                bottom: 15px;
+				transform: translateY(0px);
+                left: 0;
+                right: 0;
+                .owl-prev {
+                    position: absolute;
+                    left: 35%;
+                }
+                .owl-next {
+                    position: absolute;
+                    right: 35%;
+                }
+            }
+        }
+    }
     .service-item {
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
         .service-head h3 {
             font-size: 20px;
         }
     }
 
     .apply-text {
-        padding: 50px 0 56px;
-        span { font-size: 18px; }
-        h2 { font-size: 26px; }
+        padding-top: 50px;
+        padding-bottom: 56px;
+        span {
+            font-size: 18px;
+        }
+        h2 {
+            font-size: 26px;
+        }
     }
-
-    .course-area .container-fluid {
-        max-width: 720px;
+    
+    .course-area {
+        .container-fluid {
+            max-width: 720px;
+        }
     }
-
+    .course-item {
+        max-width: unset;
+        margin-left: unset;
+    }
     .course-text {
-        span { font-size: 18px; }
+        span {
+            font-size: 18px;
+        }
         h2 {
             font-size: 26px;
             margin-bottom: 10px;
         }
-        .course-btn { margin-top: 20px; }
+        .course-btn {
+            margin-top: 20px;
+        }
     }
-
     .course-img {
-        margin: 0;
-    }
-
-    .product-item a img,
-    .gallery-item .gallery-text,
-    .trainer-card a img {
-        width: 100%;
-    }
-
-    .trainer-card .trainer-content.active {
+        margin-left: 0;
         margin-bottom: 0;
-        padding: 17px;
     }
-    .trainer-card .trainer-content.active .social-icon {
-        opacity: 0;
-    }
-
-    .footer-conten-title a img {
-        max-width: 110px;
-    }
-
-    .footer-bottom {
-        text-align: center;
-        .bottom-text { float: none; }
-    }
-}
-
-    /* Home End */
-
-    @media only screen and (min-width : 768px) and (max-width : 991px) {
-
-    /* Home Page 2 */
     
-    .banner-area {
-        position: relative;
-        height: 100%;
-        padding-top: 100px; // Reduce espacio en pantallas medianas
-        padding-bottom: 50px;
+    .icon-shape-3 {
+        display: none;
+    }
+    .icon-shape-4 {
+        display: none;
+    }
+    .course-dots {
+        display: none;
+    }
+    .course-dots-2 {
+        display: none;
     }
 
-    .banner-content {
-        padding-top: 0;
-        text-align: center;
-        margin: 0 auto;
-
-        h1 {
-            font-size: 30px; // Título más compacto
-        }
-
-        p {
-            margin-top: 10px;
-        }
-
-        .banner-btn {
-            margin-top: 15px;
-
-            .banner-btn1,
-            .banner-btn2 {
-                font-size: 16px;
-                padding: 10px 18px or 23px;
+    .product-item {
+        a {
+            display: block;
+            img {
+                max-width: 100%;
             }
         }
     }
 
+    .gallery-item {
+        .gallery-text {
+            text-align: center;
+        }
+    }
+    
+    .trainer-card {
+        a {
+            display: block;
+            img {
+                width: 100%;
+            }
+        }
+        .trainer-content {
+            &.active {
+               margin-bottom: 0;
+               padding: 17px;
+            }
+            &.active .social-icon {
+                opacity: 0;
+            }
+        }
+    }
+
+    .footer-conten-title {
+        a {
+            img {
+                max-width: 110px;
+            }
+        }
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        .bottom-text {
+            float: none;
+        }
+    }
+    /* Home Page One End */
+
+    /* Home Page Two */
+    
+    .banner-area {
+        position: relative;
+        height: 100%;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    .banner-content {
+        padding-top: 0;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        h1 {
+            font-size: 30px;
+        }
+        p {
+            margin-top: 10px;
+        }
+        .banner-btn {
+            margin-top: 15px;
+            .banner-btn1 {
+                font-size: 16px;
+                padding: 10px 18px;
+            }
+            .banner-btn2 {
+                font-size: 16px;
+                padding: 10px 23px;
+            }
+        }
+    }
     .banner-img {
         text-align: right;
         margin-top: 30px;
-
         img {
             height: auto;
         }
     }
-
-    .about-another .container-fluid {
-        max-width: 720px; // Ancho de sección contenido
+    .about-another {
+        .container-fluid {
+            max-width: 720px;
+        }
     }
-
     .about-content {
         margin-left: 0;
-
         span {
             font-size: 18px;
         }
-
         h2 {
             font-size: 26px;
         }
     }
-
-    .icon-shape-5,
-    .icon-shape-6 {
-        display: none; // Oculta decoraciones visuales
+    .icon-shape-5 {
+        display: none;
     }
-
+    .icon-shape-6 {
+        display: none;
+    }
     .visit-btn {
         margin-top: 0;
     }
-
     .course-card {
         text-align: center;
-
         .couser-delt {
-            top: 65px; // Ajuste vertical del detalle
+            top: 65px;
         }
     }
 
     .testimonial-area {
         margin-bottom: 40px;
-
-        .owl-theme .owl-nav {
-            position: absolute;
-            bottom: 30px;
-            left: 0;
-            right: 0;
-            margin: 10px;
-            z-index: 999;
-
-            .owl-prev { left: 40%; }
-            .owl-next { right: 40%; }
+        .owl-theme {
+            .owl-nav {
+                z-index: 999;
+                position: absolute;
+                margin-top: 0;
+                left: 0;
+                right: 0;
+                margin: 10px;
+                bottom: 30px;
+                .owl-prev {
+                    left: 40%;
+                }
+                .owl-next {
+                    right: 40%;
+                }
+            }
         }
     }
-
     .testimonial-img img {
         max-width: 320px;
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
     }
-
     .testimonial-item {
         text-align: center;
-        margin: 0 0 30px;
-
+        margin-top: 0;
+        margin-bottom: 30px;
         p {
             margin-bottom: 20px;
         }
     }
+    /* Home Page Two End */
 
     /* Inner Banner */
-    .inner-banner .inner-title {
-        padding-top: 150px;
-        padding-bottom: 90px;
-
-        h3 {
-            font-size: 35px;
+    .inner-banner {
+        .inner-title {
+            padding-top: 150px;
+            padding-bottom: 90px;
+            position: relative;
+            h3 {
+                font-size: 35px;
+            }
         }
     }
-
-    .common-dtel-text h2 {
-        font-size: 24px;
+    .common-dtel-text {
+        h2 {
+            font-size: 24px;
+        }
     }
-
-    .common-offer .common-offer-text .call-btn {
-        padding: 10px 35px;
-        font-size: 15px;
+    .common-offer {
+        .common-offer-text {
+            .call-btn {
+                padding: 10px 35px;
+                font-size: 15px;
+            }
+        }
     }
+    /* Inner Banner End */
 
     /* Contact Page */
-    .contact-title h2 {
-        font-size: 26px;
-        text-align: center;
-        max-width: 100%;
+    .contact-title {
+        h2 {
+            font-size: 26px;
+            max-width: 100%;
+            text-align: center;
+        }
     }
-
-    .contact-img img {
-        height: auto;
+    .contact-img {
+        img {
+            height: auto;
+        }
     }
-
     .form-area {
-        padding: 50px 30px;
-        margin: 0 auto;
+        padding:50px 30px;
+        margin-right: auto;
+        margin-left: auto;
     }
-
-    .form-section h2 {
-        font-size: 26px;
+    .form-section {
+        h2 {
+            font-size: 26px;
+        }
     }
+    /* Contact Page End */
 
-    /* Widget Categories */
-    .widget-categories {
+     /* Widget Categories */
+     .widget-categories {
         h2 {
             font-size: 26px;
             margin-bottom: 15px;
         }
-
-        ul li a {
-            font-size: 16px;
-        }
-    }
-
-    /* Cart Page */
-    .cart-area .cart-calc .shops-form .form-group select {
-        width: 100%; // Select ocupa todo el ancho
-    }
-
-    /* Checkout Page */
-    .checkout-area .user-option {
-        margin-bottom: 30px;
-    }
-
-    /* Instructor Image */
-    .instructor-img img {
-        width: 100%;
-    }
-
-    /* Single Testimonial */
-    .single-testominal p {
-        max-width: 450px;
-        margin: 0 auto;
-    }
-
-    /* Courses Card Item */
-    .courses-card-item {
-        .courses-card-img .courses-card-text {
-            margin-top: -52px;
-            font-size: 20px;
-        }
-
-        .courses-card-content a h3 {
-            font-size: 20px;
-        }
-    }
-
-    /* Pricing Card */
-    .pricing-card {
-        .price-head h2 {
-            font-size: 55px;
-        }
-
-        .price-list {
-            padding: 50px 30px;
-
-            ul li {
-                font-size: 16px;
+        ul {
+            li {
+                a {
+                    font-size: 16px;
+                }
             }
         }
     }
+    /* Widget Categories End */
 
-    /* News Comments */
-    .news-comments .news-comments-title h2 {
-        font-size: 26px;
+    /* Cart Page */
+    .cart-area {
+        .cart-calc {
+            .shops-form {
+                .form-group {
+                    select {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    /* Cart Page */
+
+    /* Checkout Page */
+    .checkout-area {
+        .user-option {
+            margin-bottom: 30px;
+        }
+    }
+    /* Checkout Page End */
+
+    .instructor-img {
+        img {
+            width: 100%;
+        }
     }
 
-    .news-post h3 {
-        font-size: 16px;
+    .single-testominal {
+       p {
+           max-width: 450px;
+           margin-left: auto;
+           margin-right: auto;
+        }
+    }
+    
+    /* Courses Card Item */
+    .courses-card-item {
+        .courses-card-img {
+            .courses-card-text {
+                margin-top: -52px;
+                font-size: 20px;
+            }
+        }
+        .courses-card-content {
+            a {
+                h3 {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    /* Courses Card Item End */
+
+    /* pricing card  */
+    .pricing-card {
+        .price-head {
+            h2 {
+                font-size: 55px;
+            }
+        }
+        .price-list {
+            padding: 50px 30px;
+            ul {
+               
+                li {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    /* pricing card End */
+    .news-comments {
+        .news-comments-title {
+            h2 {
+                font-size: 26px;
+            }
+        }
+    }
+    .news-post {
+        h3 {
+            font-size: 16px;
+        }
     }
 }
 
 @media only screen and (min-width : 992px) and (max-width : 1199px) {
-
-    /* HOME PAGE ONE */
-
+    /* Home Page One */
     .top-header {
-        .header-left ul li {
-            font-size: 12px;
-            margin-right: 30px;
-
-            &::before {
-                left: -15px; // Ajusta posición del separador
+        .header-left {
+            ul {
+                li {
+                    font-size: 12px;
+                    margin-right: 30px;
+                    &::before {
+                        left: -15px;
+                    }
+                }
             }
         }
-
-        .social-icon ul li a {
-            font-size: 14px; // Íconos sociales más legibles
+        .social-icon {
+            ul {
+                li {
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
         }
     }
-
-    .main-nav nav .navbar-nav .nav-item a {
-        text-transform: capitalize;
-        color: #373737;
-        font-weight: 400;
-        font-size: 14px;
-        margin: 0 9px;
-
-        i {
-            font-size: 8px;
+    .main-nav {
+        nav  {
+            .navbar-nav {
+                .nav-item {
+                    a {
+                        text-transform: capitalize;
+                        color: #373737;
+                        font-weight: 400;
+                        font-size: 14px;
+                        margin-left: 9px;
+                        margin-right: 9px;
+                        i {
+                            font-size: 8px;
+                        }
+                    }
+                }
+            }
         }
     }
 
     .other-side {
-        .search-area .search-item {
-            top: 12px;
-
-            i {
-                top: -5px;
-            }
-
-            .close-btn.active {
-                top: -2px;
+        .search-area {
+            .search-item {
+                top: 12px;
+                i {
+                    top: -5px;
+                }
+                .close-btn {
+                    &.active {
+                        top: -2px;
+                    }
+                }
             }
         }
-
-        .cart-area .cart-icon {
-            top: 5px;
-            font-size: 15px;
+        .cart-area {
+            .cart-icon {
+                top: 5px;
+                font-size: 15px;
+            }
         }
-
         .search-text {
-            margin-right: 0;
+            margin-right: 0px;
         }
     }
 
-    .service-area .owl-theme .owl-nav {
-        .owl-prev { left: -30px; }
-        .owl-next { right: -30px; }
+    .service-area {
+        .owl-theme  {
+            .owl-nav {
+                .owl-prev {
+                    position: absolute;
+                    left: -30px;
+                }
+                .owl-next {
+                    position: absolute;
+                    right: -30px;
+                }
+            }
+        }
     }
-
-    .course-area .container-fluid {
-        max-width: 960px;
+    .course-area {
+        .container-fluid {
+            max-width: 960px;
+        }
     }
-
     .course-dots-2 {
-        bottom: 30px; // Posición decorativa
+        bottom: 30px;
     }
-
     .icon-shape-3 {
         top: -25px;
     }
-
-    .product-item .product-cotent {
-        .add-product {
-            width: 45px;
-            height: 45px;
-            line-height: 45px;
+    .product-item {
+        .product-cotent {
+            .add-product {
+                width: 45px;
+                height: 45px;
+                line-height: 45px;
+            }
+            .product-text {
+                a {
+                    h3 {
+                        font-size: 18px;
+                        width: 200px;
+                    }
+                }
+            } 
         }
-
-        .product-text a h3 {
-            font-size: 18px;
-            width: 200px;
-        }
-    }
-
-    .gallery-item .gallery-text {
-        text-align: center;
-
-        a i {
-            position: inherit; // Evita posición absoluta
+    } 
+    .gallery-item {
+        .gallery-text {
+            text-align: center;
+            a {
+                i {
+                    position: inherit;
+                }
+            }
         }
     }
 
     .footer-list {
         h3 {
             font-size: 20px;
-
             &::before {
                 height: 20px;
             }
         }
-
-        ul li {
-            font-size: 15px;
+        ul {
+            li {
+                font-size: 15px;
+            }
         }
     }
-
     .footer-bottom {
-        .bottom-list ul li {
-            display: inline-block;
-            margin-right: 20px;
-            font-size: 14px;
+        .bottom-list {
+            ul {
+                li {
+                    display: inline-block;
+                    margin-right: 20px;
+                    font-size: 14px;
+                }
+            }
         }
-
         .bottom-text {
             float: right;
-
             p {
                 font-size: 14px;
             }
         }
     }
+   
+    /* Home Page One End */
 
-    /* HOME PAGE TWO */
-
+    /* Home Page Two */
     .nav-top {
         position: fixed;
         width: 100%;
     }
-
-    .other-side .modal-menu {
-        margin-top: 10px;
-
-        a {
-            font-size: 16px;
-            width: 30px;
-            height: 30px;
-            line-height: 30px;
+    .other-side {
+        .modal-menu {
+            margin-top: 10px;
+            a {
+                font-size: 16px;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+            }
         }
     }
-
     .banner-content {
         max-width: 450px;
         margin-left: auto;
-
-        h1 {
-            font-size: 40px;
+    }
+    .banner-content h1 {
+        font-size: 40px;
+    }
+    .service-item {
+        .service-head {
+            h3 {
+                font-size: 19px;
+            }
         }
     }
-
-    .service-item .service-head h3 {
-        font-size: 19px;
+    
+    .course-card {
+        .couser-delt {
+            top: 25px;
+        }
     }
-
-    .course-card .couser-delt {
-        top: 25px;
+    .testimonial-area {
+        .owl-theme  {
+            .owl-nav {
+                z-index: 999;
+                position: absolute;
+                bottom: 20px;
+                margin-top: 0;
+                left: 230px;
+                margin: 10px;
+            }
+        }
     }
-
-    .testimonial-area .owl-theme .owl-nav {
-        z-index: 999;
-        position: absolute;
-        bottom: 20px;
-        margin: 10px;
-        left: 230px;
+    .testimonial-img {
+        img {
+            margin-left: 70px;
+        }
     }
+    /* Home Page Two End */
 
-    .testimonial-img img {
-        margin-left: 70px;
-    }
-
-    /* CONTACT PAGE */
-
+    /* Contact page */
     .contact-item {
         padding: 50px 7px;
-
         h3 {
             font-size: 17px;
         }
     }
+    /* Contact page  End */
 
-    /* PRICING CARD */
-
-    .pricing-card .price-list {
-        padding: 50px 25px;
-
-        ul li {
-            font-size: 16px;
+    /* pricing card  */
+    .pricing-card {
+        .price-list {
+            padding: 50px 25px;
+            ul {
+               
+                li {
+                    font-size: 16px;
+                }
+            }
         }
     }
-
-    /* WIDGET CATEGORIES */
-
-    .widget-categories ul li a {
-        font-size: 16px;
+    /* pricing card End */
+    .widget-categories {
+        ul {
+            li {
+                a {
+                    font-size: 16px;
+                }
+            }
+        }
     }
 }
 
-
-.home-slider {
-    .owl-theme .owl-dots {
-        right: 18%; // Desplaza dots hacia la izquierda
+@media only screen and (min-width : 1800px) {
+    /* Home Page One */
+    .home-slider {
+        width: 100%;
+        .owl-theme {
+            .owl-dots {
+                right: 18%;
+            }
+        }
     }
+    .course-dots {
+        right: 100px;
+    }
+    .course-dots-2 {
+        left: 100px;
+    }
+    .course-img {
+        margin-left: 70px;
+    }
+    .course-img-2 {
+        margin-right: 70px;
+        float: right;
+    }
+    .icon-shape-3 {
+        left: 15%;
+    }
+    .icon-shape-4 {
+        right: 15%;
+    }
+    /* Home Page One End */
+
+    /* Home Page Two */
+    .about-img2 {
+        float: right;
+    }
+    .icon-shape-6 {
+        left: 30%;
+    }
+    .apply-another {
+        background-position: inherit;
+    }
+    /* Home Page Two End */
+
 }
-.course-dots        { right: 100px; }
-.course-dots-2      { left: 100px; }
-.course-img         { margin-left: 70px; }
-.course-img-2       { margin-right: 70px; float: right; }
-.icon-shape-3       { left: 15%; }
-.icon-shape-4       { right: 15%; }
-
-.about-img2         { float: right; }
-.icon-shape-6       { left: 30%; }
-.apply-another      { background-position: inherit; }
-
-.container {
-    max-width: 1170px !important;
+@media only screen and (min-width : 1200px) {
+    .container{
+        max-width: 1170px !important;
+    } 
 }
 
-
-.mobile-nav {
-    display: block;
-    position: relative;
-
-    .logo {
+/* Mobile Menu Responsive Style */
+@media only screen and (max-width: 991px) {
+    .mobile-nav {
+        display: block;
+        position: relative;
+    }
+    .mobile-nav .logo {
+		text-decoration: none;
         position: absolute;
         top: 9px;
-        left: 15px;
-        font-size: 20px;
         z-index: 999;
+        left: 15px;
         color: #fff;
         font-weight: bold;
         text-transform: uppercase;
+        font-size: 20px;
     }
-}
-.mean-container .mean-bar {
-    background-color: #fff;
-    padding: 0;
-}
-.mean-container a.meanmenu-reveal {
-    padding: 20px 15px 0 0;
-}
-.mobile-nav nav .navbar-nav .nav-item a i {
-    display: none;
-}
-.main-nav {
-    display: none !important;
+    .mean-container .mean-bar {
+        background-color: #fff;
+        padding: 0;
+    }
+    .mean-container a.meanmenu-reveal {
+        padding: 20px 15px 0 0;
+    }
+    .mobile-nav nav .navbar-nav .nav-item a i {
+        display: none;
+    }
+    .main-nav {
+        display: none !important;
+    }
 }

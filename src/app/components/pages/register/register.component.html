@@ -1,86 +1,136 @@
 <app-navbar-style-one></app-navbar-style-one>
 
 <div class="inner-banner bg-shape3 bg-color3">
-    <div class="d-table">
-        <div class="d-table-cell">
-            <div class="conatiner">
-                <div class="inner-title text-center">
-                    <h3>Crear Cuenta</h3>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><i class="fas fa-chevron-right"></i></li>
-                        <li>Registro</li>
-                    </ul>
-                </div>
-            </div>
+  <div class="d-table">
+    <div class="d-table-cell">
+      <div class="conatiner">
+        <div class="inner-title text-center">
+          <h3>Crear Cuenta</h3>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><i class="fas fa-chevron-right"></i></li>
+            <li>Registro</li>
+          </ul>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 
 <div class="register-area ptb-100">
-    <div class="container">
-        <div class="register-form">
-            <h3>Regístrate</h3>
-            <div class="form-sign">
-                <form>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6">
-                            <div class="form-group">
-                                <label>Nombre</label>
-                                <input type="text" class="form-control" placeholder="Tu nombre">
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-md-6">
-                            <div class="form-group">
-                                <label>Apellido</label>
-                                <input type="text" class="form-control" placeholder="Tu apellido">
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-md-6">
-                            <div class="form-group">
-                                <label>Correo electrónico</label>
-                                <input type="email" class="form-control" placeholder="ejemplo@correo.com">
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-md-6">
-                            <div class="form-group">
-                                <label>Teléfono</label>
-                                <input type="tel" class="form-control" placeholder="+56 9 1234 5678">
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-md-6">
-                            <div class="form-group">
-                                <label>Asunto (opcional)</label>
-                                <input type="text" class="form-control" placeholder="Motivo de registro (opcional)">
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-md-6">
-                            <div class="form-group">
-                                <label>Contraseña</label>
-                                <input type="password" class="form-control" placeholder="Crea una contraseña segura">
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12 col-md-12">
-                            <div class="form-group">
-                                <label>Mensaje (opcional)</label>
-                                <textarea name="message" class="form-message textarea-hight" cols="30" rows="5" placeholder="¿Quieres contarnos algo más? (opcional)"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12 col-md-12 text-center">
-                            <button type="submit" class="default-btn1 btn-two">Registrarme</button>
-                        </div>
-                    </div>
-                </form>
+  <div class="container">
+    <div class="register-form">
+      <h3>Regístrate</h3>
+      <div class="form-sign">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="col-lg-6 col-md-6">
+              <div class="form-group">
+                <label>Nombre</label>
+                <input formControlName="firstName" type="text" class="form-control" placeholder="Tu nombre">
+                <div *ngIf="isInvalid('firstName')" class="text-danger">
+                  <small>El nombre es obligatorio.</small>
+                </div>
+              </div>
             </div>
 
-            <p>¿Ya tienes una cuenta? <a routerLink="/login">Inicia sesión</a></p>
-        </div>
+            <div class="col-lg-6 col-md-6">
+              <div class="form-group">
+                <label>Apellido</label>
+                <input formControlName="lastName" type="text" class="form-control" placeholder="Tu apellido">
+                <div *ngIf="isInvalid('lastName')" class="text-danger">
+                  <small>El apellido es obligatorio.</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+              <div class="form-group">
+                <label>Correo electrónico</label>
+                <input formControlName="email" type="email" class="form-control" placeholder="ejemplo@correo.com">
+                <div *ngIf="isInvalid('email')" class="text-danger">
+                  <small *ngIf="getError('email', 'required')">El correo es obligatorio.</small>
+                  <small *ngIf="getError('email', 'email')">Debe tener formato válido.</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+              <div class="form-group">
+                <label>Teléfono</label>
+                <input formControlName="phone" type="tel" class="form-control" placeholder="+56 9 1234 5678">
+                <div *ngIf="isInvalid('phone')" class="text-danger">
+                  <small>El teléfono es obligatorio.</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+              <div class="form-group">
+                <label>Dirección (opcional)</label>
+                <input formControlName="address" type="text" class="form-control" placeholder="Dirección de despacho">
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+              <div class="form-group">
+                <label>Fecha de nacimiento</label>
+                <input formControlName="birthDate" type="date" class="form-control">
+                <div *ngIf="isInvalid('birthDate')" class="text-danger">
+                  <small *ngIf="getError('birthDate', 'required')">La fecha de nacimiento es obligatoria.</small>
+                  <small *ngIf="getError('birthDate', 'underage')">Debes tener al menos 13 años.</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+              <div class="form-group">
+                <label>Contraseña</label>
+                <input formControlName="password" type="password" class="form-control" placeholder="Crea una contraseña segura">
+                <div *ngIf="isInvalid('password')" class="text-danger">
+                  <small *ngIf="getError('password', 'required')">La contraseña es obligatoria.</small>
+                  <small *ngIf="getError('password', 'pattern')">
+                    Debe tener entre 6 y 18 caracteres, incluir al menos una mayúscula, un número y un símbolo.
+                  </small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+              <div class="form-group">
+                <label>Confirmar contraseña</label>
+                <input formControlName="confirmPassword" type="password" class="form-control" placeholder="Repite tu contraseña">
+                <div *ngIf="isInvalid('confirmPassword')" class="text-danger">
+                  <small *ngIf="getError('confirmPassword', 'required')">Debes repetir la contraseña.</small>
+                </div>
+                <div *ngIf="registerForm.hasError('mismatch')" class="text-danger">
+                  <small>Las contraseñas no coinciden.</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12">
+              <div class="form-group">
+                <label>Selecciona tu rol</label>
+                <select formControlName="role" class="form-control">
+                  <option value="user">Usuario</option>
+                  <option value="admin">Administrador</option>
+                </select>
+                <div *ngIf="isInvalid('role')" class="text-danger">
+                  <small>Debes seleccionar un rol.</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12 text-center">
+              <button type="submit" class="default-btn1 btn-two">Registrarme</button>
+              <button type="button" class="default-btn1 btn-two ms-2" (click)="onReset()">Limpiar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <p>¿Ya tienes una cuenta? <a routerLink="/login">Inicia sesión</a></p>
     </div>
+  </div>
 </div>

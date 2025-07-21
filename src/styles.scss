@@ -1,19 +1,17 @@
-/* ================================================
-   Variables globales para colores y tipografías
-================================================= */
-$body-font: 'Josefin Sans', sans-serif;         // Fuente principal del cuerpo del sitio
-$paragraph-font: 'Roboto', sans-serif;          // Fuente utilizada para párrafos
-$main-color: #ff6464;                           // Color principal (por defecto rojo suave)
-$color-blue: #64acff;                           // Color secundario (celeste)
-$body-color: #373e58;                           // Color de texto principal
-$paragraph-color: #565e7c;                      // Color específico para párrafos
-$color-black: #373737;                          // Negro personalizado
-$head-color: #616161;                           // Color para títulos o encabezados
-$color-white: #ffffff;                          // Blanco puro
+/* You can add global styles to this file, and also import other style files */
 
-/* ================================================
-   Estilos generales para elementos base
-================================================= */
+/*================================================
+Default CSS
+=================================================*/
+$body-font: 'Josefin Sans', sans-serif;
+$paragraph-font: 'Roboto', sans-serif;
+$main-color: #ff6464;
+$color-blue: #64acff;
+$body-color: #373e58;
+$paragraph-color: #565e7c;
+$color-black: #373737;
+$head-color: #616161;
+$color-white: #ffffff;
 
 body {
     font-size: 16px;
@@ -21,83 +19,111 @@ body {
     color: $body-color;
     font-family: $body-font;
 }
-
 a {
     display: inline-block;
+    -webkit-transition: all 0.5s;
     transition: all 0.5s;
     text-decoration: none;
 
     &:hover, &:focus {
-        text-decoration: none; // Remueve subrayado al pasar o enfocar
+        text-decoration: none;
     }
 }
-
 button {
     margin: 0;
     padding: 0;
     outline: 0;
 
     &:focus {
-        outline: 0; // Quita contorno al enfocar
+        outline: 0 ;
     }
 }
-
-h1, h2, h3, h4, h5, h6 {
+ h1, h2, h3, h4, h5, h6 {
     color: $body-color;
     font-weight: 600;
     line-height: 1.3;
 }
-
 p {
     font-family: $paragraph-font;
     color: $paragraph-color;
     font-weight: 400;
 }
-
-/* ================================================
-   Clases utilitarias para espaciado, color y bordes
-================================================= */
-
-.bg-f9f9f9 { background-color: #f9f9f9; }
-
-.d-table { width: 100%; height: 100%; }
-.d-table-cell { display: table-cell; vertical-align: middle; }
-
-img { max-width: 100%; }
-
-.ptb-100 { padding-top: 100px; padding-bottom: 100px; }
-.pt-100 { padding-top: 100px; }
-.pt-94  { padding-top: 94px; }
-.pt-70  { padding-top: 70px; }
-.pb-70  { padding-bottom: 70px; }
-.pt-50  { padding-top: 50px; }
-.pt-60  { padding-top: 60px; }
-.pt-40  { padding-top: 40px; }
-
-.ml-50  { margin-left: 50px; }
-.mb-50  { margin-bottom: 50px; }
-.mb-30  { margin-bottom: 30px; }
-.ml-20  { margin-left: 20px; }
-
-.color-white { color: $color-white; }
-
-.box-shadow { 
-    box-shadow: 0 0 16px rgba(0, 0, 0, 0.1); // Sombra sutil
+.bg-f9f9f9 {
+    background-color: #f9f9f9;
 }
-
-.border-radius       { border-radius: 50px !important; }
-.border-radius-5     { border-radius: 5px; }
-.border-radius-10    { border-radius: 10px; }
-.border-radius-top   { border-radius: 15px 15px 0 0; }
-
+.d-table {
+    width: 100%;
+    height: 100%;
+}
+.d-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+img {
+    max-width: 100%;
+}
+.ptb-100 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.pt-100 {
+    padding-top: 100px;
+}
+.pt-94 {
+    padding-top: 94px;
+}
+.pt-70 {
+    padding-top: 70px;
+}
+.pb-70 {
+    padding-bottom: 70px;
+}
+.pt-50 {
+    padding-top: 50px;
+}
+.pt-60 {
+    padding-top: 60px;
+}
+.pt-40 {
+    padding-top: 40px;
+}
+.ml-50 {
+    margin-left: 50px;
+}
+.mb-50 {
+    margin-bottom: 50px;
+}
+.mb-30 {
+    margin-bottom: 30px;
+}
+.ml-20 {
+    margin-left: 20px;
+}
+.color-white {
+    color: $color-white;
+}
+.box-shadow {
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+}
+.border-radius {
+    border-radius: 50px !important;
+}
+.border-radius-5 {
+    border-radius: 5px;
+}
+.border-radius-10 {
+    border-radius: 10px;
+}
+.border-radius-top {
+    border-radius: 15px 15px 0 0;
+}
 .border-bottom {
-    border-bottom: 1px solid rgba(224, 220, 220, 0.4) !important;
+    border-bottom: 1px solid rgba(224, 220, 220,0.4) !important;
 }
 
-/* ================================================
-   Estilos de botones personalizados
-================================================= */
-
+/*================================
+Default Btn Style 
+===================================*/
 .default-btn1 {
     color: $color-white;
     font-size: 18px;
@@ -110,7 +136,6 @@ img { max-width: 100%; }
     position: relative; 
     z-index: 1;
 
-    // Efecto de transición al hacer hover
     &::before {
         content: '';
         position: absolute;
@@ -123,19 +148,15 @@ img { max-width: 100%; }
         background-color: $color-blue;
         transition: 0.7s;
     }
-
     &:hover::before {
         height: 100%;
         border-radius: 5px;
     }
-
     &:hover {
         color: $color-white;
     }
 }
-
 .default-btn2 {
-    // Botón alternativo con fondo celeste
     color: $color-white;
     text-align: center;
     font-size: 18px;
@@ -158,19 +179,15 @@ img { max-width: 100%; }
         background-color: $main-color;
         transition: 0.7s;
     }
-
     &:hover::before {
         height: 100%;
         border-radius: 5px;
     }
-
     &:hover {
         color: $color-white;
     }
 }
-
 .default-btn3 {
-    // Botón con bordes redondeados tipo cápsula
     color: $color-white;
     font-size: 18px;
     text-align: center;
@@ -185,9 +202,7 @@ img { max-width: 100%; }
         color: $color-white;
     }
 }
-
 .default-btn4 {
-    // Versión alternativa con color invertido
     color: $color-white;
     font-size: 18px;
     text-align: center;
@@ -202,10 +217,13 @@ img { max-width: 100%; }
         color: $color-white;
     }
 }
+/*================================
+Default Btn Style End
+===================================*/
 
-/* ================================
-   Título de secciones
-================================ */
+/*================================
+Section Title Style 
+===================================*/
 .scetion-title {
     span {
         font-size: 17px;
@@ -219,13 +237,16 @@ img { max-width: 100%; }
     }
     p {
         max-width: 560px;
-        margin: auto;
+        margin:auto;
     }
 }
+/*================================
+Section Title Style End
+===================================*/
 
-/* ================================
-   Preloader animado (pantalla de carga)
-================================ */
+/*=================================
+Preloader
+===================================*/
 .preloader {
     position: fixed;
     top: 0;
@@ -236,7 +257,6 @@ img { max-width: 100%; }
     display: block;
     background: $color-blue;
 }
-
 .preloader-wave {
     position: absolute;
     top: 50%;
@@ -246,7 +266,7 @@ img { max-width: 100%; }
     border-radius: 50%;
     margin: -30px 0 0 -30px;
 
-    &::before {
+    &::before{
         position: absolute;
         content: "";
         width: 60px;
@@ -256,10 +276,10 @@ img { max-width: 100%; }
         left: 0;
         border-radius: 50%;
         background-color: $color-white;
+        -webkit-animation: wave-circle 1.6s linear infinite;
         animation: wave-circle 1.6s linear infinite;
     }
-
-    &::after {
+    &::after{
         content: "";
         width: 60px;
         height: 60px;
@@ -269,60 +289,64 @@ img { max-width: 100%; }
         background-color: transparent;
         opacity: 1;
         border: 2px solid $color-white;
+        -webkit-animation: scale 1.9s linear infinite;
         animation: scale 1.9s linear infinite;
     }
 }
-
 .preloader-wave:after {
-    // Pequeño retraso en animación para crear efecto de doble onda
     animation-delay: -0.3s;
+    -webkit-animation-delay: -0.3s;
 }
+/*==================================
+ Preloader End
+====================================*/
 
-/* ================================================
-   Botón "Volver arriba" (estilos finales)
-================================================= */
-#toTop {
-    position: fixed;      // Fijado en la pantalla
-    bottom: 20px;         // Distancia desde el borde inferior
-    right: 20px;          // Distancia desde el borde derecho
-    cursor: pointer;      // Manito al pasar el mouse
-    display: none;        // Oculto hasta que aparezca con scroll
-    z-index: 99;          // Se superpone a otros elementos
-}
-
+/*==================================
+Back To Top Button 
+=====================================*/
+#toTop{
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	cursor: pointer;
+    display: none;
+    z-index: 99;
+} 
 .top-btn {
-    background-color: $body-color;
-    color: $color-white;
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-    display: inline-block;
-    text-align: center;
-    line-height: 40px;
-    transition: 0.9s;
-
-    &:hover {
-        background: $main-color;
+        background-color: $body-color;
         color: $color-white;
-        animation: none;
-    }
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        display: inline-block;
+        text-align: center;
+        line-height: 40px;
+        transition: .9s;
+        -webkit-transition: .9s;
 
+        &:hover{
+            background: $main-color;
+            color: $color-white;
+            animation:none;
+        }
     i {
-        animation: movebounce 3s linear infinite; // Animación continua de rebote
+        animation: movebounce 3s linear infinite;
     }
 }
+/*==============================
+Back To Top Button 
+=================================*/
 
-/* ================================================
-   Fin de estilos generales por defecto
-================================================= */
+/*===============================
+Default CSS End
+==================================*/
 
-/* ================================================
-   Estilos específicos para Home Page 1
-================================================= */
-
-/* ================================================
-   Área del encabezado superior (Top Header)
-================================================= */
+/*================================
+Home Page One Style 
+==================================*/
+/*================================
+Header Area Style
+===================================*/
 .top-header {
     padding: 12px 0;
     background-color: $color-white;
@@ -342,7 +366,6 @@ img { max-width: 100%; }
                 position: relative;
 
                 &::before {
-                    // Separador vertical entre ítems
                     position: absolute;
                     content: '';
                     width: 1px;
@@ -351,16 +374,13 @@ img { max-width: 100%; }
                     left: -23px;
                     top: 0;
                 }
-
                 &:first-child::before {
-                    display: none; // No mostrar separador en el primero
+                    display: none;
                 }
-
                 i {
                     font-size: 16px;
                     margin-right: 5px;
                 }
-
                 a {
                     color: $color-black;
 
@@ -371,7 +391,6 @@ img { max-width: 100%; }
             }
         }
     }
-
     .social-icon {
         float: right;
 
@@ -396,35 +415,36 @@ img { max-width: 100%; }
         }
     }
 }
+/*================================
+Header Area Style End
+===================================*/
 
-/* ================================================
-   Área del Navbar (menú principal)
-================================================= */
+/*=================================
+Navbar Area
+====================================*/
 .navbar-area {
     background-color: $color-white;
 }
-
 .navbar-light {
     padding-left: 0;
     padding-right: 0;
 
     .navbar-brand {
         img {
-            float: left; // Logo alineado a la izquierda
+            float: left;
         }
     }
 }
-
 .sticky-nav {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); // Sombra más notoria
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     margin: auto;
     z-index: 999;
     background-color: $color-white;
-    animation: 900ms ease-in-out 5s normal none 1 running fadeInDown; // Aparece con animación
+    animation: 900ms ease-in-out 5s normal none 1 running fadeInDown;
     transition: 0.9s;
     width: 100% !important;
 
@@ -432,15 +452,11 @@ img { max-width: 100%; }
         width: 100%;
         border-radius: 0;
     }
-
     .main-nav {
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); // Sombra más suave interna
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     }
 }
-
-/* ================================================
-   Navegación principal (estructura del menú)
-================================================= */
+/* Main nav */
 .main-nav {
     position: inherit;
     background: $color-white;
@@ -454,12 +470,9 @@ img { max-width: 100%; }
     nav {
         .navbar-nav {
             .nav-item {
-
-                // Color al hacer hover o si está activo
                 &:hover a, .active a {
                     color: $main-color;
                 }
-
                 a {
                     text-transform: capitalize;
                     color: $color-black;
@@ -468,41 +481,36 @@ img { max-width: 100%; }
                     i {
                         font-size: 10px;
                     }
-
                     &:hover, :focus {
                         color: $main-color;
                     }
-
                     &.active {
                         color: $main-color !important;
                     }
-
                     &.active i {
-                        transform: rotate(90deg); // Gira ícono al estar activo
+                        -webkit-transform: rotate(90deg);
+                        transform: rotate(90deg);
                     }
-
                     &:hover i {
+                        -webkit-transform: rotate(90deg);
                         transform: rotate(90deg);
                         transition: 0.7s;
                     }
-
                     .active::before {
-                        transform: scale(1); // efecto decorativo adicional
+                        transform: scale(1);
                     }
                 }
-
                 .dropdown-menu {
                     border: none;
                     border-radius: 0;
                     background-color: $color-white !important;
 
                     li {
-                        border-bottom: 1px dotted rgba(148, 46, 89, 0.4); // Línea divisoria punteada
+                        border-bottom: 1px dotted rgba(148, 46, 89, 0.4);
 
                         &:last-child {
                             border-bottom: none;
                         }
-
                         a {
                             color: $color-black;
                             position: relative;
@@ -510,7 +518,6 @@ img { max-width: 100%; }
                             font-weight: 400;
 
                             &::before {
-                                // Línea animada que aparece debajo del texto
                                 content: "";
                                 position: absolute;
                                 bottom: -1px;
@@ -518,18 +525,15 @@ img { max-width: 100%; }
                                 width: 0;
                                 height: 1px;
                                 background-color: $main-color;
+                                -webkit-transition: all 0.5s;
                                 transition: all 0.5s;
                             }
-
                             &:hover::before {
-                                width: 100%; // Ancho completo al pasar el mouse
+                                width: 100%;
                             }
-
-                            &:hover,
-                            :focus,
-                            .active {
+                            &:hover, :focus, .active{
                                 color: $main-color;
-                                letter-spacing: 0.5px; // Espaciado entre letras al pasar el mouse
+                                letter-spacing: 0.5px;
                             }
                         }
                     }
@@ -539,9 +543,7 @@ img { max-width: 100%; }
     }
 }
 
-/* ================================================
-   Navegación móvil (activada en pantallas pequeñas)
-================================================= */
+/* Mobile Nav */
 .mobile-nav {
     .mean-container {
         .mean-nav {
@@ -549,31 +551,26 @@ img { max-width: 100%; }
                 li {
                     a {
                         .active {
-                            color: $main-color; // Enlace activo (menú abierto)
-                        }
+                            color: $main-color;
+                        } 
                     }
                 }
             }
         }
     }
 }
-
-/* Estilos del botón hamburguesa del menú móvil */
 .mean-container {
-    a {
-        &.meanmenu-reveal {
-            color: $body-color; // Color del ícono (rayas del botón)
-
-            span {
-                background-color: $body-color; // Color de las líneas del ícono
+    a{
+        &.meanmenu-reveal{
+            color: $body-color;
+            span{
+                background-color: $body-color ;
             }
         }
     }
 }
 
-/* ================================================
-   Área lateral para búsqueda
-================================================= */
+/* Other Side */
 .other-side {
     .search-area {
         float: left;
@@ -597,9 +594,8 @@ img { max-width: 100%; }
                 color: $color-black;
                 font-weight: 600;
             }
-
             .search-overlay {
-                display: none; // Oculta el formulario hasta que se activa
+                display: none;
 
                 &.search-popup {
                     position: absolute;
@@ -609,30 +605,30 @@ img { max-width: 100%; }
                     background: $color-white;
                     z-index: 2;
                     padding: 20px;
-                    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+                    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+                    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
                     margin-top: 20px;
 
                     .search-form {
                         position: relative;
 
-                        // Campo de entrada de búsqueda
                         .search-input {
                             display: block;
                             width: 100%;
                             height: 50px;
+                            line-height: initial;
                             border: 1px solid #eeeeee;
                             color: $color-black;
                             outline: 0;
+                            -webkit-transition: 0.5s;
                             transition: 0.5s;
                             padding-top: 4px;
                             padding-left: 10px;
 
                             &:focus {
-                                border-color: $main-color; // Borde cambia al enfocar
-                            }
+                                border-color: $main-color;
+                            }                              
                         }
-
-                        // Botón de enviar búsqueda (ícono de lupa)
                         .search-button {
                             position: absolute;
                             right: 0;
@@ -642,6 +638,7 @@ img { max-width: 100%; }
                             border: none;
                             width: 50px;
                             outline: 0;
+                            -webkit-transition: 0.5s;
                             transition: 0.5s;
                             padding: 0;
                             cursor: pointer;
@@ -653,491 +650,424 @@ img { max-width: 100%; }
                     }
                 }
             }
+            .search-btn {
+                -webkit-transition: all 0.5s;
+                transition: all 0.5s;
+                font-size: 16px;
+                color: $color-black;
+
+                &:hover {
+                    color: $main-color;
+                }
+                &:hover i {
+                    color: $main-color;
+                }
+            }
+            .close-btn {
+                cursor: pointer;
+                display: none;
+                -webkit-transition: 0.5s;
+                transition: 0.5s;
+                color: $color-black;
+
+                &:hover {
+                    color: $main-color;
+                }
+                &.active {
+                    display: block;
+                    margin-left: 5px;
+                    top: 1px;
+                }
+            }
         }
     }
-}
-
-
-/* ================================================
-   Botones de búsqueda y cierre en el área superior
-================================================= */
-.search-btn {
-    transition: all 0.5s;
-    font-size: 16px;
-    color: $color-black;
-
-    &:hover {
-        color: $main-color;
+    .search-text {
+        float: left;
+        margin-top: 8px;
+        margin-right: 10px;
     }
-
-    &:hover i {
-        color: $main-color;
-    }
-}
-
-.close-btn {
-    cursor: pointer;
-    display: none;
-    transition: 0.5s;
-    color: $color-black;
-
-    &:hover {
-        color: $main-color;
-    }
-
-    &.active {
-        display: block;
-        margin-left: 5px;
-        top: 1px;
-    }
-}
-
-/* Texto adicional al lado del ícono de búsqueda */
-.search-text {
-    float: left;
-    margin-top: 8px;
-    margin-right: 10px;
-}
-
-/* ================================================
-   Área del carrito de compras (ícono en menú superior)
-================================================= */
-.cart-area {
-    display: inline-block;
-    margin-left: 15px;
-    position: relative;
-    top: 4px;
-
-    .cart-icon {
+    .cart-area {
         display: inline-block;
+        margin-left: 15px;
         position: relative;
-        font-weight: 600;
         top: 4px;
-        font-size: 16px;
-        color: $color-black;
 
-        p {
+        .cart-icon {
             display: inline-block;
+            position: relative;
+            font-weight: 600;
+            top: 4px;
+            font-size: 16px;
+            color: $color-black;
 
-            span {
-                color: $main-color; // Resalta el número o precio en rojo
+            p {
+                display: inline-block;
+
+                span {
+                    color: $main-color;
+                }
             }
-        }
-
-        i {
-            transition: 0.5s;
-            margin-right: 3px;
-        }
-
-        &:hover i {
-            color: $main-color;
-        }
-    }
-}
-
-/* ================================================
-   Botón que abre el menú lateral derecho (modal-menu)
-================================================= */
-.modal-menu {
-    float: right;
-    margin-left: 20px;
-    margin-top: 3px;
-
-    a {
-        color: $color-blue;
-        font-size: 20px;
-        font-weight: bold;
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        background-color: $color-white;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        text-align: center;
-
-        &:hover {
-            color: $main-color;
-        }
-    }
-}
-
-/* ===========================================
-   Estilos del modal lateral (sidebar-modal)
-   =========================================== */
-
-.sidebar-modal {
-    position: relative;
-
-    /* Ajustes para los enlaces del menú dentro del sidebar */
-    .navbar-nav {
-        li {
-            a {
-                padding: 10px 0px 10px 15px; // Espaciado personalizado
+            i {
+                transition: .5s;
+                margin-right: 3px;
             }
+            &:hover i {
+                color: $main-color;
+            }              
         }
     }
+    .modal-menu {
+        float: right;
+        margin-left: 20px;
+        margin-top: 3px;
 
-    /* Modal desde la derecha */
-    .modal.right {
-        .modal-dialog {
-            position: fixed;
-            margin: auto;
-            width: 450px;           // Ancho fijo del modal lateral
-            height: 100%;
-            transform: translate3d(0%, 0, 0); // Posicionamiento 3D para animación
-        }
-
-        .modal-content {
-            height: 100%;
-            overflow-y: auto;        // Scroll interno si el contenido es largo
-            border-radius: 0;
-            border: none;
+        a {
+            color: $color-blue;
+            font-size: 20px;
+            font-weight: bold;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
             background-color: $color-white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+
+            &:hover {
+                color: $main-color;
+            }
         }
+    }
+}
 
-        .modal-body {
-            padding: 30px;
+/* Sidebar Modal */
+    .sidebar-modal {
+        position: relative;
 
-            /* Widgets internos del sidebar */
-            .sidebar-modal-widget {
-                margin-bottom: 35px;
+        .navbar-nav {
+            li {
+                a {
+                    padding: 10px 0px 10px 15px;
+                }
+            }
+        }
+        .modal.right {
+            .modal-dialog {
+                position: fixed;
+                margin: auto;
+                width: 450px;
+                height: 100%;
+                -webkit-transform: translate3d(0%, 0, 0);
+                transform: translate3d(0%, 0, 0);
+            }
+            .modal-content {
+                height: 100%;
+                overflow-y: auto;
+                border-radius: 0;
+                border: none;
+                background-color: $color-white;
+            }
+            .modal-body {
+                padding: 30px;
 
-                .title {
-                    position: relative;
-                    z-index: 1;
+                .sidebar-modal-widget {
                     margin-bottom: 35px;
-                    color: $body-color;
-                    border-bottom: 1px solid #eeeeee;
-                    padding-bottom: 5px;
 
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        left: 0;
-                        bottom: -1px;
-                        width: 70px;
-                        height: 2px;
-                        border-radius: 5px;
-                        background: $color-blue;
-                    }
-                }
-
-                &:last-child {
-                    margin-bottom: 0;
-                }
-
-                ul {
-                    list-style: none;
-                    padding: 0;
-                    margin: 0;
-
-                    li {
-                        margin-bottom: 10px;
-
-                        &:last-child {
-                            margin-bottom: 0;
-                        }
-
-                        a {
-                            font-size: 16px;
-                            color: $body-color;
-                            font-weight: 600;
-                            text-transform: capitalize;
-
-                            &:hover {
-                                color: $main-color;
-                            }
-                        }
-                    }
-                }
-
-                /* Widget de información de contacto */
-                .contact-info {
-                    list-style: none;
-                    padding: 0;
-                    margin: 0;
-
-                    li {
+                    .title {
                         position: relative;
-                        font-weight: 500;
-                        padding-left: 45px;
-                        text-transform: uppercase;
-                        margin-bottom: 10px;
-                        font-size: 16px;
+                        z-index: 1;
+                        margin-bottom: 35px;
                         color: $body-color;
+                        border-bottom: 1px solid #eeeeee;
+                        padding-bottom: 5px;
 
-                        span {
-                            font-size: 16px;
-                            display: block;
-                            font-weight: 400;
-                            color: $head-color;
-                            margin-top: 5px;
-                            text-transform: initial;
-                        }
-
-                        i {
+                        &::before {
+                            content: '';
                             position: absolute;
                             left: 0;
-                            top: 0;
-                            color: $color-white;
-                            text-align: center;
-                            width: 35px;
-                            height: 35px;
-                            line-height: 35px;
-                            font-size: 15px;
-                            background-color: $color-blue;
-                            border-radius: 4px;
-                            transition: all 0.5s;
-                        }
-
-                        &:hover i {
-                            color: $color-white;
-                            background: $main-color;
-                        }
-
-                        &:last-child {
-                            margin-bottom: 0;
+                            bottom: -1px;
+                            width: 70px;
+                            height: 2px;
+                            border-radius: 5px;
+                            background: $color-blue;
                         }
                     }
-                }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    ul {
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
 
-                /* Íconos sociales (Facebook, Twitter, etc.) */
-                .social-list {
-                    text-align: left;
+                        li {
+                            margin-bottom: 10px;
 
-                    li {
-                        display: inline-block;
-                        padding-right: 5px;
-
-                        a {
-                            i {
-                                width: 25px;
-                                height: 25px;
-                                display: inline-block;
-                                text-align: center;
-                                line-height: 25px;
-                                border-radius: 4px;
-                                color: $color-white;
-                                background-color: $body-color;
-                                font-size: 12px;
-                                transition: all 0.5s;
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                            a {
+                                font-size: 16px;
+                                color: $body-color;
+                                font-weight: 600;
+                                text-transform: capitalize;
 
                                 &:hover {
-                                    background-color: $main-color;
+                                    color: $main-color;
                                 }
                             }
-
-                            &:hover {
-                                color: $main-color;
-                            }
                         }
+                    }
+                    .contact-info {
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
 
-                        &:hover {
-                            color: $color-white;
+                        li {
+                            position: relative;
+                            font-weight: 500;
+                            padding-left: 45px;
+                            text-transform: uppercase;
+                            margin-bottom: 10px;
+                            font-size: 16px;
+                            color: $body-color;
+
+                            span {
+                                font-size: 16px;
+                                display: block;
+                                font-weight: 400;
+                                color: $head-color;
+                                margin-top: 5px;
+                                text-transform: initial;
+                            }
+                            i {
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                color: $color-white;
+                                text-align: center;
+                                width: 35px;
+                                height: 35px;
+                                line-height: 35px;
+                                font-size: 29px;
+                                -webkit-transition: all 0.5s;
+                                transition: all 0.5s;
+                                background-color: $color-blue;
+                                border-radius: 4px;
+                                font-size: 15px;
+                            }
+                            &:hover i {
+                                color: $color-white;
+                                background: $main-color;
+                            }
+                            &:last-child {
+                                margin-bottom: 0;
+                            } 
+                        }
+                    }
+                    .social-list {
+                        text-align: left;
+
+                        li {
+                            display: inline-block;
+                            padding-right: 5px;
+
+                            a {
+                                i {
+                                    width: 25px;
+                                    height: 25px;
+                                    display: inline-block;
+                                    text-align: center;
+                                    line-height: 25px;
+                                    border-radius: 4px;
+                                    color: $color-white;
+                                    background-color: $body-color;
+                                    font-size: 12px;
+                                    -webkit-transition: all 0.5s;
+                                    transition: all 0.5s;
+
+                                    &:hover {
+                                        background-color: $main-color;
+                                    }
+                                }
+                                &:hover {
+                                    color: $main-color;
+                                }
+                            }
+                            &:hover {
+                                color: $color-white;
+                            }
                         }
                     }
                 }
             }
         }
-    }
-
-    /* Animación de aparición del modal lateral */
-    .modal.right.fade.show {
-        .modal-dialog {
-            right: 0;
-            animation: fadeInRight 0.6s linear;
-        }
-    }
-
-    /* Encabezado del modal (cierre y título) */
-    .modal-header {
-        display: inline;
-        padding: 0;
-        border: none;
-
-        .close {
-            height: 110px;
-            width: 30px;
-            color: $body-color;
-            margin: 0px;
-            padding: 0px;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-            border: none;
-            opacity: 1;
-
-            i {
-                margin-left: 0;
-                font-size: 20px;
+        .modal.right.fade.show {
+            .modal-dialog {
+                right: 0;
+                -webkit-animation: fadeInRight 0.6s linear;
+                animation: fadeInRight 0.6s linear;
             }
         }
+        .modal-header {
+            display: inline;
+            padding: 0;
+            border: none;
 
-        h2 {
-            background-color: $color-white;
-            box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
-            padding: 30px 25px;
+            .close {
+                height: 110px;
+                width: 30px;
+                color: $body-color;
+                margin: 0px;
+                padding: 0px;
+                cursor: pointer;
+                -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                border: none;
+                opacity: 1;
+
+                i {
+                    margin-left: 0;
+                    font-size: 20px;
+                }
+            }
+            h2 {
+                background-color: $color-white;
+                -webkit-box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
+                box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
+                padding: 30px 25px;
+            }            
+        }
+        button {
+            &:focus {
+                outline: 0px;
+            }
         }
     }
-
-    /* Quitar contorno azul al hacer foco con teclado */
-    button {
-        &:focus {
-            outline: 0px;
-        }
-    }
-}
-
-    /* ================================================
-    Animación de entrada para el modal lateral (sidebar)
-    ================================================ */
-
-    /* Al mostrar el modal con clase .fade.show, aplica animación de entrada desde la derecha */
     .sidebar-modal .modal.right.fade.show .modal-dialog {
-        right: 0; // Posiciona el modal alineado a la derecha
-        -webkit-animation: fadeInRight 0.6s linear; // Animación suave para navegadores WebKit
-        animation: fadeInRight 0.6s linear;         // Animación estándar (desplazamiento desde la derecha)
+        right: 0;
+        -webkit-animation: fadeInRight 0.6s linear;
+        animation: fadeInRight 0.6s linear;
     }
-
-    /* Asegura que incluso si solo tiene .fade (sin .show), el modal se posicione correctamente */
     .sidebar-modal .modal.right.fade .modal-dialog {
-        right: 0; // Permite que el modal aparezca desde la derecha, aunque sin animación
+        right: 0;
     }
-
 /*=================================
 Navbar Area End
 ====================================*/
 
- /* =================================
-   Home Slider
-   Sección principal del sitio con slider de bienvenida
-================================= */
-
+/*=================================
+Home Slider
+====================================*/
 .home-slider {
     position: relative;
 
-    /* Cada slide individual dentro del carrusel */
     .slider-item {
         position: relative;
         z-index: 1;
-        background-position: center center; // Centra la imagen de fondo
-        background-repeat: no-repeat;       // No repite la imagen
-        background-size: cover;             // Imagen de fondo cubre todo el espacio
-        height: 850px;                      // Altura fija para cada slide
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 850px;
 
-        /* Contenedor de texto dentro del slider */
         .slider-text {
             h1 {
-                font-size: 60px;            // Tamaño de título grande
-                color: $color-white;        // Texto blanco para destacar
-                max-width: 735px;           // Limita ancho del texto
-                font-weight: 500;           // Peso intermedio (semi-bold)
+                font-size: 60px;
+                color: $color-white;
+                max-width: 735px;
+                font-weight: 500;
             }
-
             p {
-                margin-top: 24px;           // Separación del título
-                color: $color-white;        // Texto blanco
-                max-width: 600px;           // Ancho controlado para legibilidad
+                margin-top: 24px;
+                color: $color-white;
+                max-width: 600px;
             }
-
             .slider-btn {
-                margin-top: 41px;           // Espaciado superior para los botones
-                margin-bottom: 10px;        // Espaciado inferior adicional
+                margin-top: 41px;
+                margin-bottom: 10px;
             }
         }
     }
-
-    /* Estilos personalizados para los puntos de navegación del carrusel (dots) */
     .owl-theme {
         .owl-dots {
             position: absolute;
-            top: 50%;                      // Centrado vertical
-            right: 8%;                     // Posicionamiento hacia el lado derecho
-            transform: translateY(-50px);  // Ajuste fino vertical
+            top: 50%;
+            right: 8%;
+            transform: translateY(-50px);
 
             .owl-dot {
-                display: grid;             // Alineación de punto
+                display: grid;
 
                 span {
-                    background-color: transparent;      // Fondo transparente por defecto
+                    background-color: transparent;
                     width: 15px;
                     height: 15px;
                     -webkit-transition: all 0.5s;
                     transition: all 0.5s;
-                    border: 1px solid $color-white;     // Borde blanco
-                    border-radius: 50%;                 // Puntos circulares
+                    border: 1px solid $color-white;
+                    border-radius: 50%;
                 }
-
                 &:hover span {
-                    background-color: $color-white !important; // Se vuelve blanco al pasar el mouse
+                    background-color: $color-white !important;
                 }
-
                 &.active span {
-                    background-color: $color-white !important; // Punto activo también en blanco
+                    background-color: $color-white !important;
                 }
             }
         }
     }
 }
-
-/* Imágenes de fondo específicas para cada slide del home slider */
 .slider-bg1 {
-    background-image: url(assets/img/home-1/slider1.jpg); // Imagen del primer slide
+    background-image: url(assets/img/home-1/slider1.jpg);
 }
 .slider-bg2 {
-    background-image: url(assets/img/home-1/slider2.jpg); // Imagen del segundo slide
+    background-image: url(assets/img/home-1/slider2.jpg);
 }
 .slider-bg3 {
-    background-image: url(assets/img/home-1/slider3.jpg); // Imagen del tercer slide
+    background-image: url(assets/img/home-1/slider3.jpg);
 }
+/*=================================
+ Home Slider End 
+===================================*/
 
-/* ================================
-   Fin del Home Slider
-================================ */
-
-
-/* =================================
-   Brand Area
-   Sección para mostrar marcas asociadas o patrocinadores
-================================= */
+/*=================================
+Brand Area 
+====================================*/
 .brand-area {
-    background-color: #fffafa; // Color de fondo suave (rosado muy claro)
+    background-color: #fffafa;
 
     .brand-item {
-        text-align: center;    // Centra el contenido dentro de cada item
-        line-height: 1;        // Asegura que no haya espacio vertical extra
+        text-align: center;
+        line-height: 1;
 
         a {
             img {
-                max-width: 100%; // Imagen escala al ancho máximo disponible
-                height: 55px;    // Altura fija para uniformidad
+                max-width: 100%;
+                height: 55px;
             }
         }
     }
 }
-/* ================================
-   Fin de la sección Brand Area
-================================ */
+/*=================================
+Brand Area End
+====================================*/
 
-
-/* ================================
-   About Section
-   Sección "Acerca de nosotros"
-================================ */
+/*=================================
+About Section 
+====================================*/
 .about-area {
-    background-color: #fffafa; // Mismo fondo que la sección de marcas
+    background-color: #fffafa;
 }
-
 .about-text {
     margin-bottom: 30px;
 
     .about-btn {
-        margin-top: 32px; // Separación del contenido con el botón
+        margin-top: 32px;
     }
 }
-
 .about-right {
     margin-bottom: 30px;
     position: relative;
-    background-image: url(assets/img/about/1.jpg); // Imagen de fondo
+    background-image: url(assets/img/about/1.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -1150,13 +1080,12 @@ Navbar Area End
         top: 0;
         left: 0;
         right: 0;
-        background-color: #000000; // Overlay negro
-        opacity: 0.7;              // Con 70% de opacidad
+        background-color: #000000;
+        opacity: 0.7;
     }
-
     .play-area {
         position: relative;
-        padding: 170px 0;        // Espaciado superior/inferior para centrar el botón
+        padding: 0px 0;
         text-align: center;
 
         .play-btn {
@@ -1167,17 +1096,14 @@ Navbar Area End
                 font-size: 30px;
                 margin-right: 10px;
                 position: relative;
-                top: 4px;         // Ajuste fino vertical
+                top: 4px;
             }
-
             &:hover {
-                color: $main-color; // Al pasar el mouse, cambia al color principal
+                color: $main-color;
             }
         }
     }
 }
-
-/* Iconos decorativos en forma de notas musicales u ornamentos */
 .icon-shape-1 {
     position: absolute;
     top: -75px;
@@ -1192,15 +1118,13 @@ Navbar Area End
     font-size: 75px;
     color: $color-blue;
 }
-/* ================================
-   Fin de la sección About
-================================ */
+/*=================================
+About Section End
+====================================*/
 
-
-/* ================================
-   Service Area
-   Sección de servicios ofrecidos (ej: clases, talleres, venta)
-================================ */
+/*=================================
+Service Area 
+====================================*/
 .service-area {
     position: relative;
 
@@ -1208,21 +1132,22 @@ Navbar Area End
         .owl-nav {
             position: absolute;
             margin-top: 0;
-            top: 50%; // Centrado vertical
+            top: 50%;
             left: 0;
             right: 0;
             transform: translateY(-33px);
 
-            /* Flecha izquierda del carrusel */
             .owl-prev {
                 position: absolute;
                 left: -5%;
                 width: 40px;
                 height: 40px;
                 font-size: 20px;
+                line-height: 0;
                 background-color: #ffeded;
                 color: $main-color;
                 border-radius: 0;
+                -webkit-transition: all 0.5s;
                 transition: all 0.5s;
 
                 &:hover {
@@ -1230,17 +1155,17 @@ Navbar Area End
                     color: #ffeded;
                 }
             }
-
-            /* Flecha derecha del carrusel */
             .owl-next {
                 position: absolute;
                 right:-5%;
                 width: 40px;
                 height: 40px;
                 font-size: 20px;
+                line-height: 0;
                 background-color: #ffeded;
                 color: $main-color;
                 border-radius: 0;
+                -webkit-transition: all 0.5s;
                 transition: all 0.5s;
 
                 &:hover {
@@ -1249,15 +1174,17 @@ Navbar Area End
                 }
             }
         }
-
-        /* Cuando un item está en el centro (activo), cambia su estilo */
         .owl-item.active.center {
             .service-item {
-                background-image: url(assets/img/shape/bg-shape.png); // Fondo especial
+                background-image: url(assets/img/shape/bg-shape.png);
                 color: $color-white;
 
-                h3,
-                p,
+                h3 {
+                    color: $color-white;
+                }
+                p {
+                    color: $color-white;
+                }
                 .service-item-icon {
                     color: $color-white;
                 }
@@ -1265,8 +1192,6 @@ Navbar Area End
         }
     }
 }
-
-/* Estilo para cada bloque de servicio individual */
 .service-item {
     margin-bottom: 30px;
     padding: 35px 15px;
@@ -1277,62 +1202,56 @@ Navbar Area End
     transition: .5s;
 
     &:hover {
-        background-color: transparent; // Efecto al pasar el mouse
+        background-color: transparent;
     }
-
     &.active::before {
         opacity: 1;
         height: 100%;
     }
-
     &.active .service-head h3,
     &.active .service-item-icon,
-    &.active p {
+    &.active  p {
         color: $color-white;
     }
-
     &:hover::before {
         opacity: 1;
         height: 100%;
         transform: 0.7s;
     }
-
     &:hover .service-icon {
         opacity: 1;
     }
-
     &:hover .service-head h3,
     &:hover .service-item-icon,
     &:hover p {
         color: $color-white;
     }
-
     &::before {
         content: '';
         position: absolute;
         opacity: 0;
         z-index: -1;
         width:100%;
+        transition: .5s;
         height: 0;
         top: 0;
         left: 0;
         right: 0;
-        background-image: url(assets/img/shape/bg-shape.png); // Fondo animado
+        background-image: url(assets/img/shape/bg-shape.png);
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
         transition: 0.9s;
     }
-
     .service-item-icon {
         font-size: 80px;
         color: $color-blue;
         line-height: 1.2;
         position: relative;
         display: block;
+        transition: 0.9s;
         transition: .5s;
     }
-
     .service-head {
         position: relative;
         transition: .5s;
@@ -1342,34 +1261,33 @@ Navbar Area End
             font-size: 24px;
         }
     }
-
     p {
         position: relative;
         max-width: 300px;
         margin: 0 auto;
         transition: .5s;
     }
-
     h3 {
         transition: .5s;
     }
 }
-/* ================================
-   Fin de la sección Services
-================================ */
+/*=================================
+Services Area End
+====================================*/
+
 /*=================================
 Apply Area 
 ====================================*/
 .apply-area {
-    background-image: url(assets/img/apply-bg.jpg); // Fondo con imagen de la sección
-    background-position: center center; // Centrado horizontal y vertical
-    background-size: cover; // Ajuste para cubrir el área
-    background-repeat: no-repeat; // No repetir la imagen
+    background-image: url(assets/img/apply-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
 }
 .apply-text {
-    text-align: center; // Centrado del texto
+    text-align: center;
     max-width: 760px;
     margin: 0 auto;
     padding-top: 116px;
@@ -1396,7 +1314,7 @@ Apply Area
         color: $color-white;
     }
     .apply-btn {
-        margin-top: 30px; // Separación superior del botón
+        margin-top: 30px;
     }
 }
 /*=================================
@@ -1407,13 +1325,13 @@ Apply Area End
 Course Section 
 ====================================*/
 .course-area {
-    overflow: hidden; // Oculta desbordes
+    overflow: hidden;
     position: relative;
 }
 .course-item {
     margin-bottom: 30px;
     max-width: 663px;
-    margin-left: auto; // Alinea a la derecha
+    margin-left: auto;
 }
 .course-text {
     span {
@@ -1443,7 +1361,7 @@ Course Section
     margin-left: 30px;
 
     img {
-        height: 100%; // Altura completa del contenedor
+        height: 100%;
     }
 }
 .course-dots {
@@ -1455,7 +1373,7 @@ Course Section
 .course-item-2 {
     margin-bottom: 30px;
     max-width: 663px;
-    margin-right: auto; // Alinea a la izquierda
+    margin-right: auto;
 }
 .course-img-2 {
     margin-bottom: 30px;
@@ -1485,7 +1403,7 @@ Course Section
     font-size: 80px;
     color:#f2f2f2;
     right: 0;
-    animation: movebounce-in 6s linear infinite; // Animación de movimiento
+    animation: movebounce-in 6s linear infinite;
 }
 /*=================================
 Course Section End
@@ -1495,17 +1413,17 @@ Course Section End
 Product Area 
 ====================================*/
 .product-area {
-    background-color: #fffafa; // Fondo claro
+    background-color: #fffafa;
     overflow: hidden;
 }
 .product-item {
     margin-bottom: 30px;
     background-color: $color-white;
-    box-shadow: 0 0 15px rgba(239, 235, 235, 0.1); // Sombra sutil
+    box-shadow: 0 0 15px rgba(239, 235, 235, 0.1);
     transition: 0.5s;
 
     &:hover {
-        transform: translateY(-5px); // Levanta la tarjeta
+        transform: translateY(-5px);
     }
     a {
         img {
@@ -1558,7 +1476,7 @@ Product Area
                 background-color: $main-color;
             }
             i {
-                list-style: 0; // Anulación de estilo de lista
+                list-style: 0;
             }
         }
     }
@@ -1572,25 +1490,22 @@ Gallery Section
 ====================================*/
 .gallery-item {
     margin-bottom: 30px;
-
     a {
         img {
-            max-width: 100%; // Imagen adaptada al contenedor
+            max-width: 100%;
         }
     }
-
-    &:hover .gallery-text h3 {
-        color: $main-color; // Cambio de color al pasar el mouse
+    &:hover .gallery-text  h3{
+        color: $main-color;
     }
-
     .gallery-text {
-        margin-top: -50px; // Superposición hacia arriba
+        margin-top: -50px;
         position: relative;
         transition: 0.7s;
         width: 100%;
         background-color: $color-white;
-        padding: 25px 15px 23px 15px; // Espaciado interno
-        box-shadow: 0 0 15px #eeeeee; // Sombra ligera
+        padding: 25px 15px 23px 15px;
+        box-shadow: 0 0 15px #eeeeee;
 
         h3 {
             font-size: 20px;
@@ -1617,23 +1532,18 @@ Trainers Section
 
     &:hover .trainer-content {
         padding-top: 17px;
-        padding-bottom: 40px; // Expande espacio al hacer hover
+        padding-bottom: 40px;
     }
-
     &:hover .social-icon {
-        opacity: 1; // Muestra íconos sociales
+        opacity: 1;
     }
-
     &:hover .content::before {
         opacity: 1;
-        height: 100%; // Aparece el fondo azul oscuro
-    }
-
-    &:hover .content h3, 
-    &:hover .content span {
-        color: $color-white; // Cambia texto a blanco en hover
-    }
-
+        height: 100%;
+    } 
+    &:hover .content h3,  &:hover .content span {
+        color: $color-white;
+    } 
     .trainer-content {
         position: relative;
         max-width: 240px;
@@ -1651,11 +1561,9 @@ Trainers Section
             padding-top: 17px;
             padding-bottom: 40px;
         }
-
         &.active .social-icon {
             opacity: 1;
         }
-
         a {
             display: block;
 
@@ -1665,7 +1573,6 @@ Trainers Section
                 color: $color-black;
             }
         }
-
         span {
             font-size: 14px;
             color: $color-black;
@@ -1673,7 +1580,6 @@ Trainers Section
             line-height: 1;
         }
     }
-
     .social-icon {
         opacity: 0;
         position: absolute;
@@ -1685,7 +1591,6 @@ Trainers Section
         &.active {
             opacity: 1;
         }
-
         ul {
             list-style: none;
             padding: 0;
@@ -1706,17 +1611,15 @@ Trainers Section
                     color: $color-blue;
 
                     &:hover {
-                        color: $color-white; // Cambio de color al pasar el mouse
+                        color: $color-white;
                     }
                 }
-
                 &:hover {
-                    background-color: $main-color; // Fondo del ícono social al pasar mouse
+                    background-color: $main-color;
                 }
             }
         }
     }
-
     .content {
         position: relative;
         z-index: 1;
@@ -1738,14 +1641,13 @@ Trainers Section
             z-index: -1;
             width: 100%;
             height: 0;
-            background-color: #063264; // Fondo azul oscuro para hover
+            background-color: #063264;
             top: 0;
             left: 0;
             right: 0;
             transition: 0.7s;
             border-radius: 0 0 10px 10px;
         }
-
         a {
             display: block;
 
@@ -1755,7 +1657,6 @@ Trainers Section
                 color: $color-black;
             }
         }
-
         span {
             font-size: 14px;
             color: $color-black;
@@ -1768,7 +1669,6 @@ Trainers Section
 Trainers Section End
 ====================================*/
 
-
 /*=================================
 News Area 
 ====================================*/
@@ -1780,7 +1680,6 @@ News Area
     &:hover .news-content a h3 {
         color: $main-color;
     }
-
     .news-img {
         position: relative;
         
@@ -1791,7 +1690,6 @@ News Area
                 max-width: 100%;
             }
         }
-
         .sub-text {
             position: absolute;
             z-index: 1;
@@ -1808,7 +1706,6 @@ News Area
             }
         }
     }
-
     ul {
         list-style: none;
         margin: 10px 0 0 0;
@@ -1833,17 +1730,14 @@ News Area
                 left: -15px;
                 top: 10px;
             }
-
             &:first-child::before {
                 display: none;
             }
-
             a {
                 color: $color-blue;
             }
         }
     }
-
     .news-content {
         padding: 10px 20px 20px 20px;
 
@@ -1853,12 +1747,10 @@ News Area
                 transition: 0.7s;
             }
         }
-
         p {
             color: $body-color;
             margin: 0;
         }
-
         .news-icon {
             margin-top: 8px;
             font-weight: 600;
@@ -1895,7 +1787,6 @@ Footer Area End
         background-repeat: no-repeat;
     }
 }
-
 .footer-content {
     position: relative;
     margin-bottom: 30px;
@@ -1907,14 +1798,12 @@ Footer Area End
             max-width: 270px;
         }
     }
-
     .newsleter-area {
         h3 {
             font-size: 24px;
             color: $main-color;
             margin-bottom: 15px;
         }
-
         .newsletter-form {
             position: relative;
             max-width: 300px;
@@ -1933,7 +1822,6 @@ Footer Area End
                     border: none;
                 }
             }
-
             .subscribe-btn {
                 position: absolute;
                 top: 0;
@@ -1955,7 +1843,6 @@ Footer Area End
             }
         }
     }
-
     .footer-social {
         margin-top: 20px;
 
@@ -1977,7 +1864,6 @@ Footer Area End
                     background-color: $main-color;
                     border-radius: 50%;
                 }
-
                 a {
                     color: $color-white;
                     line-height: 40px;
@@ -1986,7 +1872,6 @@ Footer Area End
         }
     }
 }
-
 .footer-list {
     margin-bottom: 30px;
 
@@ -2007,7 +1892,6 @@ Footer Area End
             background-color: $color-blue;
         }
     }
-
     ul {
         list-style: none;
         margin: 0;
@@ -2022,7 +1906,6 @@ Footer Area End
             &:hover {
                 color: $main-color;
             }
-
             i {
                 width: 30px;
                 height: 30px;
@@ -2034,13 +1917,11 @@ Footer Area End
                 border-radius: 3px;
                 transition: 0.7s;
             }
-
             &:hover i {
                 border-radius: 50%;
                 color: $color-white;
                 background-color: $main-color;
             }
-
             a {
                 color: $color-white;
 
@@ -2055,13 +1936,11 @@ Footer Area End
                     border-radius: 3px;
                     transition: 0.7s;
                 }
-
                 &:hover i {
                     border-radius: 50%;
                     color: $color-white;
                     background-color: $main-color;
                 }
-
                 &:hover {
                     color: $main-color;
                 }
@@ -2069,7 +1948,6 @@ Footer Area End
         }
     }
 }
-
 .footer-area .footer-content .newsletter-area .newsletter-form ::-webkit-input-placeholder {
     color: $color-black;
 }
@@ -2082,7 +1960,6 @@ Footer Area End
 .footer-area .footer-content .newsletter-area .newsletter-form ::placeholder {
     color: $color-black;
 }
-
 .footer-bottom {
     border-top: 1px solid $paragraph-color;
     padding: 20px 0;
@@ -2099,7 +1976,6 @@ Footer Area End
 
                 a {
                     color: $color-white;
-
                     &:hover {
                         color: $main-color;
                     }
@@ -2107,7 +1983,6 @@ Footer Area End
             }
         }
     }
-
     .bottom-text {
         float: right;
 
@@ -2129,6 +2004,348 @@ Footer Area End
 /*==================================
 Footer Area End 
 ==================================*/
+
+/*==================================
+Home Pages One Style End
+====================================*/
+
+/*================================
+Home Page Two Style 
+==================================*/
+
+/*================================
+Nav Top CSS
+==================================*/
+.nav-top {
+    position: fixed;
+    width: 1220px;
+    margin: 0 auto 0;
+    left: 0;
+    right: 0;
+    background-color: $color-white;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0,.1);
+
+    .navbar-light {
+        .navbar-brand {
+            img {
+                float: left;
+                margin-left: 0 !important;
+            }
+        }
+    }
+}
+/*================================
+Nav Top CSS End
+==================================*/
+/*================================
+Banner Area 
+==================================*/
+.banner-area {
+    position: relative;
+    height: 750px;
+    background-color: #f9f9f9;
+}
+.banner-content {
+    padding-top: 70px;
+    max-width: 530px;
+    margin-left: auto;
+
+    h1 {
+        font-size: 54px;
+        color: $color-black;
+        max-width: 520px;
+        font-weight: 500;
+    }
+    p {
+        margin-top: 24px;
+        max-width: 540px;
+    }
+    .banner-btn {
+        margin-top: 41px;
+        margin-bottom: 10px;
+
+        .banner-btn1 {
+            color: $color-white;
+            font-size: 18px;
+            text-align: center;
+            background-color: $main-color;
+            padding: 11px 30px 9px 30px;
+            font-weight: 500;
+            border-radius: 50px;
+            position: relative; 
+            z-index: 1;
+
+            &:hover {
+                color: $color-white;
+                background-color: $color-blue;
+            }
+        }
+        .banner-btn2 {
+            color: $color-white;
+            text-align: center;
+            font-size: 18px;
+            background-color: $color-blue;
+            padding: 12px 40px 8px 40px;
+            font-weight: 500;
+            border-radius: 50px;
+
+            &:hover {
+                color: $color-white;
+                background-color: $main-color;
+            }
+        }
+    }
+}
+.banner-img {
+    text-align: right;
+    margin-top: -20px;
+
+    img {
+        height: 770px;
+    }
+}
+/*================================
+Banner Area End
+==================================*/
+
+/*================================
+About Another
+==================================*/
+.about-img2 {
+    position: relative;
+    margin-bottom: 30px;
+}
+.icon-shape-5 {
+    position: absolute;
+    top: 95px;
+    right: -20px;
+    font-size: 80px;
+    color: $main-color;
+}
+.icon-shape-6 {
+    position: absolute;
+    bottom: 30px;
+    left: 15px;
+    font-size: 80px;
+    color: $color-blue;
+}
+.about-content {
+    margin-left: 70px;
+    margin-bottom: 30px;
+
+    span {
+        font-size: 17px;
+        color: $main-color;
+        font-weight: 600;
+    }
+    h2 {
+        font-size: 35px;
+        margin-top: 2px;
+    }
+    p {
+        max-width: 640px;
+        margin-top: 10px;
+    }
+    .about-more-btn {
+        margin-top:25px;
+    }
+}
+/*================================
+About Another
+==================================*/
+
+/*================================
+Visit Btn
+==================================*/
+.service-area-two {
+    background-color: #f9f9f9;
+    position: relative;
+    z-index: 1;
+}
+.visit-btn {
+    text-align: center;
+    font-size: 25px;
+    color: $body-color;
+    width: 100%;
+    margin-top: 15px;
+    padding: 0;
+    line-height: 1;
+
+    a {
+        color: $main-color;
+        text-decoration: underline;
+        margin-left: 5px;
+
+        &:hover {
+            color: $color-blue;
+        }
+    }
+}
+/*================================
+Visit Btn End
+==================================*/
+
+/*================================
+Apply Another
+==================================*/
+.apply-another {
+    /*background-image: url(assets/img/apply-bg-2.png);*/
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/*================================
+Apply Another End
+==================================*/
+
+/*================================
+Course Item 
+==================================*/
+.course-card {
+    margin-bottom: 30px;
+    position: relative;
+
+    &.active .couser-delt {
+        opacity: 1;
+    }
+    &:hover .couser-delt {
+        opacity: 1;
+    }
+    img {
+        position: relative;
+    }
+    .couser-delt {
+        opacity: 0;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        max-width: 420px;
+        margin: 0 auto;
+        width: 100%;
+        background-color: $color-white;
+        padding: 30px;
+        text-align: center;
+        transition: 0.9s;
+
+        h3 {
+            font-size: 25px;
+            color: $main-color;
+        }
+        p {
+            color: $paragraph-color;
+            max-width: 340px;
+        }
+        .course-delt-btn {
+            margin-top: 10px;
+        }
+    }
+}
+/*================================
+Course Item End
+==================================*/
+
+/*================================
+Testimonial Area 
+==================================*/
+.testimonial-area {
+    z-index: 1;
+    position: relative;
+    background-color: #063264;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url(assets/img/shape/testimonials-shape.png);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    .owl-theme {
+        .owl-nav {
+            z-index: 999;
+            position: absolute;
+            bottom: 20px;
+            margin-top: 0;
+            left: 295px;
+            margin: 10px;
+
+            .owl-prev {
+                position: absolute;
+                font-size: 40px;
+                background-color: transparent;
+                color: $color-white;
+                left: -65px;
+
+                &:hover {
+                    color: $main-color;
+                }
+            }
+            .owl-next {
+                position: absolute;
+                background-color: transparent;
+                font-size: 40px;
+                color: $color-white;
+
+                &:hover {
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}
+.testimonial-img {
+    position: relative;
+    margin-bottom: 30px;
+
+    img {
+        max-width: 320px;
+        margin-left: 150px;
+    }
+   .shape-img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right:50px;
+        z-index: -1;
+
+        img {
+            width: 280px;
+        }
+    }
+}
+.testimonial-item {
+    text-align: center;
+    margin-top: 70px;
+
+    p {
+        color: $color-white;
+        font-size: 18px;
+        margin-bottom: 35px;
+        max-width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    h3 {
+        font-size: 20px;
+        color: $main-color;
+        line-height: 0.3;
+    }
+    span {
+        color: $color-white;
+    }
+}
+/*================================
+Testimonial Area End
+==================================*/
+
+/*================================
+Home Page Two End 
+==================================*/
+
 /*================================
 Inner Banner
 ==================================*/
@@ -2142,9 +2359,8 @@ Inner Banner
 
         h3 {
             font-size: 45px;
-            color: $main-color; // Título del banner interior
+            color: $main-color;
         }
-
         ul {
             list-style: none;
             padding: 0;
@@ -2157,13 +2373,11 @@ Inner Banner
                 margin-right: 15px;
 
                 &:last-child {
-                    margin-right: 0;
+                    margin-right: 0; 
                 }
-
                 i {
                     font-size: 16px;
                 }
-
                 a {
                     color: $color-white;
 
@@ -2175,14 +2389,13 @@ Inner Banner
         }
     }
 }
-
-// Formas de fondo decorativas para el banner interior
-.bg-shape1, .bg-shape2, .bg-shape3 {
+.bg-shape1 {
     position: relative;
 
     &::before {
         content: '';
         position: absolute;
+        background-image: url(assets/img/shape/inner-shape2.png);
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -2190,29 +2403,51 @@ Inner Banner
         height: 100%;
     }
 }
-.bg-shape1::before {
-    background-image: url(assets/img/shape/inner-shape2.png);
-}
-.bg-shape2::before {
-    background-image: url(assets/img/shape/inner-shape.png);
-}
-.bg-shape3::before {
-    background-image: url(assets/img/shape/inner-shape3.png);
-}
+.bg-shape2 {
+    position: relative;
 
-// Colores de fondo alternativos para banners internos
-.bg-color1 { background-color: #07526a; }
-.bg-color2 { background-color: #063264; }
-.bg-color3 { background-color: #264752; }
-.bg-color4 { background-color: #152f4c; }
-.bg-color5 { background-color: #05162a; }
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url(assets/img/shape/inner-shape.png);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+    }
+}
+.bg-shape3 {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url(assets/img/shape/inner-shape3.png);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+    }
+}
+.bg-color1 {
+    background-color: hwb(190 2% 96%);
+}
+.bg-color2 {
+    background-color:#08192b;
+}
+.bg-color3 {
+    background-color:#0f191d;
+}
+.bg-color4 {
+    background-color:#152f4c ;
+}
+.bg-color5 {
+    background-color:#05162a ;
+}
 /*================================
 Inner Banner End
-==================================*/
-
-
-/*================================
-Sección de detalles comunes reutilizables
 ==================================*/
 .common-dtel-img {
     margin-bottom: 30px;
@@ -2228,8 +2463,6 @@ Sección de detalles comunes reutilizables
         font-size: 15px;
     }
 }
-
-// Oferta común destacada (ej: call-to-action)
 .common-offer {
     background-color: $color-blue;
     width: 100%;
@@ -2238,9 +2471,11 @@ Sección de detalles comunes reutilizables
 
     .drive-img {
         text-align: center;
+        top: 0;
+        left: 0;
+        right: 0;
         margin-bottom: 20px;
     }
-
     .common-offer-text {
         padding-bottom: 45px;
         text-align: center;
@@ -2249,7 +2484,6 @@ Sección de detalles comunes reutilizables
             font-size: 25px;
             text-align: center;
         }
-
         .call-btn {
             margin-top: 10px;
             color: $color-white;
@@ -2259,7 +2493,6 @@ Sección de detalles comunes reutilizables
             border-radius: 5px;
             text-align: center;
             transition: 0.7s;
-
             &:hover {
                 background-color: $color-white;
                 color: $main-color;
@@ -2270,7 +2503,7 @@ Sección de detalles comunes reutilizables
 
 
 /*================================
-Página de Contacto
+Contact Page 
 ==================================*/
 .contact-title {
     h2 {
@@ -2279,8 +2512,6 @@ Página de Contacto
         margin: 0 auto;
     }
 }
-
-// Tarjetas de contacto individuales
 .contact-item {
     text-align: center;
     max-width: 100%;
@@ -2288,8 +2519,8 @@ Página de Contacto
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    padding: 50px 25px;
+    box-shadow: 0 0 15px  rgba(0, 0, 0, 0.1);
+    padding:50px 25px;
     margin-bottom: 30px;
     border-radius: 15px;
 
@@ -2300,7 +2531,6 @@ Página de Contacto
             color: $body-color;
         }
     }
-
     .icon-contact {
         width: 50px;
         height: 50px;
@@ -2310,7 +2540,9 @@ Página de Contacto
         font-size: 25px;
         text-align: center;
         border-radius: 50px;
-        margin: 0 auto 20px auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
 
         i {
             line-height: 2;
@@ -2320,15 +2552,13 @@ Página de Contacto
 .contact-img {
     margin-bottom: 30px;
 }
-
-// Formulario de contacto decorado
 .form-area {
     background-image: url(assets/img/shape/contact-dots.png);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     padding: 50px 40px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow:0 0 15px rgba(0, 0, 0, 0.1);
     max-width: 770px;
     border-radius: 15px;
     margin-right: auto;
@@ -2348,7 +2578,6 @@ Página de Contacto
         font-weight: 600;
         margin-bottom: 20px;
     }
-
     .form-group {
         margin-bottom: 30px;
 
@@ -2359,14 +2588,13 @@ Página de Contacto
             color: #b3b3b3;
             font-weight: 400;
 
-            &:focus, &:hover {
+            &:focus,:hover {
                 outline: 0;
                 box-shadow: none;
                 border: 1px solid $body-color;
             }
         }
     }
-
     .form-message {
         font-size: 16px;
         border: 1px solid #ffd3d3;
@@ -2376,27 +2604,40 @@ Página de Contacto
         font-weight: 400;
         width: 100%;
 
-        &:focus, &:hover {
+        &:focus,:hover {
             outline: 0;
             box-shadow: none;
             border: 1px solid $body-color;
         }
     }
 }
+.form-section .form-group .form-control::-webkit-input-placeholder {
+    color: #b3b3b3;
+}
+.form-section .form-group .form-control::-ms-input-placeholder {
+    color: #b3b3b3;
+}
+.form-section .form-group .form-control::-ms-input-placeholder {
+    color: #b3b3b3;
+}
+.form-section .form-group .form-control::placeholder {
+    color: #b3b3b3;
+}
+.form-section .form-group .form-message::-webkit-input-placeholder {
+    color: #b3b3b3;
+}
 
-// Placeholders en todos los navegadores
-.form-section .form-group .form-control::-webkit-input-placeholder,
-.form-section .form-group .form-message::-webkit-input-placeholder,
-.form-section .form-group .form-control::placeholder,
-.form-section .form-group .form-message::placeholder,
-.form-section .form-group .form-control::-ms-input-placeholder,
-.form-section .form-group .form-message::-ms-input-placeholder,
-.form-section .form-group .form-control:-ms-input-placeholder,
-.form-section .form-group .form-message:-ms-input-placeholder {
+.form-section .form-group .form-message::-ms-input-placeholder {
+    color: #b3b3b3;
+}
+.form-section .form-group .form-message::-ms-input-placeholder {
+    color: #b3b3b3;
+}
+.form-section .form-group .form-message::placeholder {
     color: #b3b3b3;
 }
 /*================================
-Contact Page End
+Contact Page  End
 ==================================*/
 
 /*================================
@@ -2406,7 +2647,7 @@ Widget Search
     margin-bottom: 30px;
     width: 100%;
     background-color: $color-white;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); // Sombra suave para destacar
+    box-shadow:0 0 15px rgba(0, 0, 0, 0.1);
 
     form {
         width: 100%;
@@ -2421,12 +2662,12 @@ Widget Search
             padding: 13px 18px;
             font-weight: 400;
 
-            &:focus, &:hover {
+            &:focus,:hover {
                 outline: 0;
                 box-shadow: none;
+                
             }
         }
-
         .search-btn {
             width: 45px;
             background-color: $color-blue;
@@ -2440,7 +2681,12 @@ Widget Search
             float: right;
             border-radius: 5px;
 
-            &:hover, &:focus:hover {
+            &:hover {
+                outline: 0;
+                box-shadow: none;
+                background-color: $main-color;
+            }
+            &:focus:hover {
                 outline: 0;
                 box-shadow: none;
                 background-color: $main-color;
@@ -2452,9 +2698,8 @@ Widget Search
 Widget Search End
 ==================================*/
 
-
 /*================================
-Widget Categories
+Widget Categories 
 ==================================*/
 .widget-categories {
     margin-bottom: 30px;
@@ -2462,8 +2707,7 @@ Widget Categories
     h2 {
         font-size: 24px;
     }
-
-    ul {
+    ul{
         list-style: none;
         margin: 0;
         padding: 0;
@@ -2481,19 +2725,17 @@ Widget Categories
                 color: #909090;
                 padding: 12px 15px;
                 background-color: $color-white;
-                box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 0 15px  rgba(0, 0, 0, 0.1);
 
                 &:hover {
                     background-color: $main-color;
                     color: $color-white;
                 }
-
                 i {
                     float: right;
                     line-height: 2;
                 }
             }
-
             &:last-child {
                 margin-bottom: 0;
             }
@@ -2503,7 +2745,6 @@ Widget Categories
 /*================================
 Widget Categories End
 ==================================*/
-
 
 /*================================
 Pagination Area
@@ -2524,34 +2765,30 @@ Pagination Area
         color: $color-blue;
         font-weight: 600;
         font-size: 16px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-
-        &.current,
-        &:hover,
-        &:focus {
+        box-shadow: 0 0 15px  rgba(0, 0, 0, 0.1);
+        
+        &.current, &:hover, &:focus {
             background: $main-color;
             color: $color-white;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px  rgba(0, 0, 0, 0.1);
         }
-
         i {
             font-size: 15px;
         }
     }
 }
+
 /*================================
 Pagination Area End
 ==================================*/
 
-
 /*==================================
-FAQ Page CSS
+Faq Page CSS
 ====================================*/
 .faq-section {
     position: relative;
     margin-bottom: 30px;
 }
-
 .faq-area {
     max-width: 790px;
     margin: auto;
@@ -2571,7 +2808,6 @@ FAQ Page CSS
             &:last-child {
                 margin-bottom: 0;
             }
-
             .accordion-title {
                 padding: 15px 20px;
                 color: $paragraph-color;
@@ -2587,27 +2823,27 @@ FAQ Page CSS
                     position: absolute;
                     right: 20px;
                     top: 50%;
+                    -webkit-transform: translateY(-50%);
                     transform: translateY(-50%);
                     color: $main-color;
+                    -webkit-transition: 0.5s;
                     transition: 0.5s;
                     font-size: 24px;
                 }
-
                 &.active {
                     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
                     background-color: $color-white;
 
                     i {
                         &::before {
-                            content: "\f13a"; // icono diferente al abrir
+                            content: "\f13a";
                         }
                     }
                 }
             }
-
             .accordion-content {
                 display: none;
-                color: $paragraph-color;
+                color:$paragraph-color;
                 font-weight: 400;
                 margin-bottom: 0;
                 padding: 20px 15px;
@@ -2615,43 +2851,36 @@ FAQ Page CSS
                 position: relative;
 
                 &.show {
-                    display: block; // muestra el contenido desplegado
-                }
+                    display: block;
+                }                
             }
         }
     }
 }
-
-// Formulario de contacto en página de preguntas frecuentes
 .faq-form {
     padding: 50px 30px;
     max-width: 790px;
     text-align: center;
-    margin: auto;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin:  auto;
+    box-shadow:0 0 15px  rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
 }
 /*==================================
-FAQ Page CSS End
+Faq Page CSS End
 ====================================*/
 
 /*==================================
 Shop Details page
 ====================================*/
-
-// Imagen destacada del producto
 .shop-detls-image {
     margin-bottom: 30px;
 }
-
-// Descripción y controles de compra del producto
 .shop-desc {
     h3 {
         margin-bottom: 12px;
         font-size: 24px;
         font-weight: 600;
     }
-
     .price {
         margin-bottom: 10px;
         font-size: 15px;
@@ -2663,7 +2892,6 @@ Shop Details page
             margin-left: 10px;
         }
     }
-
     .shop-review {
         margin-bottom: 15px;
 
@@ -2676,25 +2904,22 @@ Shop Details page
                 color: $main-color;
             }
         }
-
         .rating-count {
             margin-left: 5px;
             display: inline-block;
-            color: $color-black;
+            color:  $color-black;
             border-bottom: 1px solid $color-black;
+            line-height: initial;
 
             &:hover {
                 color: $main-color;
                 border-color: $main-color;
-            }
+            }              
         }
     }
-
     p {
         font-family: $body-font;
     }
-
-    // Área de cantidad y botón agregar al carrito
     .shop-add {
         margin-top: 20px;
 
@@ -2715,21 +2940,19 @@ Shop Details page
                 width: 50px;
                 height: 100%;
                 line-height: 45px;
+                -webkit-transition: 0.5s;
                 transition: 0.5s;
 
                 &:hover {
                     color: $main-color;
                 }
             }
-
             .minus-btn {
                 left: 0;
             }
-
             .plus-btn {
                 right: 0;
             }
-
             input {
                 height: 45px;
                 color: $color-black;
@@ -2744,7 +2967,6 @@ Shop Details page
                 font-weight: 700;
             }
         }
-
         .shop-btn {
             border: none;
             background-color: $main-color;
@@ -2755,21 +2977,19 @@ Shop Details page
             float: right;
 
             &:hover {
+                color: $color-white;
                 background-color: $color-blue;
             }
         }
     }
-
-    // Checkbox y botón de compra directa
     .buy-checkbox-btn {
         margin-top: 30px;
 
-        .item {
+        .item { 
             .inp-cbx {
                 width: 15px;
                 height: 16px;
             }
-
             .cbx {
                 span {
                     font-size: 20px;
@@ -2778,7 +2998,6 @@ Shop Details page
                 }
             }
         }
-
         .btn-buy {
             margin-top: 10px;
             margin-bottom: 10px;
@@ -2787,7 +3006,8 @@ Shop Details page
             border-radius: 50px;
             border: none;
             font-size: 18px;
-            padding: 13px 25px;
+            padding: 13px  25px;
+            -webkit-transition: 0.5s;
             transition: 0.5s;
             font-weight: 600;
             display: block;
@@ -2798,8 +3018,6 @@ Shop Details page
             }
         }
     }
-
-    // Métodos de pago aceptados
     .custom-payment {
         span {
             display: block;
@@ -2807,7 +3025,6 @@ Shop Details page
             margin-bottom: 20px;
             margin-top: 20px;
         }
-
         .payment-methods {
             a {
                 display: inline-block;
@@ -2819,14 +3036,18 @@ Shop Details page
         }
     }
 }
-
-// Ajustes visuales para placeholders
-.shop-detls .shop-add .input-counter input::placeholder,
+.shop-detls .shop-add .input-counter input::-webkit-input-placeholder {
+    color: $color-black;
+}
+.shop-detls .shop-add .input-counter input:-ms-input-placeholder {
+    color: $color-black;
+}
+.shop-detls .shop-add .input-counter input::-ms-input-placeholder {
+    color: $color-black;
+}
 .shop-detls-desc .shop-add-to-cart .input-counter input::placeholder {
     color: $color-black;
 }
-
-// Tabs para detalles, información adicional y reseñas
 .tab {
     .tabs_item {
         display: none;
@@ -2835,36 +3056,40 @@ Shop Details page
             display: block;
         }
     }
-}
 
-// Contenedor de pestañas
+}
 .shop-detls-tab {
     margin-top: 30px;
 
     .tabs {
-        list-style: none;
         margin: 0;
         padding: 0;
+        list-style: none;
 
         li {
             display: inline-block;
+            line-height: initial;
             margin-right: 5px;
 
             a {
+                display: inline-block;
+                position: relative;
                 text-transform: uppercase;
                 color: $color-black;
                 border: 1px dashed #eeeeee;
-                padding: 17px 30px 13px;
-                display: inline-block;
+                padding: 17px 30px 13px 30px;
 
                 &:focus {
                     color: $color-white;
-                    background-color: $main-color;
+                    background-color:$main-color;
                     border-color: $main-color;
                 }
             }
-
-            &.active a,
+            &.active a {
+                color: $color-white;
+                background-color: $main-color;
+                border-color: $main-color;
+            }
             &.current a {
                 color: $color-white;
                 background-color: $main-color;
@@ -2872,8 +3097,6 @@ Shop Details page
             }
         }
     }
-
-    // Contenido de pestañas
     .tab_content {
         border: 1px dashed #eeeeee;
         padding: 30px;
@@ -2887,12 +3110,13 @@ Shop Details page
 
                     &:last-child {
                         margin-bottom: 0;
-                    }
+                    }                      
                 }
-
                 .additional-information {
                     padding-left: 0;
+                    margin-bottom: 0;
                     list-style-type: none;
+                    text-align: left;
 
                     li {
                         border: 1px solid #eeeeee;
@@ -2903,168 +3127,168 @@ Shop Details page
                         &:last-child {
                             border-bottom: 1px solid #eeeeee;
                         }
-
                         span {
-                            width: 30%;
-                            font-weight: 600;
-                            color: #212529;
                             display: inline-block;
+                            width: 30%;
+                            color: #212529;
+                            font-weight: 600;
                         }
                     }
                 }
-
                 h3 {
-                    font-size: 24px;
                     margin-bottom: 15px;
+                    font-size: 24px;
                     color: $color-black;
                 }
-
-                // Reseñas de clientes
                 .shop-review-form {
                     .review-title {
                         position: relative;
 
                         .rating {
+                            display: inline-block;
+
                             .fas.fa-star {
                                 color: $main-color;
                             }
-
                             i {
                                 color: #ebebeb;
                                 font-size: 14px;
                             }
-
                             p {
-                                font-family: $body-font;
-                                padding-left: 5px;
-                                display: inline-block;
                                 margin-bottom: 0;
-                            }
+                                font-family: $body-font;
+                                display: inline-block;
+                                padding-left: 5px;
+                                line-height: initial;
+                            }                         
                         }
-
                         .btn-right {
                             position: absolute;
                             right: 0;
                             bottom: 0;
-                            background-color: $main-color;
-                            color: $color-white;
                             font-size: 14px;
+                            color: $color-white;
+                            background-color: $main-color;
                             padding: 7px 15px;
                             border-radius: 5px;
 
                             &:hover {
                                 background-color: $color-blue;
+                                color: $color-white;
                             }
-                        }
+                        }   
                     }
-
                     .review-comments {
                         margin-top: 35px;
 
                         .review-item {
                             margin-top: 30px;
-                            padding-top: 30px;
-                            padding-right: 200px;
                             position: relative;
+                            padding-right: 200px;
                             border-top: 1px dashed #eeeeee;
+                            padding-top: 30px;
 
-                            .rating {
+                            .rating  {
                                 .fas.fa-star {
                                     color: $main-color;
                                 }
-
                                 i {
                                     color: #ebebeb;
                                     font-size: 14px;
                                 }
                             }
-
                             h3 {
-                                margin: 10px 0;
                                 font-size: 24px;
+                                margin-top: 10px;
+                                margin-bottom: 10px;
                                 color: $color-black;
                             }
-
                             span {
-                                display: block;
-                                font-size: 16px;
-                                font-weight: 500;
                                 margin-bottom: 10px;
+                                font-size: 16px;
+                                display: block;
+                                font-weight: 500;
 
                                 strong {
                                     font-weight: 600;
-                                }
+                                } 
                             }
-
                             p {
-                                font-family: $body-font;
                                 margin-bottom: 0;
+                                font-family: $body-font;
                             }
-
                             .review-report-link {
                                 position: absolute;
                                 right: 0;
-                                top: 40px;
-                                font-size: 15px;
                                 color: #737b9a;
-                                font-weight: 600;
+                                top: 40px;
                                 text-decoration: underline;
+                                font-weight: 600;
+                                font-size: 15px;
 
                                 &:hover {
                                     color: $main-color;
-                                }
-                            }
-                        }
+                                }                                  
+                            }      
+                        }                          
                     }
-
                     .review-form {
                         margin-top: 30px;
 
                         h3 {
                             margin-bottom: 20px;
                         }
-
                         form {
                             max-width: 800px;
 
                             .form-group {
                                 margin-bottom: 25px;
                             }
-
-                            .form-control,
-                            .form-message {
-                                border: 1px solid #ffd3d3;
-                                font-weight: 400;
-                                border-radius: 0;
+                            .form-control {
                                 font-size: 16px;
+                                border: 1px solid #ffd3d3;
+                                padding: 23px 18px;
+                                border-radius: 0;
+                                font-weight: 400;
 
-                                &:focus,
-                                &:hover {
-                                    border: 1px solid $body-color;
+                                &:focus,:hover {
                                     outline: 0;
                                     box-shadow: none;
+                                    border: 1px solid $body-color;
                                 }
                             }
-
-                            .form-control {
-                                padding: 23px 18px;
-                            }
-
                             .form-message {
+                                font-size: 16px;
+                                border: 1px solid #ffd3d3;
                                 padding: 12px 18px;
+                                border-radius: 0;
+                                font-weight: 400;
                                 width: 100%;
-                            }
 
+                                &:focus,:hover {
+                                    outline: 0;
+                                    box-shadow: none;
+                                    border: 1px solid $body-color;
+                                }
+                            }
                             .btn-submit {
+                                border-radius: 5px;
                                 background-color: $main-color;
                                 color: $color-white;
                                 font-weight: 600;
-                                border: none;
                                 padding: 13px 40px;
-                                border-radius: 5px;
-                                position: relative;
+                                border: none;
                                 z-index: 1;
+                                position: relative;
 
+                                &:hover::before {
+                                    opacity: 1;
+                                    width: 100%;
+                                    border-radius: 5px;
+                                }
+                                &:focus {
+                                    outline: 0;
+                                }
                                 &::before {
                                     content: '';
                                     position: absolute;
@@ -3078,34 +3302,22 @@ Shop Details page
                                     opacity: 0;
                                     transition: 0.9s;
                                 }
-
-                                &:hover::before {
-                                    opacity: 1;
-                                    width: 100%;
-                                    border-radius: 5px;
-                                }
-
-                                &:focus {
-                                    outline: 0;
-                                }
                             }
                         }
-                    }
-                }
+                    }  
+                } 
             }
         }
     }
 }
 /*==================================
 Shop Details page End
-====================================*/
+====================================*/ 
 
 /*=================================
 Cart Page 
 ===================================*/
-
-.cart-area {
-    // Tabla del carrito de compras
+.cart-area{
     .cart-table {
         table {
             margin-bottom: 0;
@@ -3113,9 +3325,9 @@ Cart Page
             thead {
                 tr {
                     th {
-                        border-bottom-width: 0;
+                        border-bottom-width: 0px;
                         vertical-align: middle;
-                        padding-bottom: 15px;
+                        padding: 0 0 15px;
                         text-transform: uppercase;
                         border: none;
                         font-weight: 700;
@@ -3123,7 +3335,6 @@ Cart Page
                     }
                 }
             }
-
             tbody {
                 tr {
                     td {
@@ -3136,7 +3347,6 @@ Cart Page
                         border-left: none;
                         border-right: none;
 
-                        // Miniatura del producto
                         .product-thumbnail {
                             a {
                                 display: block;
@@ -3147,8 +3357,6 @@ Cart Page
                                 }
                             }
                         }
-
-                        // Nombre del producto
                         &.product-name {
                             a {
                                 color: $head-color;
@@ -3161,38 +3369,33 @@ Cart Page
                                 }
                             }
                         }
-
-                        // Subtotal y botón eliminar
                         &.product-subtotal {
                             .remove {
                                 color: $head-color;
                                 float: right;
-                                top: 1px;
                                 position: relative;
+                                top: 1px;
+                                -webkit-transition: all 0.5s;
                                 transition: all 0.5s;
 
                                 i {
                                     font-size: 24px;
                                 }
-
                                 &:hover {
                                     color: $main-color;
                                 }
                             }
-
                             span {
                                 font-weight: 600;
                             }
                         }
-
-                        // Selector de cantidad
                         &.product-quantity {
                             .input-counter {
                                 max-width: 130px;
                                 min-width: 130px;
+                                text-align: center;
                                 display: inline-block;
                                 position: relative;
-                                text-align: center;
 
                                 span {
                                     position: absolute;
@@ -3209,26 +3412,31 @@ Cart Page
                                         color: $body-color !important;
                                     }
                                 }
-
                                 .minus-btn {
                                     left: 0;
-                                }
 
+                                    &:hover {
+                                        color: $body-color !important;
+                                    }
+                                }
                                 .plus-btn {
                                     right: 0;
-                                }
 
+                                    &:hover {
+                                        color: $body-color !important;
+                                    }
+                                }
                                 input {
                                     height: 45px;
+                                    color: $color-black;
+                                    outline: 0;
+                                    display: block;
+                                    border: none;
+                                    background-color: #f8f8f8;
+                                    text-align: center;
                                     width: 100%;
                                     font-size: 17px;
                                     font-weight: 600;
-                                    text-align: center;
-                                    background-color: #f8f8f8;
-                                    color: $color-black;
-                                    border: none;
-                                    outline: 0;
-                                    display: block;
                                 }
                             }
                         }
@@ -3237,25 +3445,22 @@ Cart Page
             }
         }
     }
-
-    // Botones de navegación del carrito
     .cart-buttons {
         margin-top: 30px;
     }
-
-    // Totales del carrito
     .cart-totals {
         background: $color-white;
         padding: 40px;
-        margin: 50px auto 0;
-        box-shadow: 0 2px 48px rgba(0, 0, 0, 0.08);
+        -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+        box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
         border-radius: 0;
+        margin: auto;
+        margin-top: 50px;
 
         h3 {
             font-size: 24px;
             margin-bottom: 25px;
         }
-
         ul {
             padding: 0;
             margin: 0 0 25px;
@@ -3265,18 +3470,18 @@ Cart Page
                 border: 1px solid #ffd3d3;
                 padding: 10px 15px;
                 color: $color-black;
-                font-weight: 700;
                 overflow: hidden;
+                font-weight: 700;
 
                 &:first-child {
                     border-bottom: none;
                 }
-
-                &:nth-child(3),
+                &:nth-child(3) {
+                    border-top: none;
+                }
                 &:last-child {
                     border-top: none;
                 }
-
                 span {
                     float: right;
                     color: $head-color;
@@ -3285,13 +3490,11 @@ Cart Page
             }
         }
     }
-
-    // Cálculo del envío y formulario adicional
     .cart-calc {
         margin-top: 50px;
         background-color: $color-white;
         padding: 40px;
-        box-shadow: 0 2px 48px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
 
         .shops-form {
             h3 {
@@ -3299,7 +3502,6 @@ Cart Page
                 color: $body-color;
                 padding-bottom: 20px;
             }
-
             .form-group {
                 margin-bottom: 20px;
 
@@ -3310,13 +3512,11 @@ Cart Page
                     border: 1px solid #ffd3d3;
                     border-radius: 5px;
 
-                    &:focus,
-                    &:hover {
+                    &:focus,:hover {
                         outline: 0;
                         box-shadow: none;
                         border: 1px solid $body-color;
                     }
-
                     option {
                         padding: 10px;
 
@@ -3325,16 +3525,14 @@ Cart Page
                         }
                     }
                 }
-
                 .form-control {
                     font-size: 16px;
+                    border: 1px solid #ffd3d3;
+                    color: #6c777d;
                     padding: 25px 18px;
                     font-weight: 400;
-                    color: #6c777d;
-                    border: 1px solid #ffd3d3;
 
-                    &:focus,
-                    &:hover {
+                    &:focus,:hover {
                         outline: 0;
                         box-shadow: none;
                         border: 1px solid $body-color;
@@ -3344,30 +3542,30 @@ Cart Page
         }
     }
 }
-
-
-// Placeholders personalizados en campos del carrito
-.cart-area .cart-table table tbody tr td.product-quantity .input-counter input::placeholder,
-.cart-area .cart-calc .shops-form .form-control input::placeholder {
+.cart-area .cart-table table tbody tr td.product-quantity .input-counter input::-webkit-input-placeholder {
     color: $color-black;
 }
-
-// Placeholders específicos para navegadores antiguos
-.cart-area .cart-table table tbody tr td.product-quantity .input-counter input::-webkit-input-placeholder,
-.cart-area .cart-calc .shops-form .form-control input::-webkit-input-placeholder {
+.cart-area .cart-table table tbody tr td.product-quantity .input-counter input:-ms-input-placeholder {
+    color: $color-black;
+}
+.cart-area .cart-table table tbody tr td.product-quantity .input-counter input::-ms-input-placeholder {
+    color: $color-black;
+}
+.cart-area .cart-table table tbody tr td.product-quantity .input-counter input::placeholder {
+    color: $color-black;
+}
+.cart-area .cart-area .cart-calc .shops-form form .form-control input::-webkit-input-placeholder {
     color: #6c777d;
 }
-
-.cart-area .cart-table table tbody tr td.product-quantity .input-counter input:-ms-input-placeholder,
-.cart-area .cart-calc .shops-form .form-control input:-ms-input-placeholder {
+.cart-area .cart-calc .shops-form form .form-control input:-ms-input-placeholder {
     color: #6c777d;
 }
-
-.cart-area .cart-table table tbody tr td.product-quantity .input-counter input::-ms-input-placeholder,
-.cart-area .cart-calc .shops-form .form-control input::-ms-input-placeholder {
+.cart-area .cart-area .cart-calc .shops-form form .form-control input::-ms-input-placeholder {
     color: #6c777d;
 }
-
+.cart-area .cart-area .cart-calc .shops-form .form-control input::placeholder {
+    color:#495057;
+}
 /*=================================
 Cart Page End
 ===================================*/
@@ -3375,16 +3573,14 @@ Cart Page End
 /*=================================
 Checkout Page 
 ===================================*/
-
 .checkout-area {
-    // Sección para mostrar opciones del usuario, como iniciar sesión
     .user-option {
+        box-shadow: 0 5px 35px 0 rgba(0, 0, 0, 0.08);
         background: $color-white;
-        border-top: 3px solid $main-color;
-        color: $main-color;
         padding: 20px 15px;
         margin-bottom: 65px;
-        box-shadow: 0 5px 35px 0 rgba(0, 0, 0, 0.08);
+        border-top: 3px solid $main-color;
+        color: $main-color;
 
         span {
             color: $body-color;
@@ -3394,73 +3590,64 @@ Checkout Page
                 color: $main-color;
 
                 &:hover {
-                    color: $color-blue; // Cambio de color en hover
+                    color: $color-blue;
                 }
             }
         }
     }
 }
-
-// Detalles de facturación: formulario de datos del cliente
 .billing-details {
+    margin-bottom: 30px;
     background-color: $color-white;
     padding: 50px 30px;
-    margin-bottom: 30px;
     box-shadow: 0 5px 28px rgba(0, 0, 0, 0.07);
 
     h3 {
         font-size: 24px;
         color: $body-color;
-        font-weight: 700;
         margin-bottom: 15px;
+        font-weight: 700;
     }
-
     .form-group {
         margin-bottom: 25px;
 
         label {
             color: $color-black;
-            margin-bottom: 10px;
             display: block;
+            margin-bottom: 10px;
             font-weight: 600;
 
             span {
-                color: $main-color; // Asterisco de campos requeridos
+                color: $main-color;
             }
         }
-
         .form-control {
             font-size: 16px;
+            border: 1px solid #ffd3d3;
             padding: 15px 18px;
             font-weight: 400;
             height: 55px;
-            border: 1px solid #ffd3d3;
-
-            &:focus,
-            &:hover {
+            
+            &:focus,:hover {
                 outline: 0;
-                border: 1px solid $body-color;
                 box-shadow: none;
+                border: 1px solid $body-color;
             }
         }
-
         .form-message {
             font-size: 16px;
-            padding: 18px;
-            width: 100%;
-            font-weight: 400;
             border: 1px solid #ffd3d3;
+            padding: 18px 18px;
+            font-weight: 400;
+            width: 100%;
 
-            &:focus,
-            &:hover {
+            &:focus,:hover {
                 outline: 0;
-                border: 1px solid $body-color;
                 box-shadow: none;
+                border: 1px solid $body-color;
             }
         }
     }
-
-    // Checkbox de guardar datos o crear cuenta
     .form-check {
         margin-bottom: 15px;
 
@@ -3468,15 +3655,12 @@ Checkout Page
             width: 15px;
             height: 15px;
         }
-
         .form-check-label {
             color: $color-black;
             margin-left: 5px;
-        }
+        } 
     }
 }
-
-// Tabla resumen del pedido
 .order-details {
     .order-table {
         background-color: $color-white;
@@ -3488,189 +3672,188 @@ Checkout Page
             font-weight: 700;
             margin-bottom: 20px;
         }
-
         table {
             margin-bottom: 0;
-
+            
             thead {
                 tr {
                     th {
-                        font-size: 18px;
-                        color: $color-black;
-                        font-weight: 700;
-                        padding: 15px 20px;
-                        border-color: #eaedff;
                         border-bottom-width: 0;
                         vertical-align: middle;
+                        border-color: #eaedff;
+                        padding-left: 20px;
+                        padding-top: 15px;
+                        padding-right: 20px;
+                        padding-bottom: 15px;
+                        font-weight: 700;
+                        color: $color-black;
+                        font-size: 18px;
                     }
                 }
             }
-
             tbody {
                 tr {
                     td {
-                        font-size: 14px;
-                        font-weight: 600;
-                        color: $color-black;
-                        padding: 15px 20px;
-                        border-color: #eaedff;
                         vertical-align: middle;
+                        color: $color-black;
+                        border-color: #eaedff;
+                        font-size: 14px;
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        font-weight: 600;
 
-                        // Nombre del producto
                         &.product-name {
                             a {
                                 color: $color-black;
-                                font-size: 15px;
-                                font-weight: 600;
                                 display: inline-block;
+                                font-weight: 600;
+                                font-size: 15px;
 
                                 &:hover {
                                     color: $main-color;
                                 }
                             }
                         }
-
-                        // Estilos para totales y subtotales
-                        &.order-subtotal,
-                        &.order-shipping,
-                        &.total-price {
+                        &.order-subtotal {
                             span {
                                 color: $color-black;
                                 font-weight: 700;
                                 font-size: 16px;
                             }
                         }
-
-                        &.shipping-price,
-                        &.order-subtotal-price,
-                        &.product-subtotal {
+                        &.order-shipping {
+                            span {
+                                color:$color-black;
+                                font-weight: 700;
+                                font-size: 16px;
+                            }
+                        }
+                        &.total-price {
+                            span {
+                                color:$color-black;
+                                font-weight: 700;
+                                font-size: 16px;
+                            }
+                        } 
+                        &.shipping-price {
                             font-size: 16px;
                             font-weight: 700;
                         }
-                    }
+                        &.order-subtotal-price {
+                            font-size: 16px;
+                            font-weight: 700;
+                        }
+                        &.product-subtotal {
+                            font-size: 16px;
+                            font-weight: 700;
+                        }                          
+                    } 
                 }
             }
-        }
+        }          
     }
-
-    // Método de pago
     .payment-box {
         background-color: $color-white;
-        padding: 50px 30px;
-        margin: 30px 0;
         box-shadow: 0 5px 28px rgba(0, 0, 0, 0.07);
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding:50px 30px;
 
         .payment-method {
-            // Estilo general del párrafo
             p {
                 font-family: $body-font;
             }
-
-            // Radio seleccionado
             p [type="radio"]:checked {
                 display: none;
             }
-
             p [type="radio"]:checked + label {
-                color: $main-color;
-                font-weight: 600;
-                margin-bottom: 8px;
                 padding-left: 27px;
-                position: relative;
-                display: block;
                 cursor: pointer;
+                display: block;
+                font-weight: 600;
+                color: $main-color;
+                position: relative;
+                margin-bottom: 8px;
 
                 &::before {
                     content: '';
                     position: absolute;
-                    top: 3px;
                     left: 0;
+                    top: 3px;
                     width: 18px;
                     height: 18px;
-                    background: $color-white;
                     border: 1px solid #dddddd;
                     border-radius: 50%;
+                    background: $color-white;
                 }
-
                 &::after {
                     content: '';
                     width: 12px;
                     height: 12px;
                     background: $main-color;
-                    border-radius: 50%;
                     position: absolute;
                     top: 6px;
                     left: 3px;
+                    border-radius: 50%;
+                    -webkit-transition: 0.5s;
                     transition: 0.5s;
                     opacity: 1;
                     visibility: visible;
                     transform: scale(1);
-                }
+                }                
             }
-
-            // Radio no seleccionado
             p [type="radio"]:not(:checked) {
                 display: none;
             }
-
             p [type="radio"]:not(:checked) + label {
-                color: #172541;
-                font-weight: 600;
-                margin-bottom: 8px;
                 padding-left: 27px;
-                position: relative;
-                display: block;
                 cursor: pointer;
+                display: block;
+                font-weight: 600;
+                color: #172541;
+                position: relative;
+                margin-bottom: 8px;
 
                 &::before {
                     content: '';
                     position: absolute;
-                    top: 3px;
                     left: 0;
+                    top: 3px;
                     width: 18px;
                     height: 18px;
-                    background: $color-white;
                     border: 1px solid #dddddd;
                     border-radius: 50%;
+                    background: $color-white;
                 }
-
                 &::after {
                     content: '';
                     width: 12px;
                     height: 12px;
                     background: $main-color;
-                    border-radius: 50%;
                     position: absolute;
                     top: 6px;
                     left: 3px;
+                    border-radius: 50%;
+                    -webkit-transition: 0.5s;
                     transition: 0.5s;
                     opacity: 0;
                     visibility: hidden;
                     transform: scale(0);
-                }
+                }     
             }
         }
-
-        // Botón de finalizar compra
         .default-btn3 {
+            margin-top: 20px;
             display: block;
             text-align: center;
             width: 100%;
-            margin-top: 20px;
         }
     }
 }
-
-// Estilo para opciones seleccionadas dentro del select del formulario
-.billing-details .form-group .nice-select {
-    .option:hover,
-    .option.focus,
-    .option.selected.focus {
-        background-color: $main-color !important;
-        color: $color-white !important;
-    }
+.billing-details .form-group .nice-select .option:hover,  .billing-details .form-group .nice-select .option.focus, .billing-details .form-group .nice-select .option.selected.focus {
+    background-color:$main-color !important;
+    color: $color-white !important;
 }
-
 /*=================================
 Checkout Page End
 ===================================*/
@@ -3678,64 +3861,55 @@ Checkout Page End
 /*=================================
 Instructor Page 
 ===================================*/
-
-// Imagen del instructor (espaciado inferior)
 .instructor-img {
     margin-bottom: 30px;
 }
-
-// Contenido del instructor
 .instructor-content {
     margin-bottom: 30px;
 
     h3 {
-        font-size: 30px; // Nombre del instructor
+        font-size: 30px;
     }
-
     span {
-        font-size: 20px; // Cargo o subtítulo del instructor
+        font-size: 20px;
         color: $main-color;
         line-height: 0.5;
     }
-
-    // Íconos sociales del instructor
     .instructor-social {
         list-style: none;
         margin: 0;
         padding: 0;
 
         li {
+            margin-top: 30px;
+            margin-bottom: 25px;
             display: inline-block;
             width: 40px;
             height: 40px;
-            margin: 30px 5px 25px 0;
             line-height: 40px;
+            margin-right: 5px;
             text-align: center;
             background-color: $main-color;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             transition: 0.7s;
-
+            
             a {
                 color: $color-white;
 
                 &:hover {
-                    color: $color-white; // Se mantiene en hover
+                    color: $color-white;
                 }
             }
-
             &:hover {
                 background-color: $color-blue;
-                border-radius: 50px; // Efecto de círculo al pasar el mouse
+                border-radius: 50px;
             }
         }
     }
-
     p {
         margin-bottom: 25px;
     }
 }
-
-// Fondo especial para contenedor de instructores
 .instructor-all {
     background-color: #fffafa;
 }
@@ -3744,10 +3918,8 @@ Instructor Page End
 ===================================*/
 
 /*=================================
-Testimonial Page 
+Testominal Page 
 ===================================*/
-
-// Tarjeta individual de testimonio
 .single-testominal {
     background-color: $color-white;
     box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
@@ -3756,29 +3928,29 @@ Testimonial Page
     text-align: center;
 
     img {
-        max-width: 20%; // Tamaño reducido
-        border-radius: 50%; // Imagen circular
+        max-width: 20%;
+        margin-bottom: 10px;
+        border-radius: 50%;
+        position: relative;
         border: 2px solid $color-blue;
         margin-bottom: 15px;
     }
-
     h3 {
         font-size: 24px;
         font-weight: 600;
         margin: 0;
         padding: 0;
     }
-
     span {
-        font-size: 16px;
         color: $head-color;
+        font-size: 16px;
     }
-
     p {
         font-weight: 500;
-        margin: 15px 0;
+        margin-bottom: 15px;
+        margin-top: 15px;
     }
-
+   
     ul {
         list-style: none;
         margin: 0;
@@ -3786,105 +3958,93 @@ Testimonial Page
 
         li {
             display: inline-block;
+            color:$main-color;
             font-size: 20px;
-            color: $main-color; // Estrellas o íconos de calificación
         }
     }
 }
 /*=================================
-Testimonial Page End
+Testominal Page End
 ===================================*/
 
 /*=================================
 Book Form 
 ===================================*/
-
-// Formulario de reserva (centrado con fondo decorativo)
 .book-form {
     max-width: 900px;
-    margin: 0 auto;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
     padding: 50px 30px;
+    margin: 0 auto;
     background-image: url(assets/img/shape/contact-shape.png);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 }
 /*=================================
 Book Form End
 ===================================*/
 
 /*=================================
-Form Sign (registro/login)
+form Sing
 ===================================*/
-
-// Formulario de inicio de sesión o registro
 .form-sign {
     .form-group {
         margin-bottom: 25px;
 
         label {
             color: $color-black;
+            display: block;
             margin-bottom: 10px;
             font-weight: 600;
-            display: block;
         }
-
         .form-control {
             font-size: 16px;
+            border: 1px solid #ffd3d3;
             padding: 15px 18px;
+            color: #b3b3b3;
             font-weight: 400;
             height: 55px;
-            color: #b3b3b3;
-            border: 1px solid #ffd3d3;
 
-            &:focus,
-            &:hover {
+            &:focus,:hover {
                 outline: 0;
-                border: 1px solid $body-color;
                 box-shadow: none;
+                border: 1px solid $body-color;
             }
         }
-
         .form-message {
             font-size: 16px;
-            padding: 18px;
-            width: 100%;
-            font-weight: 400;
-            color: #b3b3b3;
             border-radius: 5px;
             border: 1px solid #ffd3d3;
+            padding: 18px 18px;
+            color: #b3b3b3;
+            font-weight: 400;
+            width: 100%;
 
-            &:focus,
-            &:hover {
+            &:focus,:hover {
                 outline: 0;
-                border: 1px solid $body-color;
                 box-shadow: none;
+                border: 1px solid $body-color;
             }
         }
     }
-
-    // Checkbox de términos y condiciones
-    .form-group {
+}
+.form-sign {
+    .form-group { 
         .form-check-input {
             width: 15px;
             height: 15px;
         }
-
         .form-check-label {
             font-size: 16px;
         }
     }
-
-    // Botón de login
     .login-btn {
-        width: 100%;
-        padding: 12px 60px;
-        font-size: 18px;
-        font-weight: 500;
         color: $color-white;
+        font-size: 18px;
         text-align: center;
         background-color: $main-color;
+        padding: 12px 60px;
+        font-weight: 500;
         border: none;
         border-radius: 50px;
         transition: 0.7s;
@@ -3894,35 +4054,46 @@ Form Sign (registro/login)
         }
     }
 }
-
-// Placeholders (colores para navegadores)
-.form-sign .form-group .form-control::placeholder,
-.form-sign .form-group .form-message::placeholder,
-.form-sign .form-group .form-control::-webkit-input-placeholder,
-.form-sign .form-group .form-message::-webkit-input-placeholder,
-.form-sign .form-group .form-control::-ms-input-placeholder,
-.form-sign .form-group .form-message::-ms-input-placeholder,
+.form-sign .form-group .form-control::-webkit-input-placeholder {
+    color: #b3b3b3;
+}
+.form-sign .form-group .form-control::-ms-input-placeholder {
+    color: #b3b3b3;
+}
+.form-sign .form-group .form-control::-ms-input-placeholder {
+    color: #b3b3b3;
+}
+.form-sign .form-group .form-control::placeholder {
+    color: #b3b3b3;
+}
+.form-sign .form-group .form-message::-webkit-input-placeholder {
+    color: #b3b3b3;
+}
+.form-sign .form-group .form-message::-ms-input-placeholder {
+    color: #b3b3b3;
+}
 .form-sign.form-group .form-message::-ms-input-placeholder {
     color: #b3b3b3;
 }
+.form-sign .form-group .form-message::placeholder {
+    color: #b3b3b3;
+}
 /*=================================
-Form Sign End
+form Sing End
 ===================================*/
 
 /*=================================
 Login form 
 ===================================*/
-
-// Formulario de inicio de sesión (centrado y con fondo decorativo)
 .login-form {
     max-width: 600px;
-    margin: 0 auto;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
     padding: 50px 30px;
+    margin: 0 auto;
     background-image: url(assets/img/shape/contact-shape.png);
-    background-position: center;
+    background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 
     .login-title {
         text-align: center;
@@ -3930,21 +4101,21 @@ Login form
         i {
             width: 60px;
             height: 60px;
-            font-size: 24px;
             color: $color-white;
             background-color: $main-color;
+            font-size: 24px;
             line-height: 60px;
+            text-align: center;
             border-radius: 50px;
         }
-
         h3 {
-            margin: 15px 0 30px;
             font-size: 24px;
             color: $body-color;
             font-weight: 600;
+            margin-top: 15px;
+            margin-bottom: 30px;
         }
     }
-
     p {
         text-align: center;
         margin-top: 10px;
@@ -3965,29 +4136,26 @@ Login form End
 /*=================================
 Register form 
 ===================================*/
-
-// Formulario de registro (similar al login pero más ancho)
 .register-form {
     max-width: 980px;
-    margin: 0 auto;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
     padding: 50px 30px;
+    margin: 0 auto;
     background-image: url(assets/img/shape/contact-shape.png);
-    background-position: center;
+    background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 
     h3 {
-        font-size: 26px;
         text-align: center;
-        margin-bottom: 30px;
+        font-size: 26px;
         color: $body-color;
+        margin-bottom: 30px;
     }
-
     p {
         margin-top: 15px;
-        text-align: center;
         color: $body-color;
+        text-align: center;
 
         a {
             color: $main-color;
@@ -4005,8 +4173,6 @@ Register form End
 /*=================================
 404 Error page
 ===================================*/
-
-// Estilo para la página de error 404
 .error-area {
     padding: 100px 0;
 
@@ -4015,24 +4181,26 @@ Register form End
 
         h1 {
             font-size: 300px;
-            line-height: 0.8;
+            line-height: .8;
             font-weight: 700;
             color: $body-color;
 
             span {
+                
                 color: $main-color;
             }
         }
-
         h3 {
-            margin-top: 30px;
+            margin: 30px 0 0;
+            position: relative;
             color: $main-color;
         }
-
         p {
+            margin: 20px 0 20px;
             font-size: 18px;
             max-width: 520px;
-            margin: 20px auto;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }
@@ -4043,14 +4211,11 @@ Register form End
 /*==================================
 Single Content CSS
 ====================================*/
-
-// Contenido individual (texto genérico para páginas estáticas)
 .single-content {
     h3 {
         font-size: 24px;
         margin-bottom: 10px;
     }
-
     p {
         margin-bottom: 15px;
 
@@ -4066,8 +4231,6 @@ Single Content CSS End
 /*==================================
 Gallery Page CSS
 ====================================*/
-
-// Galería individual con efecto de hover
 .single-gallery {
     position: relative;
     margin-bottom: 30px;
@@ -4075,54 +4238,50 @@ Gallery Page CSS
     img {
         width: 100%;
     }
-
-    &:hover {
-        .single-icon {
-            transform: scale(1);
-        }
-
-        .gallery-content {
-            transform: scale(1);
-        }
-
-        img {
-            filter: brightness(0.5);
-        }
+    &:hover .single-icon {
+        transform: scale(1);
     }
-
+    &:hover .gallery-content {
+        transform: scale(1);
+    }
+    &:hover img {
+        filter: brightness(0.5);
+    }
     .single-icon {
         position: absolute;
+        text-align: center;
         top: 40%;
         left: 0;
         right: 0;
+        transform: translate(-40%, -50%);
         margin: 0 auto;
+        font-size: 20px;
+        color: $color-blue;
         width: 50px;
         height: 50px;
         line-height: 55px;
         background-color: $color-white;
         border-radius: 50px;
-        font-size: 20px;
-        color: $color-blue;
-        text-align: center;
         transform: scale(0);
-        transition: 0.7s;
+        transition: .7s;
 
         &:hover {
             background-color: $main-color;
             color: $color-white;
         }
     }
-
     .gallery-content {
         background-color: $color-white;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         padding: 15px;
-        margin-top: -50px;
         text-align: center;
-        transform: scale(0);
-        transition: 0.7s;
-        position: relative;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-top: -50px;
         z-index: 1;
+        transition: .7s;
+        position: relative;
+        transform: scale(0);
 
         h3 {
             font-size: 20px;
@@ -4137,34 +4296,30 @@ Gallery Page CSS End
 /*==================================
 Courses Page CSS
 ====================================*/
-
-// Imagen destacada del curso
 .single-course {
     border-radius: 5px 5px 0 0;
 
     img {
         max-width: 100%;
         border-radius: 5px 5px 0 0;
+        position: relative;
     }
-
     .course-price {
         position: absolute;
         bottom: 70px;
         right: 20px;
+        font-size: 24px;
+        color: $color-white;
+        background-color: $main-color;
         width: 70px;
         height: 70px;
         line-height: 70px;
         text-align: center;
-        font-size: 24px;
-        color: $color-white;
-        background-color: $main-color;
         border-radius: 50px;
         z-index: 1;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     }
 }
-
-// Tarjeta completa del curso
 .courses-card-item {
     margin-bottom: 30px;
     background-color: $color-white;
@@ -4176,31 +4331,32 @@ Courses Page CSS
                 width: 100%;
             }
         }
-
         .courses-card-text {
-            position: relative;
             margin-top: -59px;
-            float: right;
+            position: relative;
+            z-index: 1;
+           /* float: right;*/
+            right: 0px;
             font-size: 24px;
             font-weight: 600;
             color: $color-blue;
-            padding: 8px 25px;
-            border-radius: 5px 0 0 0;
+            padding: 8px 15px;
+           /* border-radius: 5px 0 0 0;*/
             background-color: $color-white;
         }
     }
-
     ul {
         list-style: none;
-        padding-left: 15px;
         margin: 0;
+        width: 100%;
+        padding-left: 15px;
 
         li {
             display: inline-block;
             font-size: 15px;
             color: #8f95a9;
-            margin-top: 15px;
-            margin-right: 30px;
+            /*margin-top: 15px;*/
+            margin-right: 25px;
             position: relative;
 
             &::before {
@@ -4212,13 +4368,11 @@ Courses Page CSS
                 left: -15px;
                 top: 10px;
             }
-
             &:first-child::before {
                 display: none;
             }
         }
     }
-
     .courses-card-content {
         padding: 20px;
 
@@ -4227,11 +4381,9 @@ Courses Page CSS
                 font-size: 24px;
             }
         }
-
         p {
             color: $body-color;
         }
-
         .course-book-btn {
             background-color: $main-color;
             color: $color-white;
@@ -4253,15 +4405,12 @@ Courses Page CSS End
 /*==================================
 Pricing Page CSS
 ====================================*/
-
-// Tarjeta de precios con diseño moderno y secciones separadas
 .pricing-card {
     overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
     border-radius: 50px 0 50px 0;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 
-    // Encabezado de precio con fondo destacado
     .price-head {
         padding: 70px 50px 50px 50px;
         background-color: #ffd3d3;
@@ -4275,45 +4424,41 @@ Pricing Page CSS
                 font-size: 35px;
             }
         }
-
         span {
             font-size: 24px;
         }
     }
-
-    // Lista de beneficios o características con botón de acción
     .price-list {
-        padding: 50px 40px;
-        background-image: url(assets/img/shape/contact-shape.png);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+       background-image: url(assets/img/shape/contact-shape.png);
+       background-position: center center;
+       background-size: cover;
+       background-repeat: no-repeat;
+       padding: 50px 40px;
 
-        ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
+       ul {
+           list-style: none;
+           margin: 0;
+           padding: 0;
 
-            li {
-                display: block;
-                font-size: 18px;
-                margin-bottom: 15px;
+           li {
+               display: block;
+               font-size: 18px;
+               margin-bottom: 15px;
 
                 i {
-                    font-size: 20px;
-                    color: $main-color;
-                    margin-right: 10px;
+                   font-size: 20px;
+                   color: $main-color;
+                   margin-right: 10px;
                 }
             }
         }
-
         .price-btn {
-            margin-top: 15px;
             padding: 10px 25px;
             color: $color-white;
             background-color: $main-color;
-            border-radius: 50px;
+            margin-top: 15px;
             transition: 0.7s;
+            border-radius: 50px;
 
             &:hover {
                 padding: 8px 25px;
@@ -4327,8 +4472,6 @@ Pricing Page CSS
 /*==================================
 Pricing Page CSS End
 ====================================*/
-
-// Publicación de noticias en sección de blog o novedades
 .news-post {
     padding: 30px 15px;
     margin-bottom: 30px;
@@ -4338,24 +4481,22 @@ Pricing Page CSS End
     h2 {
         font-size: 24px;
         color: $color-black;
-        padding-bottom: 15px;
         border-bottom: 1px solid #e1e1e1;
+        padding-bottom: 15px;
     }
-
     h3 {
         font-size: 18px;
-        font-weight: 400;
         color: $head-color;
+        font-weight: 400;
         display: block;
 
         &:hover {
             color: $main-color;
         }
     }
-
     span {
-        font-size: 14px;
         color: $color-blue;
+        font-size: 14px;
         display: block;
 
         i {
@@ -4364,27 +4505,26 @@ Pricing Page CSS End
             color: $color-blue;
         }
     }
-
-    // Itens de noticias relacionados o por categoría
-    .post-item1,
-    .post-item2,
+    .post-item1 {
+        margin-top: 10px;
+    }
+    .post-item2 {
+        margin-top: 10px;
+    }
     .post-item3 {
         margin-top: 10px;
     }
 }
-
-// Etiquetas (tags) asociadas a publicaciones o categorías
-.sonidos-tag {
+.nuva-tag {
     h3 {
         font-size: 24px;
         font-weight: 600;
         color: $color-black;
     }
-
     ul {
-        list-style: none;
         margin: 0;
         padding: 0;
+        list-style: none;
 
         li {
             display: inline-block;
@@ -4392,10 +4532,10 @@ Pricing Page CSS End
             a {
                 font-size: 16px;
                 font-weight: 400;
-                padding: 10px 25px;
-                margin: 5px;
-                background-color: #f7f7f7;
                 color: #4f4f4f;
+                background-color: #f7f7f7;
+                padding: 10px 25px;
+                margin:  5px;
                 border-radius: 3px;
                 transition: 0.9s;
 
@@ -4407,8 +4547,6 @@ Pricing Page CSS End
         }
     }
 }
-
-// Sección de comentarios en noticias o blogs
 .news-comments {
     margin-top: 30px;
     padding: 30px;
@@ -4420,7 +4558,6 @@ Pricing Page CSS End
             font-size: 30px;
         }
     }
-
     .news-comments-card {
         margin-top: 15px;
         border-bottom: 1px solid #e1e1e1;
@@ -4430,12 +4567,13 @@ Pricing Page CSS End
 
             img {
                 max-width: 80%;
-                margin-bottom: 15px;
+                margin-bottom: 10px;
                 border-radius: 50%;
+                position: relative;
                 border: 2px solid $color-blue;
+                margin-bottom: 15px;
             }
         }
-
         .comments-title {
             display: inline-block;
 
@@ -4444,22 +4582,20 @@ Pricing Page CSS End
                 color: $paragraph-color;
                 margin: 0;
             }
-
             span {
                 font-size: 12px;
             }
         }
-
         .reply-btn {
-            margin-bottom: 20px;
+            background-color: transparent;
             padding: 5px 7px;
+            font-weight: 600;
+            color: $body-color ;
+            border: 1px solid #eeeeee;
             width: 100px;
             text-align: center;
-            font-weight: 600;
-            color: $body-color;
-            background-color: transparent;
-            border: 1px solid #eeeeee;
             border-radius: 50px;
+            margin-bottom: 20px;
 
             &:hover {
                 background-color: $main-color;
@@ -4468,8 +4604,6 @@ Pricing Page CSS End
         }
     }
 }
-
-// Botón asociado a formularios o respuestas dentro de la sección de noticias detalladas
 .news-detl-contact {
     margin-top: 30px;
 
@@ -4477,12 +4611,9 @@ Pricing Page CSS End
         margin-top: -10px;
     }
 }
-
 /*==================================
 Animation CSS
 ====================================*/
-
-// Animación que genera un efecto de rebote vertical
 @keyframes movebounce {
     0% {
         -webkit-transform: translateY(0px);
@@ -4497,24 +4628,20 @@ Animation CSS
         transform: translateY(0px);
     }
 }
-
-// Animación de expansión y desvanecimiento (como un pulso circular)
 @keyframes wave-circle {
     0% {
         -webkit-transform: scale(0, 0);
         transform: scale(0, 0);
         opacity: 0.5;
-        filter: alpha(opacity=50); // Compatibilidad con IE
+        filter: alpha(opacity=50);
     }
     100% {
         -webkit-transform: scale(1, 1);
         transform: scale(1, 1);
         opacity: 0;
-        filter: alpha(opacity=0); // Compatibilidad con IE
+        filter: alpha(opacity=0);
     }
 }
-
-// Versión específica para Webkit de wave-circle
 @-webkit-keyframes wave-circle {
     0% {
         -webkit-transform: scale(0, 0);
@@ -4528,9 +4655,9 @@ Animation CSS
     }
 }
 
-// Animación que crea un efecto de escala creciente con desvanecimiento gradual
 @keyframes scale {
-    0%, 35% {
+    0%,
+    35% {
         transform: scale(0);
         opacity: 1;
     }
@@ -4539,12 +4666,11 @@ Animation CSS
         opacity: 0.8;
     }
     100% {
-        transform: scale(1.5);
         opacity: 0;
+        transform: scale(1.5);
     }
 }
 
-// Animación que mueve un elemento horizontalmente (de ida y vuelta)
 @keyframes movebounce-in {
     0% {
         -webkit-transform: translateX(0px);
@@ -4560,5 +4686,5 @@ Animation CSS
     }
 }
 /*==================================
-Animation CSS End
+Animation CSS
 =====================================*/

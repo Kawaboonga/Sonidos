@@ -64,17 +64,29 @@
                     <ul class="navbar-nav m-auto">
                         
                        
-                        <li class="nav-item"><a routerLink="/" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Home</a></li>
+                        <!--<li class="nav-item"><a routerLink="/" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Home</a></li>-->
 
-                        <li class="nav-item"><a routerLink="/about" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Equipo</a></li>
+                        <!-- <li class="nav-item"><a routerLink="/about" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Equipo</a></li>-->
+
+                        <li class="nav-item"><a routerLink="/courses" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Cursos</a></li>
 
                         <li class="nav-item"><a routerLink="/instructor" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Instructor</a></li>
 
-                        <li class="nav-item"><a routerLink="/courses" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Cursos</a></li>
-                                
-                        <li class="nav-item"><a routerLink="/login" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Log In</a></li>
+                         <li class="nav-item">
+                            <a href="javascript:void(0)" class="nav-link">Ingresar <i class="fas fa-chevron-right"></i></a>
 
-                        <li class="nav-item"><a routerLink="/register" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Registro</a></li>
+                            <ul class="dropdown-menu">
+                                  <li class="nav-item"><a routerLink="/login" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Log In</a></li>
+
+                                  <li class="nav-item"><a routerLink="/register" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Registro</a></li>
+
+                                  <li class="nav-item" *ngIf="!isLoggedIn"> <a routerLink="/forgot-password" class="nav-link" routerLinkActive="active">¿Olvidaste tu clave?</a></li>
+
+                            </ul>
+                        </li>
+                        
+                        
+                      
 
                         <li class="nav-item">
                             <a href="javascript:void(0)" class="nav-link">Servicios <i class="fas fa-chevron-right"></i></a>
@@ -86,6 +98,9 @@
                             </ul>
                         </li>
 
+                        
+
+                       
 
                         <li class="nav-item">
                             <a href="javascript:void(0)" class="nav-link">News <i class="fas fa-chevron-right"></i></a>
@@ -112,6 +127,27 @@
                         <li class="nav-item">
                             <a routerLink="/contact" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Contacto</a>
                         </li>
+                    </ul>
+
+                    <ul class="navbar-nav ms-auto">
+
+                   
+
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" class="nav-link">👤 {{ userName }} <i class="fas fa-chevron-right"></i></a>
+
+                        <ul class="dropdown-menu">
+                                
+                            <li class="nav-item" *ngIf="isLoggedIn"><a routerLink="/profile" class="nav-link" routerLinkActive="active">Perfil</a></li>
+
+                            <li class="nav-item" *ngIf="isLoggedIn"><a href="javascript:void(0)" class="nav-link text-danger" (click)="logout()">Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+
+
+
+
+                    
                     </ul>
 
                     <div class="other-side">
