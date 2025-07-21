@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HomeOneComponent } from './components/pages/home-one/home-one.component';
 import { PreloaderComponent } from './components/common/preloader/preloader.component';
 import { FooterComponent } from './components/common/footer/footer.component';
-import { NavbarStyleOneComponent } from './components/common/navbar-style-one/navbar-style-one.component';
 import { NavbarStyleTwoComponent } from './components/common/navbar-style-two/navbar-style-two.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { InstructorComponent } from './components/pages/instructor/instructor.component';
@@ -25,6 +24,10 @@ import { ForgotPasswordComponent } from './components/pages/forgot-password/forg
 import { ResetPasswordComponent } from './components/pages/reset-password/reset-password.component';
 import { ProfileComponent } from './components/pages/profile/profile.component';
 import { AdminComponent } from './components/pages/admin/admin.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NavbarStyleOneComponent } from './components/common/navbar-style-one/navbar-style-one.component';
+import { SonidosComponent } from './sonidos/sonidos.component';
+
 
 
 
@@ -51,7 +54,9 @@ import { AdminComponent } from './components/pages/admin/admin.component';
     ProductsDetailsComponent,
     ContactComponent,
     ResetPasswordComponent,
-    AdminComponent
+    AdminComponent,
+    SonidosComponent
+   
 
     
   ],
@@ -59,6 +64,7 @@ import { AdminComponent } from './components/pages/admin/admin.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    HttpClientModule
    
   ],
   providers: [],

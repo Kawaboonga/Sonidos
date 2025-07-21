@@ -1,7 +1,25 @@
-FROM node:alpine
-WORKDIR /usr/src/app
-COPY . /usr/src/app
-RUN npm install -g @angular/cli
+# Etapa 1: Build de la app Angular
+FROM node:18 AS build
+
+WORKDIR /app
+
+COPY package*.json ./
 RUN npm install
-EXPOSE 4200
-CMD ["ng", "serve", "--host", "0.0.0.0"]
+
+COPY . .
+RUN npm run build -- --configuration production
+
+# Etapa 2: Servidor NGINX para servir archivos estáticos
+FROM nginx:stable-alpine
+
+COPY --from=build /app/dist/sonidos /usr/share/nginx/html
+
+# Opcional: sobrescribir configuración de NGINX si tienes un archivo personalizado
+# COPY nginx.conf /etc/nginx/nginx.conf
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
+
+
+

@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "nombre": "Delay Vintage",
+    "categoria": "Efecto",
+    "descripcion": "Delay análogo con modulación",
+    "precio": 45000,
+    "imagen": "assets/img/trainers/1.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Pedal Overdrive",
+    "categoria": "Efecto",
+    "descripcion": "Overdrive suave tipo blues",
+    "precio": 39000,
+    "imagen": "assets/img/trainers/2.jpg"
+  }
+]

@@ -18,6 +18,9 @@ import { ProfileComponent } from './components/pages/profile/profile.component';
 import { UnauthorizedComponent } from './components/pages/unauthorized/unauthorized.component';
 import { ForgotPasswordComponent } from './components/pages/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './components/pages/reset-password/reset-password.component';
+import { SonidosComponent } from './sonidos/sonidos.component';
+
+
 
 import { RoleGuard } from './guards/role.guard';
 
@@ -40,11 +43,12 @@ const routes: Routes = [
     { path: 'news-details', component: NewsDetailsComponent },
     { path: 'products-details', component: ProductsDetailsComponent },
     { path: 'contact', component: ContactComponent },
+    { path: 'sonidos', component: SonidosComponent },
     { path: '**', component: ErrorComponent }
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes, {})],
+    imports: [RouterModule.forRoot(routes, { useHash: true })],
     exports: [RouterModule]
 })
 export class AppRoutingModule { }

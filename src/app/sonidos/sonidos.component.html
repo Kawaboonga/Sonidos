@@ -1,0 +1,61 @@
+<app-navbar-style-one></app-navbar-style-one>
+
+<div class="inner-banner bg-shape3 bg-color4">
+  <div class="d-table">
+    <div class="d-table-cell">
+      <div class="conatiner">
+        <div class="inner-title text-center">
+          <h3>Catálogo de Sonidos</h3>
+          <ul>
+            <li><a routerLink="/">Inicio</a></li>
+            <li><i class="fas fa-chevron-right"></i></li>
+            <li>Sonidos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="trainers-area pt-100 pb-70">
+  <div class="container">
+    <div class="scetion-title text-center mb-50">
+      <span>Explora</span>
+      <h2>Sonidos disponibles</h2>
+      <p>Listado de Instrumentos y efectos musicales disponibles para compra o intercambio.</p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6" *ngFor="let sonido of sonidos">
+        <div class="trainer-card">
+          <img [src]="sonido.imagen" alt="{{sonido.nombre}}" class="w-100">
+          <div class="trainer-content">
+            <h3>{{ sonido.nombre }}</h3>
+            <span>{{ sonido.categoria }}</span>
+            <p>{{ sonido.descripcion }}</p>
+            <p><strong>Precio:</strong> ${{ sonido.precio }}</p>
+
+            <div class="social-icon mt-3" *ngIf="isAdmin">
+              <ul>
+                <li>
+                  <button (click)="editar(sonido.id)" class="btn btn-warning btn-sm">Editar</button>
+                </li>
+                <li>
+                  <button (click)="eliminar(sonido.id)" class="btn btn-danger btn-sm ml-2">Eliminar</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="isAdmin" class="text-center mt-4">
+      <button (click)="agregarNuevo()" class="default-btn1">Agregar nuevo sonido</button>
+    </div>
+
+    <div *ngIf="!isAdmin" class="text-center mt-4">
+      <p class="text-muted">Debes tener rol de administrador para modificar el catálogo.</p>
+    </div>
+  </div>
+</section>
