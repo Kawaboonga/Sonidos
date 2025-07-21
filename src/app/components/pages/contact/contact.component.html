@@ -59,48 +59,80 @@
                 </div>
             </div>
 
-            <div class="col-lg-6">
+            
+
+
+
+
+<div class="col-lg-6">
+
+                
+
+            
+                
                 <div class="form-area">
                     <div class="form-section">
                         <h2>¿En qué podemos ayudarte?</h2>
 
-                        <form id="contactForm">
-                            <div class="row">
-                                <div class="col-lg-6 col-sm-6">
-                                    <div class="form-group">
-                                        <input type="text" name="name" id="name" class="form-control" required placeholder="Tu nombre">
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-sm-6">
-                                    <div class="form-group">
-                                        <input type="email" name="email" id="email" class="form-control" required placeholder="Tu correo electrónico">
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-sm-6">
-                                    <div class="form-group">
-                                        <input type="text" name="phone_number" id="phone_number" required class="form-control" placeholder="Tu teléfono">
-                                    </div>
-                                </div>
-                                
-                                <div class="col-lg-6 col-sm-6">
-                                    <div class="form-group">
-                                        <input type="text" name="msg_subject" id="msg_subject" class="form-control" required placeholder="Asunto">
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="form-group">
-                                        <textarea name="message" class="form-message textarea-hight" id="message" cols="30" rows="5" required placeholder="Tu mensaje"></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12">
-                                    <button type="submit" class="default-btn1 btn-two">Enviar mensaje</button>
-                                </div>
+                        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-6">
+                            <div class="form-group">
+                                <input type="text" id="name" formControlName="name" class="form-control" placeholder="Tu nombre">
+                                <div *ngIf="submitted && f.name.errors" class="text-danger">Nombre requerido</div>
                             </div>
-                        </form>
+                        </div>
+
+                    <div class="col-lg-6 col-sm-6">
+                    <div class="form-group">
+                        <input type="email" id="email" formControlName="email" class="form-control" placeholder="Tu correo electrónico">
+                        <div *ngIf="submitted && f.email.errors" class="text-danger">
+                        <div *ngIf="f.email.errors.required">Correo requerido</div>
+                        <div *ngIf="f.email.errors.email">Correo inválido</div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="col-lg-6 col-sm-6">
+                    <div class="form-group">
+                        <input type="text" id="phone_number" formControlName="phone_number" class="form-control" placeholder="Tu teléfono">
+                        <div *ngIf="submitted && f.phone_number.errors" class="text-danger">
+                        <div *ngIf="f.phone_number.errors.required">Teléfono requerido</div>
+                        <div *ngIf="f.phone_number.errors.pattern">Debe tener 9 dígitos y comenzar con 9</div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="col-lg-6 col-sm-6">
+                    <div class="form-group">
+                        <input type="text" id="msg_subject" formControlName="msg_subject" class="form-control" placeholder="Asunto">
+                        <div *ngIf="submitted && f.msg_subject.errors" class="text-danger">Asunto requerido</div>
+                    </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                    <div class="form-group">
+                        <textarea id="message" formControlName="message" class="form-message textarea-hight form-control" cols="30" rows="5" placeholder="Tu mensaje"></textarea>
+                        <div *ngIf="submitted && f.message.errors" class="text-danger">Mensaje requerido</div>
+                    </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                    <button type="submit" class="default-btn1 btn-two">Enviar mensaje</button>
+                    </div>
+                </div>
+            </form>
+
+
+                        <div *ngIf="enviado" class="alert alert-success mt-3">
+                        ¡Mensaje enviado con éxito!
+                        </div>
+
+
+                        
+
+
+                        
                     </div>
                 </div>
             </div>
