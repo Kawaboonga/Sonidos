@@ -15,7 +15,11 @@ customElements.define('compodoc-menu', class extends HTMLElement {
         <nav>
             <ul class="list">
                 <li class="title">
+<<<<<<< HEAD
                     <a href="index.html" data-type="index-link">sonidos documentation</a>
+=======
+                    <a href="index.html" data-type="index-link">sonidos-ng documentation</a>
+>>>>>>> a18bfe4f5c55d751faba0140eaa79244a108fbd9
                 </li>
 
                 <li class="divider"></li>
